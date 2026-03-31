@@ -3,8 +3,8 @@ import math
 # ── Settings ──────────────────────────────────────────
 R = 2.0       # hex side length in mm
 gap = 1.0     # wall-to-wall gap in mm
-cols = 10     # number of columns
-rows = 10     # number of rows
+cols = 75  # number of columns
+rows = 75  # number of rows
 output = "honeycomb.dxf"
 # ──────────────────────────────────────────────────────
 
