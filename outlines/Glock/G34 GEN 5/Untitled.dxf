@@ -489,19 +489,19 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461133.936782408
+2461133.947638889
   9
 $TDUCREATE
  40
-2461133.936782408
+2461133.947638889
   9
 $TDUPDATE
  40
-2461133.936782408
+2461133.947638889
   9
 $TDUUPDATE
  40
-2461133.936782408
+2461133.947638889
   9
 $TDINDWG
  40
@@ -549,7 +549,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-AC
+97
   9
 $SURFTAB1
  70
@@ -929,11 +929,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{3D629585-8217-154D-96E1-3766100B8412}
+{EFC8DDCD-12F6-114B-A154-3D2079A4EF46}
   9
 $VERSIONGUID
   2
-{F3946DCB-A11D-9549-BCD2-FB2878AE1230}
+{6C893045-7B47-6C4D-A71C-BDFFA313217E}
   9
 $EXTNAMES
 290
@@ -1557,7 +1557,7 @@ AcDbSymbolTableRecord
 100
 AcDbLayerTableRecord
   2
-Untitled v2_Sketch1
+Untitled v3_Sketch3
  70
      0
  62
@@ -2037,7 +2037,7 @@ POINT
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbPoint
  10
@@ -2055,7 +2055,7 @@ LINE
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbLine
  10
@@ -2067,7 +2067,7 @@ AcDbLine
  11
 0.0
  21
-0.0
+3.0
  31
 0.0
   0
@@ -2079,17 +2079,17 @@ LINE
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbLine
  10
-0.0
+23.00000034272671
  20
-76.5
+83.75
  30
 0.0
  11
-3.375000000000001
+23.00000034272671
  21
 76.5
  31
@@ -2103,17 +2103,17 @@ LINE
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbLine
  10
-0.0
+3.75
  20
-76.5
+83.75
  30
 0.0
  11
-3.375000000000001
+3.75
  21
 76.5
  31
@@ -2127,13 +2127,13 @@ LINE
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbLine
  10
-0.0
+26.75000000000001
  20
-83.75
+88.75
  30
 0.0
  11
@@ -2151,19 +2151,19 @@ LINE
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbLine
  10
-0.0
+3.75
  20
-88.75
+83.75
  30
 0.0
  11
 26.75000000000001
  21
-88.75
+83.75
  31
 0.0
   0
@@ -2175,19 +2175,19 @@ LINE
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbLine
  10
-23.375
+26.75000000000001
  20
 83.75
  30
 0.0
  11
-23.375
+23.00000034272671
  21
-76.5
+83.75
  31
 0.0
   0
@@ -2199,13 +2199,13 @@ LINE
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbLine
  10
-26.75000000000001
+23.00000034272671
  20
-0.0
+76.5
  30
 0.0
  11
@@ -2223,17 +2223,17 @@ LINE
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbLine
  10
-26.75000000000001
+0.0
  20
-88.75
+83.75
  30
 0.0
  11
-26.75000000000001
+3.75
  21
 83.75
  31
@@ -2247,17 +2247,17 @@ LINE
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbLine
  10
-0.0
+26.75000000000001
  20
-83.75
+88.75
  30
 0.0
  11
-3.375000000000001
+26.75000000000001
  21
 83.75
  31
@@ -2271,19 +2271,19 @@ LINE
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbLine
  10
-26.75000000000001
+13.375
  20
-83.75
+3.0
  30
 0.0
  11
-23.375
+0.0
  21
-83.75
+3.0
  31
 0.0
   0
@@ -2295,17 +2295,17 @@ LINE
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbLine
  10
 26.75000000000001
  20
-76.5
+3.0
  30
 0.0
  11
-23.375
+26.75000000000001
  21
 76.5
  31
@@ -2319,19 +2319,19 @@ LINE
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbLine
  10
-3.375000000000001
+13.375
  20
-76.5
+3.0
  30
 0.0
  11
-3.375000000000001
+26.75000000000001
  21
-83.75
+3.0
  31
 0.0
   0
@@ -2343,7 +2343,7 @@ LINE
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbLine
  10
@@ -2353,9 +2353,9 @@ AcDbLine
  30
 0.0
  11
-26.75000000000001
+0.0
  21
-88.75
+83.75
  31
 0.0
   0
@@ -2367,203 +2367,11 @@ LINE
 100
 AcDbEntity
   8
-Untitled v2_Sketch1
+Untitled v3_Sketch3
 100
 AcDbLine
  10
-0.0
- 20
-0.0
- 30
-0.0
- 11
-26.75000000000001
- 21
-0.0
- 31
-0.0
-  0
-LINE
-  5
-8A
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-0.0
- 20
-83.75
- 30
-0.0
- 11
-0.0
- 21
-88.75
- 31
-0.0
-  0
-LINE
-  5
-8B
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-3.375000000000001
- 20
-83.75
- 30
-0.0
- 11
-3.375000000000001
- 21
-76.5
- 31
-0.0
-  0
-LINE
-  5
-8C
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-0.0
- 20
-0.0
- 30
-0.0
- 11
-0.0
- 21
-76.5
- 31
-0.0
-  0
-LINE
-  5
-8D
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-3.375000000000001
- 20
-83.75
- 30
-0.0
- 11
-0.0
- 21
-83.75
- 31
-0.0
-  0
-LINE
-  5
-8E
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-26.75000000000001
- 20
-88.75
- 30
-0.0
- 11
-26.75000000000001
- 21
-83.75
- 31
-0.0
-  0
-LINE
-  5
-8F
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-26.75000000000001
- 20
-83.75
- 30
-0.0
- 11
-23.375
- 21
-83.75
- 31
-0.0
-  0
-LINE
-  5
-90
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-0.0
- 20
-88.75
- 30
-0.0
- 11
-26.75000000000001
- 21
-88.75
- 31
-0.0
-  0
-LINE
-  5
-91
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-3.375000000000001
+3.75
  20
 76.5
  30
@@ -2572,318 +2380,6 @@ AcDbLine
 0.0
  21
 76.5
- 31
-0.0
-  0
-LINE
-  5
-92
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-23.375
- 20
-76.5
- 30
-0.0
- 11
-26.75000000000001
- 21
-76.5
- 31
-0.0
-  0
-LINE
-  5
-93
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-26.75000000000001
- 20
-76.5
- 30
-0.0
- 11
-26.75000000000001
- 21
-0.0
- 31
-0.0
-  0
-LINE
-  5
-94
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-23.375
- 20
-83.75
- 30
-0.0
- 11
-23.375
- 21
-76.5
- 31
-0.0
-  0
-LINE
-  5
-95
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-26.75000000000001
- 20
-88.75
- 30
-0.0
- 11
-26.75000000000001
- 21
-83.75
- 31
-0.0
-  0
-LINE
-  5
-96
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-3.375000000000001
- 20
-76.5
- 30
-0.0
- 11
-3.375000000000001
- 21
-83.75
- 31
-0.0
-  0
-LINE
-  5
-97
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-23.375
- 20
-83.75
- 30
-0.0
- 11
-23.375
- 21
-77.00000114738941
- 31
-0.0
-  0
-LINE
-  5
-98
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-0.0
- 20
-0.0
- 30
-0.0
- 11
-0.0
- 21
-76.5
- 31
-0.0
-  0
-LINE
-  5
-99
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-26.75000000000001
- 20
-0.0
- 30
-0.0
- 11
-0.0
- 21
-0.0
- 31
-0.0
-  0
-LINE
-  5
-9A
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-0.0
- 20
-83.75
- 30
-0.0
- 11
-3.375000000000001
- 21
-83.75
- 31
-0.0
-  0
-LINE
-  5
-9B
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-26.75000000000001
- 20
-76.5
- 30
-0.0
- 11
-23.375
- 21
-76.5
- 31
-0.0
-  0
-LINE
-  5
-9C
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-26.75000000000001
- 20
-76.5
- 30
-0.0
- 11
-26.75000000000001
- 21
-0.0
- 31
-0.0
-  0
-LINE
-  5
-9D
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-26.75000000000001
- 20
-83.75
- 30
-0.0
- 11
-23.375
- 21
-83.75
- 31
-0.0
-  0
-LINE
-  5
-9E
-330
-70
-100
-AcDbEntity
-  8
-Untitled v2_Sketch1
-100
-AcDbLine
- 10
-0.0
- 20
-83.75
- 30
-0.0
- 11
-0.0
- 21
-88.75
  31
 0.0
   0
@@ -2957,11 +2453,11 @@ ACAD_VISUALSTYLE
   3
 ACDB_RECOMPOSE_DATA
 350
-A7
+92
   3
 AcDbVariableDictionary
 350
-9F
+8A
   0
 DICTIONARY
   5
@@ -3389,7 +2885,7 @@ X-Ray
   0
 XRECORD
   5
-A7
+92
 102
 {ACAD_REACTORS
 330
@@ -3409,7 +2905,7 @@ AcDbXrecord
   0
 DICTIONARY
   5
-9F
+8A
 102
 {ACAD_REACTORS
 330
@@ -3425,23 +2921,23 @@ AcDbDictionary
   3
 CANNOSCALE
 350
-A4
+8F
   3
 CMLEADERSTYLE
 350
-A1
+8C
   3
 CTABLESTYLE
 350
-A0
+8B
   3
 CVIEWDETAILSTYLE
 350
-A2
+8D
   3
 CVIEWSECTIONSTYLE
 350
-A3
+8E
   0
 ACDBDETAILVIEWSTYLE
   5
@@ -3449,7 +2945,7 @@ ACDBDETAILVIEWSTYLE
 102
 {ACAD_XDICTIONARY
 360
-AA
+95
 102
 }
 102
@@ -5173,7 +4669,7 @@ ACDBSECTIONVIEWSTYLE
 102
 {ACAD_XDICTIONARY
 360
-A8
+93
 102
 }
 102
@@ -5299,7 +4795,7 @@ TABLESTYLE
 102
 {ACAD_XDICTIONARY
 360
-A5
+90
 102
 }
 102
@@ -11929,15 +11425,15 @@ AcDbSavedByObjectVersion
   0
 DICTIONARYVAR
   5
-A4
+8F
 102
 {ACAD_REACTORS
 330
-9F
+8A
 102
 }
 330
-9F
+8A
 100
 DictionaryVariables
 280
@@ -11947,15 +11443,15 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-A1
+8C
 102
 {ACAD_REACTORS
 330
-9F
+8A
 102
 }
 330
-9F
+8A
 100
 DictionaryVariables
 280
@@ -11965,15 +11461,15 @@ STANDARD
   0
 DICTIONARYVAR
   5
-A0
+8B
 102
 {ACAD_REACTORS
 330
-9F
+8A
 102
 }
 330
-9F
+8A
 100
 DictionaryVariables
 280
@@ -11983,15 +11479,15 @@ STANDARD
   0
 DICTIONARYVAR
   5
-A2
+8D
 102
 {ACAD_REACTORS
 330
-9F
+8A
 102
 }
 330
-9F
+8A
 100
 DictionaryVariables
 280
@@ -12001,15 +11497,15 @@ Imperial24
   0
 DICTIONARYVAR
   5
-A3
+8E
 102
 {ACAD_REACTORS
 330
-9F
+8A
 102
 }
 330
-9F
+8A
 100
 DictionaryVariables
 280
@@ -12019,7 +11515,7 @@ Imperial24
   0
 DICTIONARY
   5
-AA
+95
 330
 6B
 100
@@ -12031,7 +11527,7 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-AB
+96
   0
 DICTIONARY
   5
@@ -12143,7 +11639,7 @@ SPECULARTILE
   0
 DICTIONARY
   5
-A8
+93
 330
 69
 100
@@ -12155,11 +11651,11 @@ AcDbDictionary
   3
 ACAD_XREC_ROUNDTRIP
 360
-A9
+94
   0
 DICTIONARY
   5
-A5
+90
 330
 65
 100
@@ -12171,19 +11667,19 @@ AcDbDictionary
   3
 ACAD_ROUNDTRIP_2008_TABLESTYLE_CELLSTYLEMAP
 360
-A6
+91
   0
 XRECORD
   5
-AB
+96
 102
 {ACAD_REACTORS
 330
-AA
+95
 102
 }
 330
-AA
+95
 100
 AcDbXrecord
 280
@@ -12559,15 +12055,15 @@ AcDbXrecord
   0
 XRECORD
   5
-A9
+94
 102
 {ACAD_REACTORS
 330
-A8
+93
 102
 }
 330
-A8
+93
 100
 AcDbXrecord
 280
@@ -12583,15 +12079,15 @@ FLAGS
   0
 CELLSTYLEMAP
   5
-A6
+91
 102
 {ACAD_REACTORS
 330
-A5
+90
 102
 }
 330
-A5
+90
 100
 AcDbCellStyleMap
  90
