@@ -38,7 +38,7 @@ def convert_fvi_to_dxf(input_path, output_path):
 
 def batch_convert(folder):
     folder = Path(folder)
-    fvi_files = list(folder.rglob("*.fvi")) + list(folder.rglob("*.FVI"))
+    fvi_files = [p for p in folder.rglob("*") if p.suffix.lower() == ".fvi"]
 
     if not fvi_files:
         print(f"No .fvi files found in {folder}")
