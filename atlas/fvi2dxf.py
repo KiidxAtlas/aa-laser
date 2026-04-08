@@ -30,7 +30,7 @@ def convert_fvi_to_dxf(input_path, output_path):
             dx, dy = float(match_draw.group(1)), float(match_draw.group(2))
             x2 = x + dx
             y2 = y + dy
-            msp.add_line((x, y), (x2, y2))
+            msp.add_line((x * 0.254, y * 0.254), (x2 * 0.254, y2 * 0.254))
             x, y = x2, y2
 
     doc.saveas(output_path)
