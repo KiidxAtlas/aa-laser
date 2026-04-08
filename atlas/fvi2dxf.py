@@ -3,6 +3,8 @@ import re
 import ezdxf
 from pathlib import Path
 
+SCALE = 0.254
+
 
 def convert_fvi_to_dxf(input_path, output_path):
     doc = ezdxf.new("R2010")
@@ -12,6 +14,11 @@ def convert_fvi_to_dxf(input_path, output_path):
         lines = f.readlines()
 
     x, y = 0.0, 0.0
+    current_points = []
+
+    def flush_polyline():
+        if len(current_points) >= 2:
+            msp.add_lwpolyline(current_points)
 
     for line in lines:
         line = line.strip()
@@ -22,17 +29,20 @@ def convert_fvi_to_dxf(input_path, output_path):
         match_draw = re.match(r"DRAWLINE\s+([-\d.]+),([-\d.]+)", line)
 
         if match_move:
+            flush_polyline()
+            current_points = []
             dx, dy = float(match_move.group(1)), float(match_move.group(2))
             x += dx
             y += dy
+            current_points.append((x * SCALE, y * SCALE))
 
         elif match_draw:
             dx, dy = float(match_draw.group(1)), float(match_draw.group(2))
-            x2 = x + dx
-            y2 = y + dy
-            msp.add_line((x * 0.254, y * 0.254), (x2 * 0.254, y2 * 0.254))
-            x, y = x2, y2
+            x += dx
+            y += dy
+            current_points.append((x * SCALE, y * SCALE))
 
+    flush_polyline()
     doc.saveas(output_path)
 
 
