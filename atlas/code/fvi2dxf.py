@@ -1,13 +1,14 @@
-import sys
 import re
-import ezdxf
+import sys
 from pathlib import Path
+
+import ezdxf  # type: ignore[attr-defined]
 
 SCALE = 0.254
 
 
 def convert_fvi_to_dxf(input_path, output_path):
-    doc = ezdxf.new("R2010")
+    doc = ezdxf.new("R2010")  # type: ignore[attr-defined]
     msp = doc.modelspace()
 
     with open(input_path, "r") as f:

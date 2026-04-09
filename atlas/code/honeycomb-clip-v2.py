@@ -1,9 +1,9 @@
 import math
 import sys
-import ezdxf
-from pathlib import Path
-from shapely.geometry import Polygon, MultiPolygon, LineString
-from shapely.ops import unary_union
+
+import ezdxf  # type: ignore[attr-defined]
+from shapely.geometry import MultiPolygon, Polygon  # type: ignore[import-untyped]
+from shapely.ops import unary_union  # type: ignore[import-untyped]
 
 # ── Settings ──────────────────────────────────────────
 R = 1.75  # hex side length in mm
@@ -21,13 +21,13 @@ def hex_verts(cx, cy, r):
 
 
 def load_outline(dxf_path):
-    doc = ezdxf.readfile(dxf_path)
+    doc = ezdxf.readfile(dxf_path)  # type: ignore[attr-defined]
     msp = doc.modelspace()
     all_coords = []
 
     for entity in msp:
         if entity.dxftype() == "LWPOLYLINE":
-            pts = list(entity.get_points())
+            pts = list(entity.get_points())  # type: ignore[attr-defined]
             coords = [(p[0], p[1]) for p in pts]
             if len(coords) >= 3:
                 all_coords.append(coords)
@@ -46,8 +46,8 @@ def load_outline(dxf_path):
             p = Polygon(coords)
             if p.is_valid and p.area > 0:
                 polys.append(p)
-        except Exception:
-            pass
+        except (ValueError, TypeError):
+            continue
 
     if not polys:
         # fallback: treat all coords as one big polygon
@@ -79,7 +79,7 @@ def generate_clipped_honeycomb(outline_poly, r, gap, out_path):
     cols = int((maxx - minx + pad * 2) / col_step) + 2
     rows = int((maxy - miny + pad * 2) / row_step) + 2
 
-    doc = ezdxf.new("R2010")
+    doc = ezdxf.new("R2010")  # type: ignore[attr-defined]
     doc.header["$INSUNITS"] = 4  # mm
     msp = doc.modelspace()
 
@@ -114,15 +114,15 @@ def generate_clipped_honeycomb(outline_poly, r, gap, out_path):
                     if len(coords) >= 2:
                         msp.add_lwpolyline(coords)
                         count += 1
-                except Exception:
-                    pass
+                except (ValueError, AttributeError):
+                    continue
                 continue
 
             for geom in geoms:
                 if geom.is_empty or geom.area < 0.001:
                     continue
                 geom = geom.simplify(0.01, preserve_topology=True)
-                coords = [(round(x, 3), round(y, 3)) for x, y in geom.exterior.coords]
+                coords = [(round(x, 3), round(y, 3)) for x, y in geom.exterior.coords]  # type: ignore[attr-defined]
                 if len(coords) >= 2:
                     msp.add_lwpolyline(coords, close=True)
                     count += 1
@@ -142,5 +142,5 @@ if __name__ == "__main__":
     print(f"Loading outline: {outline_path}")
     outline_poly = load_outline(outline_path)
     print(f"Outline bounds: {outline_poly.bounds}")
-    print(f"Generating clipped honeycomb...")
+    print("Generating clipped honeycomb...")
     generate_clipped_honeycomb(outline_poly, R, gap, out_path)
