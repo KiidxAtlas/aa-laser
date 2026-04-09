@@ -238,11 +238,11 @@ def main():
 
     if dry_run:
         if modified > 0:
-            print(f"\nDry run — no changes made. Use --apply to execute.")
-            print(f"Originals will be backed up to outlines/_originals/")
+            print("\nDry run — no changes made. Use --apply to execute.")
+            print("Originals will be backed up to outlines/_originals/")
     else:
         if modified > 0:
-            print(f"\nDone. Originals backed up to outlines/_originals/")
+            print("\nDone. Originals backed up to outlines/_originals/")
 
 
 if __name__ == "__main__":
