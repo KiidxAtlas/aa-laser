@@ -22,8 +22,15 @@ BASE = Path(__file__).resolve().parent.parent.parent / "outlines"
 BACKUP_DIR = BASE / "_originals"
 
 # Skip these — they're already grip-only, top views, or non-standard
-SKIP_SUFFIXES = ("-grip", "-top", "-backstrap", "-frontstrap", "-front-strap",
-                 "-back-strap", "untitled")
+SKIP_SUFFIXES = (
+    "-grip",
+    "-top",
+    "-backstrap",
+    "-frontstrap",
+    "-front-strap",
+    "-back-strap",
+    "untitled",
+)
 
 
 def should_process(dxf_path: Path) -> bool:
@@ -69,16 +76,18 @@ def analyze_polylines(msp):
                 continue
             ys = [p[1] for p in pts]
             xs = [p[0] for p in pts]
-            polys.append({
-                "entity": entity,
-                "npts": len(pts),
-                "min_y": min(ys),
-                "max_y": max(ys),
-                "min_x": min(xs),
-                "max_x": max(xs),
-                "height": max(ys) - min(ys),
-                "width": max(xs) - min(xs),
-            })
+            polys.append(
+                {
+                    "entity": entity,
+                    "npts": len(pts),
+                    "min_y": min(ys),
+                    "max_y": max(ys),
+                    "min_x": min(xs),
+                    "max_x": max(xs),
+                    "height": max(ys) - min(ys),
+                    "width": max(xs) - min(xs),
+                }
+            )
     return polys
 
 
@@ -142,10 +151,12 @@ def classify_polylines(polys, boundary_y, direction):
             # Slide is below (lower Y). Remove if entirely below boundary.
             is_slide = p["max_y"] < boundary_y
 
-        results.append({
-            **p,
-            "action": "REMOVE" if is_slide else "KEEP",
-        })
+        results.append(
+            {
+                **p,
+                "action": "REMOVE" if is_slide else "KEEP",
+            }
+        )
     return results
 
 
@@ -216,20 +227,26 @@ def main():
             modified += 1
             action = "Would remove" if dry_run else "Removed"
             print(f"\n{result['file']}")
-            print(f"  {action} {result['removing']}/{result['total_polys']} polylines "
-                  f"(slide at {result['direction']}_y, boundary={result['boundary_y']:.1f})")
+            print(
+                f"  {action} {result['removing']}/{result['total_polys']} polylines "
+                f"(slide at {result['direction']}_y, boundary={result['boundary_y']:.1f})"
+            )
 
             for d in result["details"]:
                 marker = "  ✗" if d["action"] == "REMOVE" else "  ✓"
-                print(f"  {marker} {d['npts']:4d}pts  "
-                      f"y=[{d['min_y']:7.1f}, {d['max_y']:7.1f}]  "
-                      f"h={d['height']:5.1f}  "
-                      f"w={d['width']:5.1f}")
+                print(
+                    f"  {marker} {d['npts']:4d}pts  "
+                    f"y=[{d['min_y']:7.1f}, {d['max_y']:7.1f}]  "
+                    f"h={d['height']:5.1f}  "
+                    f"w={d['width']:5.1f}"
+                )
         except Exception as e:
             errors.append(f"{f.relative_to(BASE)}: {e}")
 
     print("\n" + "=" * 70)
-    print(f"Modified: {modified}  |  Skipped (no slide): {skipped}  |  Errors: {len(errors)}")
+    print(
+        f"Modified: {modified}  |  Skipped (no slide): {skipped}  |  Errors: {len(errors)}"
+    )
 
     if errors:
         print("\nErrors:")

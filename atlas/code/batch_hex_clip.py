@@ -73,7 +73,7 @@ def load_outline(dxf_path: Path) -> Polygon | MultiPolygon:
 
     if not polys:
         flat = [pt for coords in all_coords for pt in coords]
-        return Polygon(flat).convex_hull
+        return Polygon(flat).convex_hull  # type: ignore[return-value]
 
     if len(polys) == 1:
         return polys[0]
@@ -81,7 +81,7 @@ def load_outline(dxf_path: Path) -> Polygon | MultiPolygon:
     result = unary_union(polys)
     if result.is_empty:
         return max(polys, key=lambda p: p.area).convex_hull
-    return result
+    return result  # type: ignore[return-value]
 
 
 # ── Grid parameters ──────────────────────────────────

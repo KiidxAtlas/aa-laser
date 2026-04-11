@@ -12,6 +12,7 @@ dependencies = [
     "customtkinter>=5.2.2",
     "ezdxf>=1.4.3",
     "shapely>=2.1.2",
+    "Pillow>=10.0.0",
 ]
 
 [tool.setuptools]
