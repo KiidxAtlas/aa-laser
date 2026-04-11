@@ -29,157 +29,26 @@ HMIREADTXT()
 
 
 
+TRACECONTOUR 2, "1000"
+WHILE 1
 
-;VECTOR9
-LaserSpeedOverrideEX = 1.000
-LaserPowerOverrideEX = 1.000
-LaserFreqOverrideEX = 1.000
-COUNTEX = _CUSTOMMATERIAL_GLOCK_POLYMER_AA_05162023.COUNT()
+;VECTOR4
+COUNTEX = 1
 FOR _TEMPINT = 1 TO COUNTEX
-   PASSEX = _CUSTOMMATERIAL_GLOCK_POLYMER_AA_05162023.PARAMETERS(_TEMPINT,1)
-   IF _TEMPINT = 1
-      PASSEX = 1
-      PASSEX = PASSEX + 2
-   ENDIF
-   PASSES PASSEX
-   MOVEABS 0.000,0.000
-   ROTATEABS 0.000
-   TEXTSCALEX 100.000
-   IMAGEJUSTIFY 0
-   IMAGEHEIGHT 20.98
-   DRAWFVI "C:\\Users\\LaserStar\\Documents\\aa-laser\\jobs\\43x-gen5-hex\\9.Fvi"
-   TEXTSCALEX 100
-   TEXTSCALEY 100
+   PASSEX = 1
+   FILLTYPE 0
+   PASSES 1
+MOVEABS 0.000,0.000
+ROTATEABS 0.000
+TEXTSCALEX 100.000
+IMAGEJUSTIFY 0
+IMAGEHEIGHT 87.9999321082472
+DRAWFVI "C:\\Users\\LaserStar\\Documents\\aa-laser\\archived\\aa-laser\\jobs\\43x-gen5-hex\\4.Fvi"
+TEXTSCALEX 100
+TEXTSCALEY 100
 NEXT
+ENDWHILE
 RETURN
-
-
-CLASS _CUSTOMMATERIAL_GLOCK_POLYMER_AA_05162023
-
-FUNCTION Count()
-   RETURN 4
-ENDFUNCTION
-
-FUNCTION Parameters(I AS INTEGER, FILL AS INTEGER)
-   SELECT i
-   CASE 1
-      DRAWSPEED 1400.000 * LaserSpeedOverrideEX
-      LASERWATTS 60.000 * LaserPowerOverrideEX
-      LASERFREQ 60.000 * LaserFreqOverrideEX
-      MOVESPEED 4000.000
-      LASERDUTY 200.000
-      TC 0,10
-      TC 1,150
-      TC 2,150
-      TC 3,200
-      TC 4,190
-      TC 5,160
-      TC 6,0
-      TC 7,0
-      DRAWWIDTH 0.000,0.000
-      IF FILL == 0
-         FILLTYPE 0
-      ELSE
-         POINT 0, 0
-         OBJECTFILL 0
-         DEFFILL 1,"0,320.000,0.090,0.000,0"
-         USEFILL 1
-         FILLTYPE 1
-      ENDIF
-      RETURN 1
-   CASE 2
-      DRAWSPEED 1100.000
-      LASERWATTS 60.000
-      LASERFREQ 60.000
-      MOVESPEED 4000.000
-      LASERDUTY 110.000
-      TC 0,10
-      TC 1,150
-      TC 2,150
-      TC 3,200
-      TC 4,190
-      TC 5,160
-      TC 6,0
-      TC 7,0
-      DRAWWIDTH 0.000,0.000
-      IF FILL == 0
-         FILLTYPE 0
-      ELSE
-         POINT 0, 0
-         OBJECTFILL 0
-         DEFFILL 1,"0,50.000,0.090,0.000,0"
-         USEFILL 1
-         FILLTYPE 1
-      ENDIF
-      RETURN 1
-   CASE 3
-      DRAWSPEED 1100.000
-      LASERWATTS 60.000
-      LASERFREQ 60.000
-      MOVESPEED 4000.000
-      LASERDUTY 110.000
-      TC 0,10
-      TC 1,150
-      TC 2,150
-      TC 3,200
-      TC 4,190
-      TC 5,160
-      TC 6,0
-      TC 7,0
-      DRAWWIDTH 0.000,0.000
-      IF FILL == 0
-         FILLTYPE 0
-      ELSE
-         POINT 0, 0
-         OBJECTFILL 0
-         DEFFILL 1,"0,0.000,0.090,0.000,0"
-         USEFILL 1
-         FILLTYPE 1
-      ENDIF
-      RETURN 1
-   CASE 4
-      DRAWSPEED 1100.000
-      LASERWATTS 60.000
-      LASERFREQ 60.000
-      MOVESPEED 4000.000
-      LASERDUTY 110.000
-      TC 0,10
-      TC 1,150
-      TC 2,150
-      TC 3,200
-      TC 4,190
-      TC 5,160
-      TC 6,0
-      TC 7,0
-      DRAWWIDTH 0.000,0.000
-      IF FILL == 0
-         FILLTYPE 0
-      ELSE
-         POINT 0, 0
-         OBJECTFILL 0
-         DEFFILL 1,"0,90.000,0.090,0.000,0"
-         USEFILL 1
-         FILLTYPE 1
-      ENDIF
-      RETURN 1
-   ENDSELECT
-ENDFUNCTION
-
-FUNCTION AutoRotate(I AS INTEGER)
-   SELECT i
-   CASE 1
-      RETURN 0
-   CASE 2
-      RETURN 0
-   CASE 3
-      RETURN 0
-   CASE 4
-      RETURN 0
-   ENDSELECT
-ENDFUNCTION
-
-ENDCLASS
-
 
 FUNCTION HMIREADTXT()
 ENDFUNCTION
