@@ -6,13 +6,17 @@ Each generator clips its output to the provided Shapely outline polygon.
 from __future__ import annotations
 
 import math
+import random
 
 from shapely import prepared  # type: ignore[import-untyped]
 from shapely.geometry import (  # type: ignore[import-untyped]
     LineString,
+    MultiPoint,
     MultiPolygon,
+    Point,
     Polygon,
 )
+from shapely.ops import voronoi_diagram  # type: ignore[import-untyped]
 
 try:
     from PIL import Image as _PIL_Image  # type: ignore[import-untyped]
@@ -72,7 +76,7 @@ def gen_honeycomb(
             if not prep.intersects(hp):
                 continue
             if prep.contains(hp):
-                result.append(verts)
+                result.append(verts + [verts[0]])
                 continue
             clipped = outline_poly.intersection(hp)
             if clipped.is_empty:
@@ -91,28 +95,56 @@ def gen_honeycomb(
 
 
 def gen_diamond_checkering(
-    outline_poly, spacing: float, angle_deg: float = 45.0
+    outline_poly, cell_size: float, gap: float = 0.1
 ) -> list[list[tuple[float, float]]]:
-    """Two families of parallel lines at ±angle creating a diamond grid."""
-    a = math.radians(angle_deg)
+    """Grid of closed diamond (rotated-square) cell outlines clipped to the outline.
+
+    Each diamond is a square rotated 45° with its bounding box cell_size × cell_size.
+    gap controls the space between adjacent diamonds.
+    """
+    hs = (cell_size - gap) / 2.0  # half-span from centre to tip along each axis
+    if hs <= 0:
+        return []
+    step = cell_size
     minx, miny, maxx, maxy = outline_poly.bounds
-    diag = math.hypot(maxx - minx, maxy - miny) + spacing * 4
+    pad = cell_size * 2.0
+    prep = prepared.prep(outline_poly)
     result: list[list[tuple[float, float]]] = []
-    for sign in (1.0, -1.0):
-        dx, dy = math.cos(sign * a), math.sin(sign * a)
-        nx, ny = -dy, dx
-        corners = [(minx, miny), (maxx, miny), (maxx, maxy), (minx, maxy)]
-        projs = [x * nx + y * ny for x, y in corners]
-        p = min(projs) - spacing
-        p_max = max(projs) + spacing
-        while p <= p_max:
-            cx, cy = p * nx, p * ny
-            ln = LineString([
-                (cx - dx * diag, cy - dy * diag),
-                (cx + dx * diag, cy + dy * diag),
-            ])
-            _collect_lines(outline_poly.intersection(ln), result)
-            p += spacing
+    y = miny - pad
+    while y <= maxy + pad:
+        x = minx - pad
+        while x <= maxx + pad:
+            # Diamond vertices: top, right, bottom, left
+            verts = [
+                (x,       y + hs),
+                (x + hs,  y),
+                (x,       y - hs),
+                (x - hs,  y),
+            ]
+            dp = Polygon(verts)
+            if not prep.intersects(dp):
+                x += step
+                continue
+            if prep.contains(dp):
+                result.append(verts + [verts[0]])
+                x += step
+                continue
+            clipped = outline_poly.intersection(dp)
+            if clipped.is_empty:
+                x += step
+                continue
+            geoms = (
+                [clipped]
+                if isinstance(clipped, Polygon)
+                else list(clipped.geoms)
+                if isinstance(clipped, MultiPolygon)
+                else []
+            )
+            for g in geoms:
+                if not g.is_empty and g.area >= 0.001:
+                    result.append(list(g.exterior.coords))
+            x += step
+        y += step
     return result
 
 
@@ -147,8 +179,6 @@ def gen_stipple_dots(
     outline_poly, radius: float, spacing: float
 ) -> list[list[tuple[float, float]]]:
     """Grid of randomly-jittered filled circles clipped to the outline."""
-    import random
-
     rng = random.Random(42)
     minx, miny, maxx, maxy = outline_poly.bounds
     prep = prepared.prep(outline_poly)
@@ -230,7 +260,7 @@ def gen_gradient_honeycomb(
             if not prep.intersects(hp):
                 continue
             if prep.contains(hp):
-                result.append(verts)
+                result.append(verts + [verts[0]])
                 continue
             clipped = outline_poly.intersection(hp)
             if clipped.is_empty:
@@ -289,7 +319,7 @@ def gen_image_halftone(
                 hp = Polygon(verts)
                 if prep.intersects(hp):
                     if prep.contains(hp):
-                        result.append(verts)
+                        result.append(verts + [verts[0]])
                     else:
                         clipped = outline_poly.intersection(hp)
                         if not clipped.is_empty:
@@ -359,7 +389,7 @@ def gen_custom_tile(
                 if not prep.intersects(shape):
                     continue
                 if prep.contains(shape):
-                    result.append(transformed)
+                    result.append(transformed + [transformed[0]])
                 else:
                     clipped = outline_poly.intersection(shape)
                     if clipped.is_empty:
@@ -378,3 +408,300 @@ def gen_custom_tile(
         y += row_step
         row += 1
     return result
+
+
+def gen_brick(
+    outline_poly, brick_w: float, brick_h: float, gap: float
+) -> list[list[tuple[float, float]]]:
+    """Staggered rectangular bricks clipped to the outline."""
+    minx, miny, maxx, maxy = outline_poly.bounds
+    pad = max(brick_w, brick_h) * 2.0
+    col_step = brick_w + gap
+    row_step = brick_h + gap
+    prep = prepared.prep(outline_poly)
+    result: list[list[tuple[float, float]]] = []
+    row = 0
+    y = miny - pad
+    while y <= maxy + pad:
+        offset = col_step / 2.0 if row & 1 else 0.0
+        x = minx - pad + offset
+        while x <= maxx + pad:
+            hw, hh = brick_w / 2.0, brick_h / 2.0
+            verts = [
+                (x - hw, y - hh),
+                (x + hw, y - hh),
+                (x + hw, y + hh),
+                (x - hw, y + hh),
+            ]
+            bp = Polygon(verts)
+            if not prep.intersects(bp):
+                x += col_step
+                continue
+            if prep.contains(bp):
+                result.append(verts + [verts[0]])
+                x += col_step
+                continue
+            clipped = outline_poly.intersection(bp)
+            if clipped.is_empty:
+                x += col_step
+                continue
+            geoms = (
+                [clipped]
+                if isinstance(clipped, Polygon)
+                else list(clipped.geoms)
+                if isinstance(clipped, MultiPolygon)
+                else []
+            )
+            for g in geoms:
+                if not g.is_empty and g.area >= 0.001:
+                    result.append(list(g.exterior.coords))
+            x += col_step
+        y += row_step
+        row += 1
+    return result
+
+
+def gen_diagonal_lines(
+    outline_poly, spacing: float, angle_deg: float = 45.0
+) -> list[list[tuple[float, float]]]:
+    """Single family of evenly-spaced parallel lines at angle_deg, clipped to outline."""
+    a = math.radians(angle_deg)
+    dx, dy = math.cos(a), math.sin(a)
+    nx, ny = -dy, dx
+    minx, miny, maxx, maxy = outline_poly.bounds
+    diag = math.hypot(maxx - minx, maxy - miny) + spacing * 4
+    corners = [(minx, miny), (maxx, miny), (maxx, maxy), (minx, maxy)]
+    projs = [x * nx + y * ny for x, y in corners]
+    p = min(projs) - spacing
+    p_max = max(projs) + spacing
+    result: list[list[tuple[float, float]]] = []
+    while p <= p_max:
+        ox, oy = p * nx, p * ny
+        ln = LineString([
+            (ox - dx * diag, oy - dy * diag),
+            (ox + dx * diag, oy + dy * diag),
+        ])
+        _collect_lines(outline_poly.intersection(ln), result)
+        p += spacing
+    return result
+
+
+def gen_sunburst(
+    outline_poly, spacing_deg: float
+) -> list[list[tuple[float, float]]]:
+    """Lines radiating through the bounding-box centre, clipped to outline.
+
+    spacing_deg is the angular step between each through-line.  E.g. 5.0 gives
+    36 full-diameter spokes (72 rays).  Each line passes through the centre in
+    both directions so a single increment covers two opposing rays.
+    """
+    if spacing_deg <= 0:
+        return []
+    minx, miny, maxx, maxy = outline_poly.bounds
+    cx = (minx + maxx) / 2.0
+    cy = (miny + maxy) / 2.0
+    diag = math.hypot(maxx - minx, maxy - miny)
+    n = max(1, round(180.0 / spacing_deg))
+    result: list[list[tuple[float, float]]] = []
+    for i in range(n):
+        a = math.radians(i * 180.0 / n)
+        sdx, sdy = math.cos(a), math.sin(a)
+        ln = LineString([
+            (cx - sdx * diag, cy - sdy * diag),
+            (cx + sdx * diag, cy + sdy * diag),
+        ])
+        _collect_lines(outline_poly.intersection(ln), result)
+    return result
+
+
+def gen_concentric_rings(
+    outline_poly, spacing: float, n_seg: int = 72
+) -> list[list[tuple[float, float]]]:
+    """Concentric circles radiating from the bounding-box centre, clipped to outline.
+
+    n_seg controls tessellation quality of each ring (higher = smoother circles).
+    """
+    minx, miny, maxx, maxy = outline_poly.bounds
+    cx = (minx + maxx) / 2.0
+    cy = (miny + maxy) / 2.0
+    # Radius must reach farthest corner from the centre
+    max_r = math.hypot(maxx - minx, maxy - miny) / 2.0 + spacing
+    result: list[list[tuple[float, float]]] = []
+    r = spacing
+    while r <= max_r:
+        pts = [
+            (
+                cx + r * math.cos(2.0 * math.pi * i / n_seg),
+                cy + r * math.sin(2.0 * math.pi * i / n_seg),
+            )
+            for i in range(n_seg)
+        ]
+        pts.append(pts[0])  # close the ring so it's a full circle
+        _collect_lines(outline_poly.intersection(LineString(pts)), result)
+        r += spacing
+    return result
+
+
+def gen_wave_fill(
+    outline_poly, spacing: float, amplitude: float, wavelength: float
+) -> list[list[tuple[float, float]]]:
+    """Parallel horizontal sine-wave lines clipped to the outline.
+
+    spacing    — row-to-row distance (mm)
+    amplitude  — wave height above/below the baseline (mm)
+    wavelength — horizontal distance per full cycle (mm)
+    """
+    minx, miny, maxx, maxy = outline_poly.bounds
+    width = (maxx - minx) + wavelength * 4
+    # 40 sample points per wavelength keeps curves smooth without exploding point count
+    n_pts = max(4, int(width / max(wavelength, 1e-6) * 40))
+    result: list[list[tuple[float, float]]] = []
+    y = miny + spacing / 2.0
+    while y <= maxy + spacing / 2.0:
+        x0 = minx - wavelength * 2
+        pts = [
+            (
+                x0 + i * width / n_pts,
+                y + amplitude * math.sin(2.0 * math.pi * (x0 + i * width / n_pts) / wavelength),
+            )
+            for i in range(n_pts + 1)
+        ]
+        _collect_lines(outline_poly.intersection(LineString(pts)), result)
+        y += spacing
+    return result
+
+
+def gen_square_grid(
+    outline_poly, spacing: float
+) -> list[list[tuple[float, float]]]:
+    """Orthogonal grid of horizontal and vertical lines clipped to outline."""
+    return (
+        gen_diagonal_lines(outline_poly, spacing, 0.0)   # horizontal
+        + gen_diagonal_lines(outline_poly, spacing, 90.0)  # vertical
+    )
+
+
+def gen_voronoi(
+    outline_poly, n_cells: int, gap: float = 0.1, seed: int = 42
+) -> list[list[tuple[float, float]]]:
+    """Random-seed Voronoi cells clipped to the outline.
+
+    n_cells  — approximate number of cells (actual may vary slightly due to clipping)
+    gap      — stroke gap around each cell edge (cell is shrunk by gap/2 before output)
+    seed     — random seed for reproducible layouts
+    """
+    rng = random.Random(seed)
+    minx, miny, maxx, maxy = outline_poly.bounds
+    # Seed points inside the bounding box; Voronoi is clipped to outline afterwards
+    pts = [
+        Point(rng.uniform(minx, maxx), rng.uniform(miny, maxy))
+        for _ in range(n_cells)
+    ]
+    mp = MultiPoint(pts)
+    envelope = outline_poly.convex_hull.buffer(
+        max(maxx - minx, maxy - miny) * 0.1
+    )
+    try:
+        diagram = voronoi_diagram(mp, envelope=envelope)
+    except Exception:
+        return []
+    result: list[list[tuple[float, float]]] = []
+    shrink = gap / 2.0
+    for cell in diagram.geoms:
+        clipped = outline_poly.intersection(cell)
+        if clipped.is_empty:
+            continue
+        geoms = (
+            [clipped]
+            if isinstance(clipped, Polygon)
+            else list(clipped.geoms)
+            if isinstance(clipped, MultiPolygon)
+            else []
+        )
+        for g in geoms:
+            if g.is_empty or g.area < 0.001:
+                continue
+            shrunk = g.buffer(-shrink) if shrink > 0 else g
+            if shrunk is None or shrunk.is_empty:
+                continue
+            if isinstance(shrunk, Polygon):
+                result.append(list(shrunk.exterior.coords))
+            elif isinstance(shrunk, MultiPolygon):
+                for s in shrunk.geoms:
+                    if not s.is_empty and s.area >= 0.001:
+                        result.append(list(s.exterior.coords))
+    return result
+
+
+def gen_triangle_grid(
+    outline_poly, size: float, gap: float = 0.1
+) -> list[list[tuple[float, float]]]:
+    """Equilateral triangle tessellation clipped to the outline.
+
+    size  — side length of each triangle (mm)
+    gap   — space between adjacent triangles (mm)
+    """
+    h = size * math.sqrt(3) / 2.0  # height of equilateral triangle
+    col_step = size + gap
+    row_step = h + gap * math.sqrt(3) / 2.0
+    half_gap = gap / 2.0
+    minx, miny, maxx, maxy = outline_poly.bounds
+    pad = size * 2.0
+    prep = prepared.prep(outline_poly)
+    result: list[list[tuple[float, float]]] = []
+    row = 0
+    y = miny - pad
+    while y <= maxy + pad:
+        x = minx - pad
+        while x <= maxx + pad:
+            # Two triangles per cell: upward and downward
+            # Upward triangle: apex at top
+            s2 = (size - gap) / 2.0   # half-base after gap
+            h2 = s2 * math.sqrt(3)     # corresponding height
+            if h2 > 0 and s2 > 0:
+                # Upward ▲ centred at (x, y)
+                up = [
+                    (x,       y + h2 * 2.0 / 3.0),
+                    (x + s2,  y - h2 / 3.0),
+                    (x - s2,  y - h2 / 3.0),
+                ]
+                tp = Polygon(up)
+                if prep.intersects(tp):
+                    if prep.contains(tp):
+                        result.append(up + [up[0]])
+                    else:
+                        clipped = outline_poly.intersection(tp)
+                        _extract_polys(clipped, result)
+                # Downward ▽ — offset half a column_step to the right and y same row
+                dx_off = col_step / 2.0
+                dn = [
+                    (x + dx_off,        y - h2 * 2.0 / 3.0),
+                    (x + dx_off - s2,   y + h2 / 3.0),
+                    (x + dx_off + s2,   y + h2 / 3.0),
+                ]
+                tp2 = Polygon(dn)
+                if prep.intersects(tp2):
+                    if prep.contains(tp2):
+                        result.append(dn + [dn[0]])
+                    else:
+                        clipped2 = outline_poly.intersection(tp2)
+                        _extract_polys(clipped2, result)
+            x += col_step
+        y += row_step
+        row += 1
+    return result
+
+
+def _extract_polys(
+    geom, out: list[list[tuple[float, float]]]
+) -> None:
+    """Append exterior coords of Polygon(s) from a Shapely geometry."""
+    if geom is None or geom.is_empty:
+        return
+    if isinstance(geom, Polygon):
+        if geom.area >= 0.001:
+            out.append(list(geom.exterior.coords))
+    elif isinstance(geom, MultiPolygon):
+        for g in geom.geoms:
+            if not g.is_empty and g.area >= 0.001:
+                out.append(list(g.exterior.coords))

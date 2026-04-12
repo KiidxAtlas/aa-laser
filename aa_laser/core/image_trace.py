@@ -2,13 +2,8 @@
 
 Dependencies: Pillow (already required), numpy (shapely transitive dep).
 
-Modes
------
-``"edges"``     Canny-style gradient edge detection.  Best for photographs.
-``"threshold"`` Hard threshold on grayscale value.  Best for clean silhouettes.
-
-Pipeline (threshold mode)
---------------------------
+Pipeline
+--------
 1. _load_image        — load, composite on white, downscale, return gray array
 2. _threshold_mask    — threshold → filled binary mask (dark objects by default)
 3. _morph_close       — optional PIL-based morphological closing to fill gaps
@@ -16,17 +11,11 @@ Pipeline (threshold mode)
 5. simplify_contours  — Ramer-Douglas-Peucker
 6. filter_contours    — drop by area (min / optional max)
 7. scale_to_mm        — pixel coords → millimetres
-
-Pipeline (edges mode)
-----------------------
-Steps 1–4 differ: Canny gradient edges → component labeling → greedy chain trace.
-Same simplify/filter/scale pipeline follows.
 """
 
 from __future__ import annotations
 
 import math
-from collections import deque
 
 import numpy as np
 from PIL import Image, ImageFilter
@@ -56,93 +45,7 @@ def _load_image(path: str, max_px: int = 1200) -> tuple[Image.Image, np.ndarray]
 
 
 # ---------------------------------------------------------------------------
-# Step 2a — Canny-style edge detection
-# ---------------------------------------------------------------------------
-
-
-def _sobel_gradients(arr: np.ndarray) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
-    """Vectorized Sobel: returns (gx, gy, magnitude)."""
-    p = np.pad(arr.astype(float), 1, mode="reflect")
-    gx = (
-        -p[:-2, :-2]
-        + p[:-2, 2:]
-        - 2 * p[1:-1, :-2]
-        + 2 * p[1:-1, 2:]
-        - p[2:, :-2]
-        + p[2:, 2:]
-    )
-    gy = (
-        -p[:-2, :-2]
-        - 2 * p[:-2, 1:-1]
-        - p[:-2, 2:]
-        + p[2:, :-2]
-        + 2 * p[2:, 1:-1]
-        + p[2:, 2:]
-    )
-    return gx, gy, np.hypot(gx, gy)
-
-
-def _nms(mag: np.ndarray, gx: np.ndarray, gy: np.ndarray) -> np.ndarray:
-    """Vectorised non-maximum suppression — thins edges to 1 pixel width."""
-    angle = np.arctan2(gy, gx) * 180.0 / np.pi % 180.0
-    qa = ((angle + 22.5) / 45.0).astype(int) % 4
-    pm = np.pad(mag, 1, mode="constant")
-    n1 = np.zeros_like(mag)
-    n2 = np.zeros_like(mag)
-    m0 = qa == 0
-    n1[m0] = pm[1:-1, 2:][m0]
-    n2[m0] = pm[1:-1, :-2][m0]
-    m1 = qa == 1
-    n1[m1] = pm[:-2, 2:][m1]
-    n2[m1] = pm[2:, :-2][m1]
-    m2 = qa == 2
-    n1[m2] = pm[:-2, 1:-1][m2]
-    n2[m2] = pm[2:, 1:-1][m2]
-    m3 = qa == 3
-    n1[m3] = pm[:-2, :-2][m3]
-    n2[m3] = pm[2:, 2:][m3]
-    return np.where((mag >= n1) & (mag >= n2), mag, 0.0)
-
-
-def _canny_binary(
-    gray: np.ndarray,
-    sigma: float = 1.5,
-    lo_pct: float = 0.5,
-    hi_pct: float = 0.8,
-) -> np.ndarray:
-    """
-    Canny-style edge detection → binary (0/1) edge mask.
-
-    lo_pct / hi_pct are percentiles of the non-zero NMS magnitude.
-    hi_pct=0.8 keeps the top 20 % as strong edges; lo_pct=0.5 allows the
-    top 50 % to be included as weak (hysteresis-connected) edges.
-    """
-    blurred = Image.fromarray(gray)
-    if sigma > 0:
-        blurred = blurred.filter(ImageFilter.GaussianBlur(radius=sigma))
-    arr = np.array(blurred, dtype=float)
-
-    gx, gy, mag = _sobel_gradients(arr)
-    thin = _nms(mag, gx, gy)
-
-    nz = thin[thin > 0]
-    if nz.size == 0:
-        return np.zeros_like(thin, dtype=np.uint8)
-
-    lo_val = float(np.percentile(nz, lo_pct * 100))
-    hi_val = float(np.percentile(nz, hi_pct * 100))
-
-    strong = (thin >= hi_val).astype(np.uint8)
-    weak = ((thin >= lo_val) & (thin < hi_val)).astype(np.uint8)
-
-    # Hysteresis: grow strong regions to include touching weak pixels
-    strong_img = Image.fromarray(strong * 255)
-    dilated = np.array(strong_img.filter(ImageFilter.MaxFilter(3))) > 0
-    return ((strong > 0) | (weak.astype(bool) & dilated)).astype(np.uint8)
-
-
-# ---------------------------------------------------------------------------
-# Step 2b — hard-threshold binary (filled mask)
+# Step 2 — hard-threshold binary (filled mask)
 # ---------------------------------------------------------------------------
 
 
@@ -325,122 +228,7 @@ def _morph_close(binary: np.ndarray, radius: int) -> np.ndarray:
 
 
 # ---------------------------------------------------------------------------
-# Step 4 — connected-component labeling (BFS, 8-connected)
-# ---------------------------------------------------------------------------
-
-
-def _label_components(binary: np.ndarray) -> tuple[np.ndarray, int]:
-    """BFS 8-connected labeling.  Returns (label_array, n_labels)."""
-    h, w = binary.shape
-    labels = np.zeros((h, w), dtype=np.int32)
-    N8 = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
-    curr = 0
-    rows, cols = np.where(binary > 0)
-    for r0, c0 in zip(rows.tolist(), cols.tolist()):
-        if labels[r0, c0]:
-            continue
-        curr += 1
-        q: deque[tuple[int, int]] = deque([(r0, c0)])
-        labels[r0, c0] = curr
-        while q:
-            r, c = q.popleft()
-            for dr, dc in N8:
-                nr, nc = r + dr, c + dc
-                if (
-                    0 <= nr < h
-                    and 0 <= nc < w
-                    and binary[nr, nc]
-                    and not labels[nr, nc]
-                ):
-                    labels[nr, nc] = curr
-                    q.append((nr, nc))
-    return labels, curr
-
-
-# ---------------------------------------------------------------------------
-# Step 5 — per-component greedy chain trace
-# ---------------------------------------------------------------------------
-
-# Clockwise 8-neighbourhood starting from East
-_CW8 = [(0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1), (-1, 0), (-1, 1)]
-_CW8_IDX = {d: i for i, d in enumerate(_CW8)}
-
-
-def _trace_component(
-    remaining: np.ndarray,
-    start: tuple[int, int],
-    h: int,
-    w: int,
-) -> list[tuple[int, int]]:
-    """
-    Greedy 8-connected walk of one connected component.
-
-    Prefers continuing in the same direction first; never immediately
-    reverses, which keeps the output polyline smooth.
-    """
-    chain = [start]
-    remaining[start] = False
-    pos = start
-    entry: tuple[int, int] | None = None
-
-    while True:
-        r, c = pos
-        if entry is None:
-            order = _CW8
-        else:
-            rev = (-entry[0], -entry[1])
-            si = _CW8_IDX.get(entry, 0)
-            order = [_CW8[(si + i) % 8] for i in range(8) if _CW8[(si + i) % 8] != rev]
-
-        moved = False
-        for dr, dc in order:
-            nr, nc = r + dr, c + dc
-            if 0 <= nr < h and 0 <= nc < w and remaining[nr, nc]:
-                chain.append((nr, nc))
-                remaining[nr, nc] = False
-                pos = (nr, nc)
-                entry = (dr, dc)
-                moved = True
-                break
-
-        if not moved:
-            break
-
-    return chain
-
-
-def _extract_contours(binary: np.ndarray) -> list[Poly]:
-    """Label connected components and trace each one independently."""
-    labels, n = _label_components(binary)
-    h, w = binary.shape
-    contours: list[Poly] = []
-
-    for lab in range(1, n + 1):
-        mask = labels == lab
-        rows, cols = np.where(mask)
-        if len(rows) < 6:
-            continue
-
-        remaining = mask.copy()
-        start = (int(rows[0]), int(cols[0]))  # topmost-leftmost pixel
-        chain = _trace_component(remaining, start, h, w)
-        if len(chain) < 6:
-            continue
-
-        # Close the loop if endpoints are spatially close
-        r0, c0 = chain[0]
-        rl, cl = chain[-1]
-        if abs(r0 - rl) <= 2 and abs(c0 - cl) <= 2:
-            chain.append((r0, c0))
-
-        # (row, col) → (x, y) with y pointing upward
-        contours.append([(float(c), float(h - r)) for r, c in chain])
-
-    return contours
-
-
-# ---------------------------------------------------------------------------
-# Step 6 — Ramer-Douglas-Peucker simplification
+# Step 4 — Ramer-Douglas-Peucker simplification
 # ---------------------------------------------------------------------------
 
 
@@ -478,7 +266,7 @@ def simplify_contours(contours: list[Poly], tolerance: float = 1.0) -> list[Poly
 
 
 # ---------------------------------------------------------------------------
-# Step 7 — area filtering
+# Step 5 — area filtering
 # ---------------------------------------------------------------------------
 
 
@@ -510,7 +298,7 @@ def filter_contours(
 
 
 # ---------------------------------------------------------------------------
-# Step 8 — scale to mm
+# Step 6 — scale to mm
 # ---------------------------------------------------------------------------
 
 
@@ -533,16 +321,9 @@ def scale_to_mm(
 def image_to_outlines(
     path: str,
     *,
-    mode: str = "edges",
-    # threshold-mode params
     blur_radius: float = 1.5,
     threshold: int | None = 128,
     invert: bool = False,
-    # edges-mode params
-    sigma: float = 1.5,
-    canny_lo: float = 0.5,
-    canny_hi: float = 0.8,
-    # shared
     close_radius: int = 1,
     simplify_tol: float = 2.0,
     min_area_px: float = 100.0,
@@ -562,16 +343,10 @@ def image_to_outlines(
     img_w_px = gray.shape[1]
     img_h_px = gray.shape[0]
 
-    if mode == "edges":
-        binary = _canny_binary(gray, sigma, canny_lo, canny_hi)
-        if close_radius > 0:
-            binary = _morph_close(binary, close_radius)
-        contours = _extract_contours(binary)
-    else:
-        mask = _threshold_mask(gray, blur_radius, threshold, invert)
-        if close_radius > 0:
-            mask = _morph_close(mask, close_radius)
-        contours = _marching_squares(mask)
+    mask = _threshold_mask(gray, blur_radius, threshold, invert)
+    if close_radius > 0:
+        mask = _morph_close(mask, close_radius)
+    contours = _marching_squares(mask)
 
     contours = simplify_contours(contours, simplify_tol)
     contours = filter_contours(contours, min_area_px, max_area_px)

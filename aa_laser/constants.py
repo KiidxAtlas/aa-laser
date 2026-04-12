@@ -1,10 +1,23 @@
 """Shared visual constants and list constants."""
 
-# Canvas colours
-_BG = "#16213e"  # canvas background
-_POLY = "#4d94ff"  # normal polyline colour
-_SEL = "#ff5252"  # selected polyline colour
-_DIM = "#888888"  # status / dim text
+from PySide6.QtGui import QColor
+
+# ── Canvas colors ────────────────────────────────────────────────────────────
+# (hex strings kept for convenience; QColor versions for Qt)
+_BG = "#0d1117"  # canvas background — deepest layer
+_POLY = "#4a9eff"  # polyline normal
+_SEL = "#f47067"  # polyline selected / danger accent
+_DIM = "#8b949e"  # muted labels / secondary text
+
+Q_BG = QColor(_BG)
+Q_POLY = QColor(_POLY)
+Q_SEL = QColor(_SEL)
+Q_DIM = QColor(_DIM)
+
+# ── Semantic status colors (for setStyleSheet calls in tabs) ─────────────────
+_SUCCESS = "#3fb950"  # green — saved, done, ok
+_ERROR = "#f85149"  # red   — failed, error
+_WARN = "#d29922"  # amber — warning
 
 # Interaction
 _DRAG_THRESH = 5  # pixels
@@ -17,6 +30,14 @@ _PATTERNS = [
     "Diamond Checkering",
     "Fish Scale",
     "Stipple Dots",
+    "Brick",
+    "Diagonal Lines",
+    "Square Grid",
+    "Concentric Rings",
+    "Wave Fill",
+    "Sunburst",
+    "Voronoi",
+    "Triangle Grid",
     "Custom Tile",
     "Image Halftone",
 ]

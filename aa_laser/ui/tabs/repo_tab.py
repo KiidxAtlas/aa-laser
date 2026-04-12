@@ -4,113 +4,137 @@ from __future__ import annotations
 
 import subprocess
 import threading
-from tkinter import filedialog
 
-import customtkinter as ctk
+from PySide6.QtCore import QTimer
+from PySide6.QtGui import QFont
+from PySide6.QtWidgets import (
+    QFileDialog,
+    QHBoxLayout,
+    QLabel,
+    QLineEdit,
+    QPlainTextEdit,
+    QPushButton,
+    QVBoxLayout,
+    QWidget,
+)
 
 from aa_laser.constants import _DIM
 from aa_laser.settings import save_settings
 from aa_laser.ui.helpers import _section_label
 
 
-class RepoTab(ctk.CTkFrame):
-    def __init__(self, master, settings: dict, **kw):
-        super().__init__(master, fg_color="transparent", **kw)
-        self._settings = settings
-        self._build()
+class RepoTab(QWidget):
+    def __init__(self, parent: QWidget | None = None, settings: dict | None = None):
+        super().__init__(parent)
+        self._settings: dict = settings or {}
 
-    def _build(self) -> None:
-        left = ctk.CTkFrame(self, width=300)
-        left.pack(side="left", fill="y", padx=(10, 4), pady=10)
-        left.pack_propagate(False)
+        root = QHBoxLayout(self)
+        root.setContentsMargins(10, 10, 10, 10)
 
-        right = ctk.CTkFrame(self, fg_color="transparent")
-        right.pack(side="left", fill="both", expand=True, padx=(4, 10), pady=10)
+        left_w = QWidget()
+        left_w.setFixedWidth(300)
+        left = QVBoxLayout(left_w)
+        left.setContentsMargins(0, 0, 0, 0)
+        root.addWidget(left_w)
+
+        right_w = QWidget()
+        right = QVBoxLayout(right_w)
+        right.setContentsMargins(4, 0, 0, 0)
+        root.addWidget(right_w, stretch=1)
 
         self._build_left(left)
         self._build_right(right)
 
-    def _build_left(self, parent: ctk.CTkFrame) -> None:
-        _section_label(parent, "Repository")
+    # ── Left panel ────────────────────────────────────────────────────────────
 
-        ctk.CTkLabel(parent, text="Local path", anchor="w", text_color=_DIM).pack(
-            anchor="w", padx=10
-        )
-        path_row = ctk.CTkFrame(parent, fg_color="transparent")
-        path_row.pack(fill="x", padx=8, pady=(2, 4))
-        self._repo_path = ctk.CTkEntry(path_row, placeholder_text="Path to repo…")
-        self._repo_path.insert(0, self._settings.get("repo_path", ""))
-        self._repo_path.pack(side="left", fill="x", expand=True, padx=(0, 6))
-        ctk.CTkButton(
-            path_row, text="…", width=28, height=28, command=self._browse_repo
-        ).pack(side="right")
+    def _build_left(self, layout: QVBoxLayout) -> None:
+        _section_label(layout, "Repository")
 
-        ctk.CTkLabel(parent, text="Remote URL", anchor="w", text_color=_DIM).pack(
-            anchor="w", padx=10
-        )
-        self._remote_url = ctk.CTkEntry(parent, placeholder_text="https://github.com/…")
-        self._remote_url.insert(0, self._settings.get("repo_remote", ""))
-        self._remote_url.pack(fill="x", padx=8, pady=(2, 4))
+        lbl = QLabel("Local path")
+        lbl.setStyleSheet(f"color: {_DIM};")
+        layout.addWidget(lbl)
 
-        _section_label(parent, "Status", pady=(8, 4))
-        self._branch_label = ctk.CTkLabel(parent, text="—", anchor="w", text_color=_DIM)
-        self._branch_label.pack(anchor="w", padx=10)
-        self._commit_label = ctk.CTkLabel(
-            parent,
-            text="",
-            anchor="w",
-            text_color=_DIM,
-            wraplength=270,
-            font=("Helvetica", 11),
-        )
-        self._commit_label.pack(anchor="w", padx=10, pady=(2, 0))
-        ctk.CTkButton(
-            parent,
-            text="↺  Refresh status",
-            height=28,
-            fg_color="transparent",
-            border_width=1,
-            command=self._refresh_status,
-        ).pack(fill="x", padx=8, pady=(6, 0))
+        path_row = QHBoxLayout()
+        self._repo_path = QLineEdit()
+        self._repo_path.setPlaceholderText("Path to repo…")
+        self._repo_path.setText(self._settings.get("repo_path", ""))
+        path_row.addWidget(self._repo_path, stretch=1)
+        browse_btn = QPushButton("…")
+        browse_btn.setFixedSize(28, 28)
+        browse_btn.clicked.connect(self._browse_repo)
+        path_row.addWidget(browse_btn)
+        layout.addLayout(path_row)
 
-        _section_label(parent, "Sync")
-        self._pull_btn = ctk.CTkButton(
-            parent, text="⬇  Pull", height=34, command=self._pull
+        lbl2 = QLabel("Remote URL")
+        lbl2.setStyleSheet(f"color: {_DIM};")
+        layout.addWidget(lbl2)
+        self._remote_url = QLineEdit()
+        self._remote_url.setReadOnly(True)
+        self._remote_url.setPlaceholderText(
+            "(refreshed from git remote get-url origin)"
         )
-        self._pull_btn.pack(fill="x", padx=8, pady=(0, 6))
+        self._remote_url.setStyleSheet("color: #8b949e;")
+        layout.addWidget(self._remote_url)
 
-        _section_label(parent, "Commit & Push")
-        ctk.CTkLabel(parent, text="Commit message", anchor="w", text_color=_DIM).pack(
-            anchor="w", padx=10
-        )
-        self._commit_msg = ctk.CTkEntry(parent, placeholder_text="Update patterns…")
-        self._commit_msg.pack(fill="x", padx=8, pady=(2, 6))
-        self._push_btn = ctk.CTkButton(
-            parent,
-            text="⬆  Commit & Push",
-            height=34,
-            fg_color="#1a5c1a",
-            hover_color="#227722",
-            command=self._push,
-        )
-        self._push_btn.pack(fill="x", padx=8, pady=(0, 6))
+        # ── Status ────────────────────────────────────────────────────────────
+        _section_label(layout, "Status")
+        self._branch_label = QLabel("—")
+        self._branch_label.setStyleSheet(f"color: {_DIM};")
+        layout.addWidget(self._branch_label)
+        self._commit_label = QLabel("")
+        self._commit_label.setStyleSheet(f"color: {_DIM}; font-size: 11px;")
+        self._commit_label.setWordWrap(True)
+        layout.addWidget(self._commit_label)
 
-    def _build_right(self, parent: ctk.CTkFrame) -> None:
-        _section_label(parent, "Git Output", padx=4, pady=(0, 4))
-        self._log = ctk.CTkTextbox(parent, font=("Menlo", 11), state="disabled")
-        self._log.pack(fill="both", expand=True)
+        refresh_btn = QPushButton("↺  Refresh status")
+        refresh_btn.setMinimumHeight(28)
+        refresh_btn.clicked.connect(self._refresh_status)
+        layout.addWidget(refresh_btn)
+
+        # ── Sync ──────────────────────────────────────────────────────────────
+        _section_label(layout, "Sync")
+        self._pull_btn = QPushButton("⬇  Pull")
+        self._pull_btn.setMinimumHeight(34)
+        self._pull_btn.clicked.connect(self._pull)
+        layout.addWidget(self._pull_btn)
+
+        # ── Commit & Push ─────────────────────────────────────────────────────
+        _section_label(layout, "Commit & Push")
+        lbl3 = QLabel("Commit message")
+        lbl3.setStyleSheet(f"color: {_DIM};")
+        layout.addWidget(lbl3)
+        self._commit_msg = QLineEdit()
+        self._commit_msg.setPlaceholderText("Update patterns…")
+        layout.addWidget(self._commit_msg)
+        self._push_btn = QPushButton("⬆  Commit & Push")
+        self._push_btn.setMinimumHeight(34)
+        self._push_btn.setStyleSheet(
+            "background: transparent;border: 1px solid #3fb950;color: #3fb950;"
+        )
+        self._push_btn.clicked.connect(self._push)
+        layout.addWidget(self._push_btn)
+
+        layout.addStretch()
+
+    # ── Right panel ───────────────────────────────────────────────────────────
+
+    def _build_right(self, layout: QVBoxLayout) -> None:
+        _section_label(layout, "Git Output")
+        self._log = QPlainTextEdit()
+        self._log.setReadOnly(True)
+        self._log.setFont(QFont("Menlo", 11))
+        layout.addWidget(self._log, stretch=1)
 
     # ── Helpers ──────────────────────────────────────────────────────────────
 
     def _repo_dir(self) -> str | None:
-        d = self._repo_path.get().strip()
+        d = self._repo_path.text().strip()
         return d if d else None
 
     def _browse_repo(self) -> None:
-        d = filedialog.askdirectory(title="Select local repository folder")
+        d = QFileDialog.getExistingDirectory(self, "Select local repository folder")
         if d:
-            self._repo_path.delete(0, "end")
-            self._repo_path.insert(0, d)
+            self._repo_path.setText(d)
             self._settings["repo_path"] = d
             save_settings(self._settings)
 
@@ -134,34 +158,34 @@ class RepoTab(ctk.CTkFrame):
             return 1, "git command timed out."
 
     def _log_write(self, text: str) -> None:
-        self._log.configure(state="normal")
-        self._log.insert("end", text + "\n")
-        self._log.see("end")
-        self._log.configure(state="disabled")
+        self._log.appendPlainText(text)
 
     def _log_clear(self) -> None:
-        self._log.configure(state="normal")
-        self._log.delete("1.0", "end")
-        self._log.configure(state="disabled")
+        self._log.clear()
 
     def _set_btns(self, enabled: bool) -> None:
-        state = "normal" if enabled else "disabled"
-        self._pull_btn.configure(state=state)
-        self._push_btn.configure(state=state)
+        self._pull_btn.setEnabled(enabled)
+        self._push_btn.setEnabled(enabled)
 
     # ── Status ────────────────────────────────────────────────────────────────
 
     def _refresh_status(self) -> None:
         rc, branch = self._git("rev-parse", "--abbrev-ref", "HEAD")
         if rc == 0:
-            self._branch_label.configure(text=f"Branch: {branch}", text_color="#60c060")
+            self._branch_label.setText(f"Branch: {branch}")
+            self._branch_label.setStyleSheet("color: #3fb950;")
         else:
-            self._branch_label.configure(text="Not a git repo", text_color="#e06060")
-            self._commit_label.configure(text="")
+            self._branch_label.setText("Not a git repo")
+            self._branch_label.setStyleSheet("color: #f85149;")
+            self._commit_label.setText("")
+            self._remote_url.setText("")
             return
         rc2, log = self._git("log", "--oneline", "-1")
         if rc2 == 0:
-            self._commit_label.configure(text=log, text_color=_DIM)
+            self._commit_label.setText(log)
+            self._commit_label.setStyleSheet(f"color: {_DIM};")
+        rc3, remote = self._git("remote", "get-url", "origin")
+        self._remote_url.setText(remote if rc3 == 0 else "")
 
     # ── Pull ──────────────────────────────────────────────────────────────────
 
@@ -171,41 +195,41 @@ class RepoTab(ctk.CTkFrame):
         threading.Thread(target=self._run_pull, daemon=True).start()
 
     def _run_pull(self) -> None:
-        self.after(0, self._log_write, "$ git pull")
+        QTimer.singleShot(0, lambda: self._log_write("$ git pull"))
         rc, out = self._git("pull")
-        self.after(0, self._log_write, out)
+        QTimer.singleShot(0, lambda: self._log_write(out))
         if rc == 0:
-            self.after(0, self._refresh_status)
-        self.after(0, self._set_btns, True)
+            QTimer.singleShot(0, self._refresh_status)
+        QTimer.singleShot(0, lambda: self._set_btns(True))
 
     # ── Push ──────────────────────────────────────────────────────────────────
 
     def _push(self) -> None:
-        msg = self._commit_msg.get().strip() or "app commit"
+        msg = self._commit_msg.text().strip() or "app commit"
         self._set_btns(False)
         self._log_clear()
         threading.Thread(target=self._run_push, args=(msg,), daemon=True).start()
 
     def _run_push(self, msg: str) -> None:
-        self.after(0, self._log_write, "$ git add -A")
+        QTimer.singleShot(0, lambda: self._log_write("$ git add -A"))
         rc, out = self._git("add", "-A")
         if out:
-            self.after(0, self._log_write, out)
+            QTimer.singleShot(0, lambda o=out: self._log_write(o))
 
-        self.after(0, self._log_write, f'$ git commit -m "{msg}"')
+        QTimer.singleShot(0, lambda: self._log_write(f'$ git commit -m "{msg}"'))
         rc, out = self._git("commit", "-m", msg)
-        self.after(0, self._log_write, out)
+        QTimer.singleShot(0, lambda o=out: self._log_write(o))
         if rc != 0 and "nothing to commit" not in out:
-            self.after(0, self._set_btns, True)
+            QTimer.singleShot(0, lambda: self._set_btns(True))
             return
 
-        self.after(0, self._log_write, "$ git push")
+        QTimer.singleShot(0, lambda: self._log_write("$ git push"))
         rc, out = self._git("push")
-        self.after(0, self._log_write, out)
+        QTimer.singleShot(0, lambda o=out: self._log_write(o))
         if rc == 0:
-            self.after(0, self._refresh_status)
-            self.after(0, lambda: self._commit_msg.delete(0, "end"))
-        self.after(0, self._set_btns, True)
+            QTimer.singleShot(0, self._refresh_status)
+            QTimer.singleShot(0, lambda: self._commit_msg.clear())
+        QTimer.singleShot(0, lambda: self._set_btns(True))
 
     # ── Auto-pull on startup ──────────────────────────────────────────────────
 

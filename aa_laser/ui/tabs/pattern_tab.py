@@ -4,11 +4,26 @@ from __future__ import annotations
 
 import subprocess
 import threading
-import tkinter as tk
 from pathlib import Path
-from tkinter import filedialog, messagebox
 
-import customtkinter as ctk
+from PySide6.QtCore import QPoint, Qt, QTimer, Signal
+from PySide6.QtWidgets import (
+    QCheckBox,
+    QComboBox,
+    QFileDialog,
+    QGridLayout,
+    QHBoxLayout,
+    QLabel,
+    QLineEdit,
+    QMenu,
+    QMessageBox,
+    QProgressBar,
+    QPushButton,
+    QScrollArea,
+    QTabWidget,
+    QVBoxLayout,
+    QWidget,
+)
 
 from aa_laser.constants import _DIM, _PATTERNS, _SEL
 from aa_laser.core.dxf_io import (
@@ -17,598 +32,574 @@ from aa_laser.core.dxf_io import (
     write_polylines_dxf,
 )
 from aa_laser.core.generators import (
+    gen_brick,
+    gen_concentric_rings,
     gen_custom_tile,
+    gen_diagonal_lines,
     gen_diamond_checkering,
     gen_fish_scale,
     gen_gradient_honeycomb,
     gen_honeycomb,
     gen_image_halftone,
+    gen_square_grid,
     gen_stipple_dots,
+    gen_sunburst,
+    gen_triangle_grid,
+    gen_voronoi,
+    gen_wave_fill,
 )
 from aa_laser.settings import save_settings
 from aa_laser.ui.canvas import DxfCanvas
 from aa_laser.ui.helpers import _section_label
 
 
-class PatternTab(ctk.CTkFrame):
-    def __init__(self, master, settings: dict | None = None, **kw):
-        super().__init__(master, fg_color="transparent", **kw)
+def _param_entry(
+    grid: QGridLayout, row: int, label: str, default: str, width: int = 80
+) -> QLineEdit:
+    grid.addWidget(QLabel(label), row, 0)
+    e = QLineEdit(default)
+    e.setFixedWidth(width)
+    grid.addWidget(e, row, 1)
+    return e
+
+
+class PatternTab(QWidget):
+    _gen_done = Signal(object)  # (count, name, polys)
+    _gen_error = Signal(str)
+    _preview_done = Signal(object)  # (display_polys, count)
+    _preview_error = Signal(str)
+
+    def __init__(self, parent: QWidget | None = None, settings: dict | None = None):
+        super().__init__(parent)
         self._settings: dict = settings or {}
 
         # Runtime state
         self._orig_polys: list[list[tuple[float, float]]] = []
-        self._edit_polys: list[
-            list[tuple[float, float]]
-        ] = []  # outline after user edits
-        self._orig_w: float = 0.0  # bounding-box width of loaded DXF (mm)
-        self._orig_h: float = 0.0  # bounding-box height
-        self._ar_locked: bool = True  # aspect-ratio lock state
-        self._updating_dims: bool = False  # re-entrance guard
-        self._preview_job: str | None = None  # debounce handle
-        self._preview_running: bool = False  # background thread guard
+        self._edit_polys: list[list[tuple[float, float]]] = []
+        self._orig_w: float = 0.0
+        self._orig_h: float = 0.0
+        self._ar_locked: bool = True
+        self._updating_dims: bool = False
+        self._preview_running: bool = False
+        self._last_out_path: str | None = None
 
-        # Two-column layout
-        left_outer = ctk.CTkFrame(self, width=310)
-        left_outer.pack(side="left", fill="y", padx=(10, 4), pady=10)
-        left_outer.pack_propagate(False)
-        left = ctk.CTkScrollableFrame(left_outer, fg_color="transparent", width=290)
-        left.pack(fill="both", expand=True)
+        self._preview_timer = QTimer(self)
+        self._preview_timer.setSingleShot(True)
+        self._preview_timer.timeout.connect(self._start_preview_thread)
 
-        right = ctk.CTkFrame(self, fg_color="transparent")
-        right.pack(side="left", fill="both", expand=True, padx=(4, 10), pady=10)
+        self._gen_done.connect(self._handle_gen_done)
+        self._gen_error.connect(self._handle_gen_error)
+        self._preview_done.connect(self._handle_preview_done)
+        self._preview_error.connect(self._handle_preview_error)
+
+        root = QHBoxLayout(self)
+        root.setContentsMargins(10, 10, 10, 10)
+
+        # Left panel (scrollable)
+        scroll = QScrollArea()
+        scroll.setWidgetResizable(True)
+        scroll.setFixedWidth(310)
+        scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        left_w = QWidget()
+        left = QVBoxLayout(left_w)
+        left.setContentsMargins(4, 4, 4, 4)
+        scroll.setWidget(left_w)
+        root.addWidget(scroll)
+
+        right_w = QWidget()
+        right = QVBoxLayout(right_w)
+        right.setContentsMargins(0, 0, 0, 0)
+        root.addWidget(right_w, stretch=1)
 
         self._build_left(left)
         self._build_right(right)
 
     # ── Left panel ────────────────────────────────────────────────────────────
 
-    def _build_left(self, parent: ctk.CTkFrame) -> None:
+    def _build_left(self, layout: QVBoxLayout) -> None:
         # ── DXF file ──────────────────────────────────────────────────────────
-        _section_label(parent, "Outline DXF")
+        _section_label(layout, "Outline DXF")
+        file_row = QHBoxLayout()
+        self._dxf_edit = QLineEdit()
+        self._dxf_edit.setPlaceholderText("Select .dxf…")
+        file_row.addWidget(self._dxf_edit, stretch=1)
+        self._recent_btn = QPushButton("Recent ▾")
+        self._recent_btn.setFixedWidth(76)
+        self._recent_btn.clicked.connect(self._show_recent_menu)
+        file_row.addWidget(self._recent_btn)
+        browse_btn = QPushButton("Browse")
+        browse_btn.setFixedWidth(72)
+        browse_btn.clicked.connect(self._browse_dxf)
+        file_row.addWidget(browse_btn)
+        layout.addLayout(file_row)
 
-        file_row = ctk.CTkFrame(parent, fg_color="transparent")
-        file_row.pack(fill="x", padx=8, pady=(4, 0))
-        self._dxf_var = ctk.StringVar()
-        ctk.CTkEntry(
-            file_row, textvariable=self._dxf_var, placeholder_text="Select .dxf…"
-        ).pack(side="left", fill="x", expand=True, padx=(0, 4))
-        self._recent_btn = ctk.CTkButton(
-            file_row, text="Recent ▾", width=64, command=self._show_recent_menu
-        )
-        self._recent_btn.pack(side="right", padx=(0, 4))
-        ctk.CTkButton(file_row, text="Browse", width=64, command=self._browse_dxf).pack(
-            side="right"
-        )
+        reload_btn = QPushButton("↺  Reload")
+        reload_btn.setMinimumHeight(28)
+        reload_btn.clicked.connect(self._reload_dxf)
+        layout.addWidget(reload_btn)
 
-        ctk.CTkButton(
-            parent,
-            text="↺  Reload",
-            height=28,
-            fg_color="transparent",
-            border_width=1,
-            command=self._reload_dxf,
-        ).pack(fill="x", padx=8, pady=(4, 0))
+        # ── Scale ─────────────────────────────────────────────────────────────
+        _section_label(layout, "Scale")
 
-        _section_label(parent, "Scale")
+        orig_row = QHBoxLayout()
+        orig_row.addWidget(QLabel("Original:"))
+        self._orig_dims_label = QLabel("—")
+        self._orig_dims_label.setStyleSheet(f"color: {_DIM};")
+        orig_row.addWidget(self._orig_dims_label)
+        orig_row.addStretch()
+        layout.addLayout(orig_row)
 
-        # Original size display
-        orig_row = ctk.CTkFrame(parent, fg_color="transparent")
-        orig_row.pack(fill="x", padx=10, pady=(0, 4))
-        ctk.CTkLabel(
-            orig_row, text="Original:", text_color=_DIM, anchor="w", width=68
-        ).pack(side="left")
-        self._orig_dims_label = ctk.CTkLabel(
-            orig_row, text="—", text_color=_DIM, anchor="w"
-        )
-        self._orig_dims_label.pack(side="left")
+        dims_g = QGridLayout()
+        dims_g.addWidget(QLabel("Width (mm)"), 0, 0)
+        self._scale_w = QLineEdit()
+        self._scale_w.setFixedWidth(80)
+        self._scale_w.setPlaceholderText("auto")
+        self._scale_w.textChanged.connect(self._on_scale_w_changed)
+        self._scale_w.textChanged.connect(self._schedule_preview)
+        dims_g.addWidget(self._scale_w, 0, 1)
+        dims_g.addWidget(QLabel("Height (mm)"), 1, 0)
+        self._scale_h = QLineEdit()
+        self._scale_h.setFixedWidth(80)
+        self._scale_h.setPlaceholderText("auto")
+        self._scale_h.textChanged.connect(self._on_scale_h_changed)
+        self._scale_h.textChanged.connect(self._schedule_preview)
+        dims_g.addWidget(self._scale_h, 1, 1)
+        layout.addLayout(dims_g)
 
-        # Scale-to fields
-        dims_g = ctk.CTkFrame(parent, fg_color="transparent")
-        dims_g.pack(fill="x", padx=8, pady=(0, 2))
-        ctk.CTkLabel(dims_g, text="Width (mm)", anchor="w", width=90).grid(
-            row=0, column=0, padx=6, pady=2, sticky="w"
-        )
-        self._scale_w = ctk.CTkEntry(dims_g, width=80, placeholder_text="auto")
-        self._scale_w.grid(row=0, column=1, padx=4, pady=2)
-        self._scale_w.bind("<KeyRelease>", self._on_scale_w_changed)
-        self._scale_w.bind("<KeyRelease>", self._schedule_preview, add="+")
+        self._ar_cb = QCheckBox("Lock aspect ratio")
+        self._ar_cb.setChecked(True)
+        self._ar_cb.stateChanged.connect(self._on_ar_toggle)
+        layout.addWidget(self._ar_cb)
 
-        ctk.CTkLabel(dims_g, text="Height (mm)", anchor="w", width=90).grid(
-            row=1, column=0, padx=6, pady=2, sticky="w"
-        )
-        self._scale_h = ctk.CTkEntry(dims_g, width=80, placeholder_text="auto")
-        self._scale_h.grid(row=1, column=1, padx=4, pady=2)
-        self._scale_h.bind("<KeyRelease>", self._on_scale_h_changed)
-        self._scale_h.bind("<KeyRelease>", self._schedule_preview, add="+")
+        # ── Outline editor ────────────────────────────────────────────────────
+        _section_label(layout, "Outline Editor")
 
-        # Aspect-ratio lock
-        ar_row = ctk.CTkFrame(parent, fg_color="transparent")
-        ar_row.pack(fill="x", padx=10, pady=(0, 2))
-        self._ar_var = ctk.BooleanVar(value=True)
-        ctk.CTkCheckBox(
-            ar_row,
-            text="Lock aspect ratio",
-            variable=self._ar_var,
-            command=self._on_ar_toggle,
-        ).pack(side="left")
+        self._sel_label = QLabel("0 selected")
+        self._sel_label.setStyleSheet(f"color: {_DIM};")
+        layout.addWidget(self._sel_label)
 
-        _section_label(parent, "Outline Editor")
+        btn_row = QHBoxLayout()
+        for label, slot in [
+            ("All", lambda: self._canvas.select_all()),
+            ("None", lambda: self._canvas.deselect_all()),
+            ("Fit", lambda: self._canvas.fit()),
+        ]:
+            b = QPushButton(label)
+            b.setFixedHeight(28)
+            b.clicked.connect(slot)
+            btn_row.addWidget(b)
+        layout.addLayout(btn_row)
 
-        self._sel_label = ctk.CTkLabel(
-            parent, text="0 selected", text_color=_DIM, anchor="w"
+        del_btn = QPushButton("Delete Selected  [Del]")
+        del_btn.setMinimumHeight(30)
+        del_btn.setStyleSheet(
+            "background: transparent;border: 1px solid #f85149;color: #f85149;"
         )
-        self._sel_label.pack(anchor="w", padx=10)
+        del_btn.clicked.connect(self._delete_selected)
+        layout.addWidget(del_btn)
 
-        btn_row = ctk.CTkFrame(parent, fg_color="transparent")
-        btn_row.pack(fill="x", padx=8, pady=(4, 0))
-        ctk.CTkButton(
-            btn_row,
-            text="All",
-            width=46,
-            height=28,
-            command=lambda: self._canvas.select_all(),
-        ).pack(side="left", padx=(0, 3))
-        ctk.CTkButton(
-            btn_row,
-            text="None",
-            width=46,
-            height=28,
-            command=lambda: self._canvas.deselect_all(),
-        ).pack(side="left", padx=(0, 3))
-        ctk.CTkButton(
-            btn_row, text="Fit", width=40, height=28, command=lambda: self._canvas.fit()
-        ).pack(side="left")
+        undo_btn = QPushButton("↩  Undo Delete")
+        undo_btn.setMinimumHeight(28)
+        undo_btn.clicked.connect(self._undo_delete)
+        layout.addWidget(undo_btn)
 
-        self._del_btn = ctk.CTkButton(
-            parent,
-            text="Delete Selected  [Del]",
-            height=30,
-            fg_color="#8b1a1a",
-            hover_color="#b22222",
-            command=self._delete_selected,
-        )
-        self._del_btn.pack(fill="x", padx=8, pady=(6, 0))
-        self._undo_btn = ctk.CTkButton(
-            parent,
-            text="↩  Undo Delete",
-            height=28,
-            fg_color="transparent",
-            border_width=1,
-            command=self._undo_delete,
-        )
-        self._undo_btn.pack(fill="x", padx=8, pady=(3, 0))
+        # ── Pattern ───────────────────────────────────────────────────────────
+        _section_label(layout, "Pattern")
+        self._pattern_combo = QComboBox()
+        self._pattern_combo.addItems(_PATTERNS)
+        self._pattern_combo.currentTextChanged.connect(self._switch_pattern)
+        layout.addWidget(self._pattern_combo)
 
-        _section_label(parent, "Pattern")
-        self._pattern_var = ctk.StringVar(value="— None —")
-        ctk.CTkOptionMenu(
-            parent,
-            values=_PATTERNS,
-            variable=self._pattern_var,
-            command=self._switch_pattern,
-        ).pack(fill="x", padx=8, pady=(0, 6))
+        # Pattern param panels (stacked manually — show/hide)
+        self._honeycomb_w = self._make_honeycomb_params()
+        self._gradient_w = self._make_gradient_params()
+        self._checkering_w = self._make_checkering_params()
+        self._fishscale_w = self._make_fishscale_params()
+        self._stipple_w = self._make_stipple_params()
+        self._brick_w = self._make_brick_params()
+        self._diagonal_w = self._make_diagonal_lines_params()
+        self._square_grid_w = self._make_square_grid_params()
+        self._concentric_w = self._make_concentric_rings_params()
+        self._wave_w = self._make_wave_fill_params()
+        self._sunburst_w = self._make_sunburst_params()
+        self._voronoi_w = self._make_voronoi_params()
+        self._triangle_w = self._make_triangle_grid_params()
+        self._custom_tile_w = self._make_custom_tile_params()
+        self._halftone_w = self._make_halftone_params()
 
-        self._honeycomb_frame = self._make_honeycomb_params(parent)
-        self._checkering_frame = self._make_checkering_params(parent)
-        self._fishscale_frame = self._make_fishscale_params(parent)
-        self._stipple_frame = self._make_stipple_params(parent)
-        self._gradient_frame = self._make_gradient_params(parent)
-        self._custom_tile_frame = self._make_custom_tile_params(parent)
-        self._halftone_frame = self._make_halftone_params(parent)
-        self._switch_pattern("— None —")
+        self._pattern_widgets = [
+            self._honeycomb_w,
+            self._gradient_w,
+            self._checkering_w,
+            self._fishscale_w,
+            self._stipple_w,
+            self._brick_w,
+            self._diagonal_w,
+            self._square_grid_w,
+            self._concentric_w,
+            self._wave_w,
+            self._sunburst_w,
+            self._voronoi_w,
+            self._triangle_w,
+            self._custom_tile_w,
+            self._halftone_w,
+        ]
+        for w in self._pattern_widgets:
+            layout.addWidget(w)
+            w.hide()
 
-        _section_label(parent, "Generate")
-        self._gen_btn = ctk.CTkButton(
-            parent, text="Generate DXF", height=38, command=self._generate
-        )
-        self._gen_btn.pack(fill="x", padx=8, pady=(0, 6))
+        # ── Generate ──────────────────────────────────────────────────────────
+        _section_label(layout, "Generate")
 
-        self._progress = ctk.CTkProgressBar(parent)
-        self._progress.pack(fill="x", padx=8, pady=(0, 4))
-        self._progress.set(0)
+        self._include_border_cb = QCheckBox("Include border on separate layer")
+        self._include_border_cb.setToolTip(
+            "Writes the outline on a 'BORDER' DXF layer so your laser\n"
+            "program can treat it separately from the pattern fill."
+        )
+        layout.addWidget(self._include_border_cb)
 
-        self._status = ctk.CTkLabel(
-            parent, text="", text_color=_DIM, anchor="w", wraplength=290
-        )
-        self._status.pack(anchor="w", padx=10, pady=(0, 4))
-        self._last_out_path: str | None = None
-        self._reveal_btn = ctk.CTkButton(
-            parent,
-            text="Show in Finder",
-            height=26,
-            fg_color="transparent",
-            border_width=1,
-            command=self._reveal_in_finder,
-            state="disabled",
-        )
-        self._reveal_btn.pack(fill="x", padx=8, pady=(0, 8))
+        self._gen_btn = QPushButton("Generate DXF")
+        self._gen_btn.setMinimumHeight(38)
+        self._gen_btn.setProperty("role", "primary")
+        self._gen_btn.clicked.connect(self._generate)
+        layout.addWidget(self._gen_btn)
 
-    def _make_honeycomb_params(self, parent: ctk.CTkFrame) -> ctk.CTkFrame:
-        f = ctk.CTkFrame(parent, fg_color="transparent")
-        g = ctk.CTkFrame(f, fg_color="transparent")
-        g.pack(fill="x", padx=4)
-        ctk.CTkLabel(g, text="Hex size (mm)", anchor="w", width=145).grid(
-            row=0, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._hex_r = ctk.CTkEntry(g, width=80)
-        self._hex_r.insert(0, "1.75")
-        self._hex_r.grid(row=0, column=1, padx=4, pady=3)
-        self._hex_r.bind("<KeyRelease>", self._schedule_preview)
-        ctk.CTkLabel(g, text="Gap (mm)", anchor="w", width=145).grid(
-            row=1, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._hex_gap = ctk.CTkEntry(g, width=80)
-        self._hex_gap.insert(0, "0.5")
-        self._hex_gap.grid(row=1, column=1, padx=4, pady=3)
-        self._hex_gap.bind("<KeyRelease>", self._schedule_preview)
-        return f
+        self._progress = QProgressBar()
+        self._progress.setRange(0, 100)
+        self._progress.setValue(0)
+        layout.addWidget(self._progress)
 
-    def _make_checkering_params(self, parent: ctk.CTkFrame) -> ctk.CTkFrame:
-        f = ctk.CTkFrame(parent, fg_color="transparent")
-        g = ctk.CTkFrame(f, fg_color="transparent")
-        g.pack(fill="x", padx=4)
-        ctk.CTkLabel(g, text="Line spacing (mm)", anchor="w", width=145).grid(
-            row=0, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._check_spacing = ctk.CTkEntry(g, width=80)
-        self._check_spacing.insert(0, "1.0")
-        self._check_spacing.grid(row=0, column=1, padx=4, pady=3)
-        self._check_spacing.bind("<KeyRelease>", self._schedule_preview)
-        ctk.CTkLabel(g, text="Angle (°)", anchor="w", width=145).grid(
-            row=1, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._check_angle = ctk.CTkEntry(g, width=80)
-        self._check_angle.insert(0, "45")
-        self._check_angle.grid(row=1, column=1, padx=4, pady=3)
-        self._check_angle.bind("<KeyRelease>", self._schedule_preview)
-        return f
+        self._status = QLabel("")
+        self._status.setStyleSheet(f"color: {_DIM};")
+        self._status.setWordWrap(True)
+        layout.addWidget(self._status)
 
-    def _make_fishscale_params(self, parent: ctk.CTkFrame) -> ctk.CTkFrame:
-        f = ctk.CTkFrame(parent, fg_color="transparent")
-        g = ctk.CTkFrame(f, fg_color="transparent")
-        g.pack(fill="x", padx=4)
-        ctk.CTkLabel(g, text="Scale width (mm)", anchor="w", width=145).grid(
-            row=0, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._fish_w = ctk.CTkEntry(g, width=80)
-        self._fish_w.insert(0, "3.0")
-        self._fish_w.grid(row=0, column=1, padx=4, pady=3)
-        self._fish_w.bind("<KeyRelease>", self._schedule_preview)
-        ctk.CTkLabel(g, text="Scale height (mm)", anchor="w", width=145).grid(
-            row=1, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._fish_h = ctk.CTkEntry(g, width=80)
-        self._fish_h.insert(0, "2.0")
-        self._fish_h.grid(row=1, column=1, padx=4, pady=3)
-        self._fish_h.bind("<KeyRelease>", self._schedule_preview)
-        return f
+        self._reveal_btn = QPushButton("Show in Finder")
+        self._reveal_btn.setMinimumHeight(26)
+        self._reveal_btn.setEnabled(False)
+        self._reveal_btn.clicked.connect(self._reveal_in_finder)
+        layout.addWidget(self._reveal_btn)
 
-    def _make_stipple_params(self, parent: ctk.CTkFrame) -> ctk.CTkFrame:
-        f = ctk.CTkFrame(parent, fg_color="transparent")
-        g = ctk.CTkFrame(f, fg_color="transparent")
-        g.pack(fill="x", padx=4)
-        ctk.CTkLabel(g, text="Dot radius (mm)", anchor="w", width=145).grid(
-            row=0, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._stip_r = ctk.CTkEntry(g, width=80)
-        self._stip_r.insert(0, "0.4")
-        self._stip_r.grid(row=0, column=1, padx=4, pady=3)
-        self._stip_r.bind("<KeyRelease>", self._schedule_preview)
-        ctk.CTkLabel(g, text="Spacing (mm)", anchor="w", width=145).grid(
-            row=1, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._stip_spacing = ctk.CTkEntry(g, width=80)
-        self._stip_spacing.insert(0, "1.2")
-        self._stip_spacing.grid(row=1, column=1, padx=4, pady=3)
-        self._stip_spacing.bind("<KeyRelease>", self._schedule_preview)
-        return f
+        layout.addStretch()
 
-    def _make_gradient_params(self, parent: ctk.CTkFrame) -> ctk.CTkFrame:
-        f = ctk.CTkFrame(parent, fg_color="transparent")
-        g = ctk.CTkFrame(f, fg_color="transparent")
-        g.pack(fill="x", padx=4)
-        ctk.CTkLabel(g, text="Min size (mm)", anchor="w", width=145).grid(
-            row=0, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._grad_r_min = ctk.CTkEntry(g, width=80)
-        self._grad_r_min.insert(0, "0.8")
-        self._grad_r_min.grid(row=0, column=1, padx=4, pady=3)
-        self._grad_r_min.bind("<KeyRelease>", self._schedule_preview)
-        ctk.CTkLabel(g, text="Max size (mm)", anchor="w", width=145).grid(
-            row=1, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._grad_r_max = ctk.CTkEntry(g, width=80)
-        self._grad_r_max.insert(0, "2.5")
-        self._grad_r_max.grid(row=1, column=1, padx=4, pady=3)
-        self._grad_r_max.bind("<KeyRelease>", self._schedule_preview)
-        ctk.CTkLabel(g, text="Gap (mm)", anchor="w", width=145).grid(
-            row=2, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._grad_gap = ctk.CTkEntry(g, width=80)
-        self._grad_gap.insert(0, "0.5")
-        self._grad_gap.grid(row=2, column=1, padx=4, pady=3)
-        self._grad_gap.bind("<KeyRelease>", self._schedule_preview)
-        ctk.CTkLabel(g, text="Direction (°)", anchor="w", width=145).grid(
-            row=3, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._grad_angle = ctk.CTkEntry(g, width=80)
-        self._grad_angle.insert(0, "0")
-        self._grad_angle.grid(row=3, column=1, padx=4, pady=3)
-        self._grad_angle.bind("<KeyRelease>", self._schedule_preview)
-        ctk.CTkLabel(
-            g,
-            text="0° = left→right  ·90° = vertical",
-            text_color=_DIM,
-            font=("Helvetica", 9),
-            anchor="w",
-        ).grid(row=4, column=0, columnspan=2, padx=6, pady=(0, 2), sticky="w")
-        return f
+    # ── Pattern param builders ────────────────────────────────────────────────
 
-    def _make_custom_tile_params(self, parent: ctk.CTkFrame) -> ctk.CTkFrame:
-        f = ctk.CTkFrame(parent, fg_color="transparent")
-        pick_row = ctk.CTkFrame(f, fg_color="transparent")
-        pick_row.pack(fill="x", padx=4, pady=(4, 4))
-        self._tile_path_var = ctk.StringVar()
-        ctk.CTkEntry(
-            pick_row,
-            textvariable=self._tile_path_var,
-            placeholder_text="Select tile DXF…",
-        ).pack(side="left", fill="x", expand=True, padx=(0, 4))
-        ctk.CTkButton(
-            pick_row,
-            text="Browse",
-            width=64,
-            command=self._browse_tile_dxf,
-        ).pack(side="right")
-        g = ctk.CTkFrame(f, fg_color="transparent")
-        g.pack(fill="x", padx=4)
-        ctk.CTkLabel(g, text="Gap (mm)", anchor="w", width=145).grid(
-            row=0, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._tile_gap = ctk.CTkEntry(g, width=80)
-        self._tile_gap.insert(0, "0.5")
-        self._tile_gap.grid(row=0, column=1, padx=4, pady=3)
-        self._tile_gap.bind("<KeyRelease>", self._schedule_preview)
-        ctk.CTkLabel(g, text="Tile rotation (°)", anchor="w", width=145).grid(
-            row=1, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._tile_angle = ctk.CTkEntry(g, width=80)
-        self._tile_angle.insert(0, "0")
-        self._tile_angle.grid(row=1, column=1, padx=4, pady=3)
-        self._tile_angle.bind("<KeyRelease>", self._schedule_preview)
-        ctk.CTkLabel(
-            g,
-            text="Each tile instance is rotated",
-            text_color=_DIM,
-            font=("Helvetica", 9),
-            anchor="w",
-        ).grid(row=2, column=0, columnspan=2, padx=6, pady=(0, 2), sticky="w")
-        return f
+    def _make_honeycomb_params(self) -> QWidget:
+        w = QWidget()
+        g = QGridLayout(w)
+        g.setContentsMargins(0, 0, 0, 0)
+        self._hex_r = _param_entry(g, 0, "Hex size (mm)", "1.75")
+        self._hex_gap = _param_entry(g, 1, "Gap (mm)", "0.5")
+        self._hex_r.textChanged.connect(self._schedule_preview)
+        self._hex_gap.textChanged.connect(self._schedule_preview)
+        return w
 
-    def _make_halftone_params(self, parent: ctk.CTkFrame) -> ctk.CTkFrame:
-        f = ctk.CTkFrame(parent, fg_color="transparent")
-        pick_row = ctk.CTkFrame(f, fg_color="transparent")
-        pick_row.pack(fill="x", padx=4, pady=(4, 4))
-        self._htone_img_var = ctk.StringVar()
-        ctk.CTkEntry(
-            pick_row,
-            textvariable=self._htone_img_var,
-            placeholder_text="Select image (jpg/png)…",
-        ).pack(side="left", fill="x", expand=True, padx=(0, 4))
-        ctk.CTkButton(
-            pick_row,
-            text="Browse",
-            width=64,
-            command=self._browse_halftone_image,
-        ).pack(side="right")
-        g = ctk.CTkFrame(f, fg_color="transparent")
-        g.pack(fill="x", padx=4)
-        ctk.CTkLabel(g, text="Cell min (mm)", anchor="w", width=145).grid(
-            row=0, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._htone_r_min = ctk.CTkEntry(g, width=80)
-        self._htone_r_min.insert(0, "0.3")
-        self._htone_r_min.grid(row=0, column=1, padx=4, pady=3)
-        ctk.CTkLabel(g, text="Cell max (mm)", anchor="w", width=145).grid(
-            row=1, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._htone_r_max = ctk.CTkEntry(g, width=80)
-        self._htone_r_max.insert(0, "1.8")
-        self._htone_r_max.grid(row=1, column=1, padx=4, pady=3)
-        self._htone_r_max.bind("<KeyRelease>", self._schedule_preview)
-        ctk.CTkLabel(g, text="Grid spacing (mm)", anchor="w", width=145).grid(
-            row=2, column=0, padx=6, pady=3, sticky="w"
-        )
-        self._htone_spacing = ctk.CTkEntry(g, width=80)
-        self._htone_spacing.insert(0, "2.2")
-        self._htone_spacing.grid(row=2, column=1, padx=4, pady=3)
-        self._htone_spacing.bind("<KeyRelease>", self._schedule_preview)
-        self._htone_invert = ctk.BooleanVar(value=False)
-        ctk.CTkCheckBox(
-            f,
-            text="Invert  (dark → small cells)",
-            variable=self._htone_invert,
-            command=self._schedule_preview,
-        ).pack(anchor="w", padx=8, pady=(4, 4))
-        return f
+    def _make_gradient_params(self) -> QWidget:
+        w = QWidget()
+        g = QGridLayout(w)
+        g.setContentsMargins(0, 0, 0, 0)
+        self._grad_r_min = _param_entry(g, 0, "Min size (mm)", "0.8")
+        self._grad_r_max = _param_entry(g, 1, "Max size (mm)", "2.5")
+        self._grad_gap = _param_entry(g, 2, "Gap (mm)", "0.5")
+        self._grad_angle = _param_entry(g, 3, "Direction (°)", "0")
+        for e in (self._grad_r_min, self._grad_r_max, self._grad_gap, self._grad_angle):
+            e.textChanged.connect(self._schedule_preview)
+        hint = QLabel("0° = left→right  ·90° = vertical")
+        hint.setStyleSheet(f"color: {_DIM}; font-size: 9px;")
+        g.addWidget(hint, 4, 0, 1, 2)
+        return w
+
+    def _make_checkering_params(self) -> QWidget:
+        w = QWidget()
+        g = QGridLayout(w)
+        g.setContentsMargins(0, 0, 0, 0)
+        self._check_cell = _param_entry(g, 0, "Cell size (mm)", "2.0")
+        self._check_gap = _param_entry(g, 1, "Gap (mm)", "0.15")
+        self._check_cell.textChanged.connect(self._schedule_preview)
+        self._check_gap.textChanged.connect(self._schedule_preview)
+        return w
+
+    def _make_voronoi_params(self) -> QWidget:
+        w = QWidget()
+        g = QGridLayout(w)
+        g.setContentsMargins(0, 0, 0, 0)
+        self._vor_cells = _param_entry(g, 0, "Cell count", "60")
+        self._vor_gap = _param_entry(g, 1, "Gap (mm)", "0.15")
+        self._vor_seed = _param_entry(g, 2, "Seed", "42")
+        self._vor_cells.textChanged.connect(self._schedule_preview)
+        self._vor_gap.textChanged.connect(self._schedule_preview)
+        self._vor_seed.textChanged.connect(self._schedule_preview)
+        return w
+
+    def _make_triangle_grid_params(self) -> QWidget:
+        w = QWidget()
+        g = QGridLayout(w)
+        g.setContentsMargins(0, 0, 0, 0)
+        self._tri_size = _param_entry(g, 0, "Side length (mm)", "3.0")
+        self._tri_gap = _param_entry(g, 1, "Gap (mm)", "0.15")
+        self._tri_size.textChanged.connect(self._schedule_preview)
+        self._tri_gap.textChanged.connect(self._schedule_preview)
+        return w
+
+    def _make_fishscale_params(self) -> QWidget:
+        w = QWidget()
+        g = QGridLayout(w)
+        g.setContentsMargins(0, 0, 0, 0)
+        self._fish_w = _param_entry(g, 0, "Scale width (mm)", "3.0")
+        self._fish_h = _param_entry(g, 1, "Scale height (mm)", "2.0")
+        self._fish_w.textChanged.connect(self._schedule_preview)
+        self._fish_h.textChanged.connect(self._schedule_preview)
+        return w
+
+    def _make_stipple_params(self) -> QWidget:
+        w = QWidget()
+        g = QGridLayout(w)
+        g.setContentsMargins(0, 0, 0, 0)
+        self._stip_r = _param_entry(g, 0, "Dot radius (mm)", "0.4")
+        self._stip_spacing = _param_entry(g, 1, "Spacing (mm)", "1.2")
+        self._stip_r.textChanged.connect(self._schedule_preview)
+        self._stip_spacing.textChanged.connect(self._schedule_preview)
+        return w
+
+    def _make_brick_params(self) -> QWidget:
+        w = QWidget()
+        g = QGridLayout(w)
+        g.setContentsMargins(0, 0, 0, 0)
+        self._brick_w_e = _param_entry(g, 0, "Brick width (mm)", "4.0")
+        self._brick_h_e = _param_entry(g, 1, "Brick height (mm)", "2.0")
+        self._brick_gap = _param_entry(g, 2, "Gap (mm)", "0.5")
+        self._brick_w_e.textChanged.connect(self._schedule_preview)
+        self._brick_h_e.textChanged.connect(self._schedule_preview)
+        self._brick_gap.textChanged.connect(self._schedule_preview)
+        return w
+
+    def _make_diagonal_lines_params(self) -> QWidget:
+        w = QWidget()
+        g = QGridLayout(w)
+        g.setContentsMargins(0, 0, 0, 0)
+        self._diag_spacing = _param_entry(g, 0, "Line spacing (mm)", "1.0")
+        self._diag_angle = _param_entry(g, 1, "Angle (°)", "45")
+        self._diag_spacing.textChanged.connect(self._schedule_preview)
+        self._diag_angle.textChanged.connect(self._schedule_preview)
+        return w
+
+    def _make_square_grid_params(self) -> QWidget:
+        w = QWidget()
+        g = QGridLayout(w)
+        g.setContentsMargins(0, 0, 0, 0)
+        self._sq_spacing = _param_entry(g, 0, "Grid spacing (mm)", "1.0")
+        self._sq_spacing.textChanged.connect(self._schedule_preview)
+        return w
+
+    def _make_concentric_rings_params(self) -> QWidget:
+        w = QWidget()
+        g = QGridLayout(w)
+        g.setContentsMargins(0, 0, 0, 0)
+        self._conc_spacing = _param_entry(g, 0, "Ring spacing (mm)", "1.5")
+        self._conc_spacing.textChanged.connect(self._schedule_preview)
+        return w
+
+    def _make_wave_fill_params(self) -> QWidget:
+        w = QWidget()
+        g = QGridLayout(w)
+        g.setContentsMargins(0, 0, 0, 0)
+        self._wave_spacing = _param_entry(g, 0, "Row spacing (mm)", "1.5")
+        self._wave_amplitude = _param_entry(g, 1, "Amplitude (mm)", "0.5")
+        self._wave_wavelength = _param_entry(g, 2, "Wavelength (mm)", "3.0")
+        self._wave_spacing.textChanged.connect(self._schedule_preview)
+        self._wave_amplitude.textChanged.connect(self._schedule_preview)
+        self._wave_wavelength.textChanged.connect(self._schedule_preview)
+        return w
+
+    def _make_sunburst_params(self) -> QWidget:
+        w = QWidget()
+        g = QGridLayout(w)
+        g.setContentsMargins(0, 0, 0, 0)
+        self._sunburst_spacing = _param_entry(g, 0, "Spoke spacing (°)", "5.0")
+        self._sunburst_spacing.textChanged.connect(self._schedule_preview)
+        hint = QLabel("5° → 36 spokes  ·  10° → 18 spokes")
+        hint.setStyleSheet(f"color: {_DIM}; font-size: 9px;")
+        g.addWidget(hint, 1, 0, 1, 2)
+        return w
+
+    def _make_custom_tile_params(self) -> QWidget:
+        w = QWidget()
+        vl = QVBoxLayout(w)
+        vl.setContentsMargins(0, 0, 0, 0)
+        pick_row = QHBoxLayout()
+        self._tile_path_edit = QLineEdit()
+        self._tile_path_edit.setPlaceholderText("Select tile DXF…")
+        pick_row.addWidget(self._tile_path_edit, stretch=1)
+        browse_btn = QPushButton("Browse")
+        browse_btn.setFixedWidth(64)
+        browse_btn.clicked.connect(self._browse_tile_dxf)
+        pick_row.addWidget(browse_btn)
+        vl.addLayout(pick_row)
+        g = QGridLayout()
+        self._tile_gap = _param_entry(g, 0, "Gap (mm)", "0.5")
+        self._tile_angle = _param_entry(g, 1, "Tile rotation (°)", "0")
+        self._tile_gap.textChanged.connect(self._schedule_preview)
+        self._tile_angle.textChanged.connect(self._schedule_preview)
+        vl.addLayout(g)
+        hint = QLabel("Each tile instance is rotated")
+        hint.setStyleSheet(f"color: {_DIM}; font-size: 9px;")
+        vl.addWidget(hint)
+        return w
+
+    def _make_halftone_params(self) -> QWidget:
+        w = QWidget()
+        vl = QVBoxLayout(w)
+        vl.setContentsMargins(0, 0, 0, 0)
+        pick_row = QHBoxLayout()
+        self._htone_img_edit = QLineEdit()
+        self._htone_img_edit.setPlaceholderText("Select image (jpg/png)…")
+        pick_row.addWidget(self._htone_img_edit, stretch=1)
+        browse_btn = QPushButton("Browse")
+        browse_btn.setFixedWidth(64)
+        browse_btn.clicked.connect(self._browse_halftone_image)
+        pick_row.addWidget(browse_btn)
+        vl.addLayout(pick_row)
+        g = QGridLayout()
+        self._htone_r_min = _param_entry(g, 0, "Cell min (mm)", "0.3")
+        self._htone_r_max = _param_entry(g, 1, "Cell max (mm)", "1.8")
+        self._htone_spacing = _param_entry(g, 2, "Grid spacing (mm)", "2.2")
+        self._htone_r_max.textChanged.connect(self._schedule_preview)
+        self._htone_spacing.textChanged.connect(self._schedule_preview)
+        vl.addLayout(g)
+        self._htone_invert = QCheckBox("Invert  (dark → small cells)")
+        self._htone_invert.stateChanged.connect(self._schedule_preview)
+        vl.addWidget(self._htone_invert)
+        return w
 
     def _switch_pattern(self, value: str) -> None:
-        for f in (
-            self._honeycomb_frame,
-            self._checkering_frame,
-            self._fishscale_frame,
-            self._stipple_frame,
-            self._gradient_frame,
-            self._custom_tile_frame,
-            self._halftone_frame,
-        ):
-            f.pack_forget()
-        if value != "— None —":
-            {
-                "Honeycomb": self._honeycomb_frame,
-                "Gradient Honeycomb": self._gradient_frame,
-                "Diamond Checkering": self._checkering_frame,
-                "Fish Scale": self._fishscale_frame,
-                "Stipple Dots": self._stipple_frame,
-                "Custom Tile": self._custom_tile_frame,
-                "Image Halftone": self._halftone_frame,
-            }.get(value, self._honeycomb_frame).pack(fill="x", padx=4)
+        mapping = {
+            "Honeycomb": self._honeycomb_w,
+            "Gradient Honeycomb": self._gradient_w,
+            "Diamond Checkering": self._checkering_w,
+            "Fish Scale": self._fishscale_w,
+            "Stipple Dots": self._stipple_w,
+            "Brick": self._brick_w,
+            "Diagonal Lines": self._diagonal_w,
+            "Square Grid": self._square_grid_w,
+            "Concentric Rings": self._concentric_w,
+            "Wave Fill": self._wave_w,
+            "Sunburst": self._sunburst_w,
+            "Voronoi": self._voronoi_w,
+            "Triangle Grid": self._triangle_w,
+            "Custom Tile": self._custom_tile_w,
+            "Image Halftone": self._halftone_w,
+        }
+        for w in self._pattern_widgets:
+            w.hide()
+        target = mapping.get(value)
+        if target:
+            target.show()
             self._schedule_preview()
 
-    # ── Dimension callbacks ─────────────────────────────────────────────────
+    # ── Dimension callbacks ───────────────────────────────────────────────────
 
     def _on_scale_w_changed(self, *_) -> None:
-        if self._updating_dims or not self._ar_var.get() or self._orig_w <= 0:
+        if self._updating_dims or not self._ar_cb.isChecked() or self._orig_w <= 0:
             return
         try:
-            w = float(self._scale_w.get())
+            w = float(self._scale_w.text())
             h = w * self._orig_h / self._orig_w
             self._updating_dims = True
-            self._scale_h.delete(0, "end")
-            self._scale_h.insert(0, f"{h:.3f}")
+            self._scale_h.setText(f"{h:.3f}")
         except ValueError:
             pass
         finally:
             self._updating_dims = False
 
     def _on_scale_h_changed(self, *_) -> None:
-        if self._updating_dims or not self._ar_var.get() or self._orig_h <= 0:
+        if self._updating_dims or not self._ar_cb.isChecked() or self._orig_h <= 0:
             return
         try:
-            h = float(self._scale_h.get())
+            h = float(self._scale_h.text())
             w = h * self._orig_w / self._orig_h
             self._updating_dims = True
-            self._scale_w.delete(0, "end")
-            self._scale_w.insert(0, f"{w:.3f}")
+            self._scale_w.setText(f"{w:.3f}")
         except ValueError:
             pass
         finally:
             self._updating_dims = False
 
-    def _on_ar_toggle(self) -> None:
-        self._ar_locked = self._ar_var.get()
+    def _on_ar_toggle(self, state: int) -> None:
+        self._ar_locked = bool(state)
 
-    def _reset_scale(self) -> None:
-        self._scale_w.delete(0, "end")
-        self._scale_h.delete(0, "end")
-        if self._orig_polys:
-            self._canvas.load(self._orig_polys)
+    # ── Right panel ───────────────────────────────────────────────────────────
 
-    def _get_scaled_polys(
-        self, polys: list[list[tuple[float, float]]]
-    ) -> list[list[tuple[float, float]]]:
-        """Return polys scaled to the requested dimensions (or unchanged if blank)."""
-        if self._orig_w <= 0 or self._orig_h <= 0:
-            return polys
-        try:
-            sw = (
-                float(self._scale_w.get())
-                if self._scale_w.get().strip()
-                else self._orig_w
-            )
-            sh = (
-                float(self._scale_h.get())
-                if self._scale_h.get().strip()
-                else self._orig_h
-            )
-        except ValueError:
-            return polys
-        if sw <= 0 or sh <= 0:
-            return polys
-        sx = sw / self._orig_w
-        sy = sh / self._orig_h
-        if abs(sx - 1.0) < 1e-9 and abs(sy - 1.0) < 1e-9:
-            return polys
-        # Find bounding-box origin so we scale around it
-        all_pts = [pt for p in polys for pt in p]
-        if not all_pts:
-            return polys
-        xs, ys = zip(*all_pts)
-        ox, oy = min(xs), min(ys)
-        scaled = [
-            [(ox + (x - ox) * sx, oy + (y - oy) * sy) for x, y in poly]
-            for poly in polys
-        ]
-        return scaled
+    def _build_right(self, layout: QVBoxLayout) -> None:
+        ctrl_row = QHBoxLayout()
+        back_btn = QPushButton("↺ Reset preview")
+        back_btn.setFixedHeight(28)
+        back_btn.clicked.connect(self._reset_preview)
+        ctrl_row.addWidget(back_btn)
 
-    # ── Right panel (canvas) ──────────────────────────────────────────────────
+        # Mode buttons
+        self._mode_btns: dict[str, QPushButton] = {}
+        for mode in ("Select", "Draw", "Edit"):
+            b = QPushButton(mode)
+            b.setFixedHeight(28)
+            b.setProperty("active", mode == "Select")
+            b.clicked.connect(lambda checked, m=mode: self._on_toolbar_mode(m))
+            ctrl_row.addWidget(b)
+            self._mode_btns[mode] = b
 
-    def _build_right(self, parent: ctk.CTkFrame) -> None:
+        self._preview_status = QLabel("Load a DXF and select a pattern")
+        self._preview_status.setStyleSheet(f"color: {_DIM}; font-size: 11px;")
+        self._preview_status.setAlignment(Qt.AlignmentFlag.AlignRight)
+        ctrl_row.addWidget(self._preview_status, stretch=1)
+        layout.addLayout(ctrl_row)
 
-        # ── Controls row (reset button + preview status) ──────────────────────
-        ctrl_row = ctk.CTkFrame(parent, fg_color="transparent")
-        ctrl_row.pack(fill="x", padx=4, pady=(0, 2))
-        self._back_btn = ctk.CTkButton(
-            ctrl_row,
-            text="↺ Reset preview",
-            width=110,
-            height=22,
-            fg_color="transparent",
-            border_width=1,
-            font=("Helvetica", 11),
-            command=self._reset_preview,
-        )
-        self._back_btn.pack(side="left")
-        self._mode_seg = ctk.CTkSegmentedButton(
-            ctrl_row,
-            values=["Select", "Draw", "Edit"],
-            command=self._on_toolbar_mode,
-        )
-        self._mode_seg.set("Select")
-        self._mode_seg.pack(side="left", padx=(6, 0))
+        # Tabbed canvas (Edit / Preview)
+        self._canvas_tabs = QTabWidget()
+        layout.addWidget(self._canvas_tabs, stretch=1)
 
-        self._preview_status = ctk.CTkLabel(
-            ctrl_row,
-            text="Load a DXF and select a pattern",
-            text_color=_DIM,
-            font=("Helvetica", 11),
-            anchor="e",
-        )
-        self._preview_status.pack(side="right")
-
-        # ── Tabbed canvas (Edit / Preview) ────────────────────────────────────
-        self._canvas_tabs = ctk.CTkTabview(parent, fg_color="transparent")
-        self._canvas_tabs.pack(fill="both", expand=True, padx=0, pady=(0, 0))
-
-        edit_tab = self._canvas_tabs.add("Edit")
-        preview_tab = self._canvas_tabs.add("Preview")
-
+        edit_page = QWidget()
+        edit_lay = QVBoxLayout(edit_page)
+        edit_lay.setContentsMargins(0, 0, 0, 0)
         self._canvas = DxfCanvas(
-            edit_tab,
             selectable=True,
             on_change=self._on_sel_change,
             on_mode_change=self._on_canvas_mode_change,
         )
-        self._canvas.pack(fill="both", expand=True)
+        edit_lay.addWidget(self._canvas)
+        self._canvas_tabs.addTab(edit_page, "Edit")
 
-        self._preview_canvas = DxfCanvas(
-            preview_tab,
-            selectable=False,
-        )
-        self._preview_canvas.pack(fill="both", expand=True)
+        preview_page = QWidget()
+        preview_lay = QVBoxLayout(preview_page)
+        preview_lay.setContentsMargins(0, 0, 0, 0)
+        self._preview_canvas = DxfCanvas(selectable=False)
+        preview_lay.addWidget(self._preview_canvas)
+        self._canvas_tabs.addTab(preview_page, "Preview")
 
     # ── Callbacks ─────────────────────────────────────────────────────────────
 
     def _on_sel_change(self, count: int) -> None:
-        self._sel_label.configure(
-            text=f"{count} selected" if count else "0 selected",
-            text_color=_SEL if count else _DIM,
-        )
-        # Keep _edit_polys in sync with current non-selected outline polys
-        self._edit_polys = self._canvas.get_active()
+        self._sel_label.setText(f"{count} selected" if count else "0 selected")
+        self._sel_label.setStyleSheet(f"color: {_SEL};" if count else f"color: {_DIM};")
+        # When polys are selected, use them as the clip outline; otherwise use all.
+        if count:
+            self._edit_polys = self._canvas.get_selected()
+        else:
+            self._edit_polys = self._canvas.get_active()
+        self._schedule_preview()
 
     def _browse_dxf(self) -> None:
         idir = self._settings.get("outline_dxf_dir", "")
-        path = filedialog.askopenfilename(
-            title="Select outline DXF",
-            initialdir=idir or None,
-            filetypes=[("DXF files", "*.dxf *.Dxf *.DXF"), ("All files", "*.*")],
+        path, _ = QFileDialog.getOpenFileName(
+            self,
+            "Select outline DXF",
+            idir,
+            "DXF files (*.dxf *.Dxf *.DXF);;All files (*)",
         )
         if path:
-            self._dxf_var.set(path)
+            self._dxf_edit.setText(path)
             self._load_dxf(path)
 
     def _reload_dxf(self) -> None:
-        path = self._dxf_var.get().strip()
+        path = self._dxf_edit.text().strip()
         if path:
             self._load_dxf(path)
 
@@ -619,36 +610,34 @@ class PatternTab(ctk.CTkFrame):
             self._edit_polys = list(polys)
             self._canvas.load(polys)
 
-            # Compute & store bounding-box dimensions
             all_pts = [pt for p in polys for pt in p]
             if all_pts:
                 xs, ys = zip(*all_pts)
                 self._orig_w = max(xs) - min(xs)
                 self._orig_h = max(ys) - min(ys)
-                self._orig_dims_label.configure(
-                    text=f"{self._orig_w:.2f} × {self._orig_h:.2f} mm"
+                self._orig_dims_label.setText(
+                    f"{self._orig_w:.2f} × {self._orig_h:.2f} mm"
                 )
-                # Pre-fill scale fields with original size
-                self._scale_w.delete(0, "end")
-                self._scale_w.insert(0, f"{self._orig_w:.3f}")
-                self._scale_h.delete(0, "end")
-                self._scale_h.insert(0, f"{self._orig_h:.3f}")
+                self._scale_w.blockSignals(True)
+                self._scale_h.blockSignals(True)
+                self._scale_w.setText(f"{self._orig_w:.3f}")
+                self._scale_h.setText(f"{self._orig_h:.3f}")
+                self._scale_w.blockSignals(False)
+                self._scale_h.blockSignals(False)
             else:
                 self._orig_w = self._orig_h = 0.0
-                self._orig_dims_label.configure(text="—")
+                self._orig_dims_label.setText("—")
 
             self._set_status(f"Loaded {len(polys)} polylines from {Path(path).name}")
-            # Track recent files
             recent = self._settings.get("recent_dxf", [])
             if path in recent:
                 recent.remove(path)
             recent.insert(0, path)
             self._settings["recent_dxf"] = recent[:8]
             save_settings(self._settings)
-            # Show live preview immediately
             self._schedule_preview()
         except Exception as exc:
-            messagebox.showerror("Load Error", str(exc))
+            QMessageBox.critical(self, "Load Error", str(exc))
 
     def _delete_selected(self) -> None:
         n = self._canvas.delete_selected()
@@ -665,11 +654,19 @@ class PatternTab(ctk.CTkFrame):
             self._set_status("Undo: polylines restored.")
             self._schedule_preview()
 
+    def _set_active_mode_btn(self, value: str) -> None:
+        v = value.lower()
+        for k, b in self._mode_btns.items():
+            b.setProperty("active", k.lower() == v)
+            b.style().unpolish(b)
+            b.style().polish(b)
+
     def _on_toolbar_mode(self, value: str) -> None:
+        self._set_active_mode_btn(value)
         self._canvas.set_mode(value.lower())
 
     def _on_canvas_mode_change(self, mode: str) -> None:
-        self._mode_seg.set(mode.capitalize())
+        self._set_active_mode_btn(mode)
 
     def _reveal_in_finder(self) -> None:
         if self._last_out_path:
@@ -678,23 +675,18 @@ class PatternTab(ctk.CTkFrame):
     def _show_recent_menu(self) -> None:
         recent = [r for r in self._settings.get("recent_dxf", []) if Path(r).exists()]
         if not recent:
-            messagebox.showinfo("Recent Files", "No recent DXF files.", parent=self)
+            QMessageBox.information(self, "Recent Files", "No recent DXF files.")
             return
-        menu = tk.Menu(self, tearoff=0)
+        menu = QMenu(self)
         for path in recent:
             lbl = Path(path).name + f"  ‹{Path(path).parent.name}›"
-            menu.add_command(label=lbl, command=lambda p=path: self._quick_load(p))
-        menu.add_separator()
-        menu.add_command(label="Clear history", command=self._clear_recent)
-        try:
-            x = self._recent_btn.winfo_rootx()
-            y = self._recent_btn.winfo_rooty() + self._recent_btn.winfo_height()
-            menu.tk_popup(x, y)
-        finally:
-            menu.grab_release()
+            menu.addAction(lbl, lambda p=path: self._quick_load(p))
+        menu.addSeparator()
+        menu.addAction("Clear history", self._clear_recent)
+        menu.popup(self._recent_btn.mapToGlobal(QPoint(0, self._recent_btn.height())))
 
     def _quick_load(self, path: str) -> None:
-        self._dxf_var.set(path)
+        self._dxf_edit.setText(path)
         self._load_dxf(path)
 
     def _clear_recent(self) -> None:
@@ -702,200 +694,352 @@ class PatternTab(ctk.CTkFrame):
         save_settings(self._settings)
 
     def _browse_tile_dxf(self) -> None:
-        path = filedialog.askopenfilename(
-            title="Select tile DXF",
-            filetypes=[("DXF files", "*.dxf *.Dxf *.DXF"), ("All files", "*.*")],
+        path, _ = QFileDialog.getOpenFileName(
+            self,
+            "Select tile DXF",
+            "",
+            "DXF files (*.dxf *.Dxf *.DXF);;All files (*)",
         )
         if path:
-            self._tile_path_var.set(path)
+            self._tile_path_edit.setText(path)
             self._schedule_preview()
 
     def _browse_halftone_image(self) -> None:
-        path = filedialog.askopenfilename(
-            title="Select image for halftone",
-            filetypes=[
-                ("Image files", "*.png *.jpg *.jpeg *.bmp *.tif *.tiff"),
-                ("All files", "*.*"),
-            ],
+        path, _ = QFileDialog.getOpenFileName(
+            self,
+            "Select image for halftone",
+            "",
+            "Image files (*.png *.jpg *.jpeg *.bmp *.tif *.tiff);;All files (*)",
         )
         if path:
-            self._htone_img_var.set(path)
+            self._htone_img_edit.setText(path)
             self._schedule_preview()
 
     def _set_status(self, text: str, color: str = _DIM) -> None:
-        self._status.configure(text=text, text_color=color)
+        self._status.setText(text)
+        self._status.setStyleSheet(f"color: {color};")
 
     def _generate(self) -> None:
         if not self._edit_polys:
-            messagebox.showerror("Error", "No polylines available for outline.")
+            QMessageBox.critical(self, "Error", "No polylines available for outline.")
             return
 
-        out_path = filedialog.asksaveasfilename(
-            title="Save pattern DXF",
-            defaultextension=".dxf",
-            initialdir=self._settings.get("pattern_output_dir") or None,
-            initialfile="pattern.dxf",
-            filetypes=[("DXF files", "*.dxf"), ("All files", "*.*")],
+        out_path, _ = QFileDialog.getSaveFileName(
+            self,
+            "Save pattern DXF",
+            str(Path(self._settings.get("pattern_output_dir", "")) / "pattern.dxf"),
+            "DXF files (*.dxf);;All files (*)",
         )
         if not out_path:
             return
 
-        self._gen_btn.configure(state="disabled")
-        self._progress.configure(mode="indeterminate")
-        self._progress.start()
+        # Read widget values on the GUI thread (thread-safe)
+        pattern = self._pattern_combo.currentText()
+        include_border = self._include_border_cb.isChecked()
+        try:
+            scale = self._collect_scale()
+            params = self._collect_pattern_params(pattern)
+        except ValueError:
+            return
+        polys_snap = list(self._edit_polys)
+        border_polys = self._apply_scale(polys_snap, *scale) if include_border else None
+
+        self._gen_btn.setEnabled(False)
+        self._progress.setRange(0, 0)  # indeterminate
         self._set_status("Generating…")
 
         threading.Thread(
             target=self._run_generate,
-            args=(list(self._edit_polys), out_path),
+            args=(polys_snap, out_path, pattern, params, scale, border_polys),
             daemon=True,
         ).start()
 
     def _run_generate(
-        self, active: list[list[tuple[float, float]]], out_path: str
+        self,
+        active: list[list[tuple[float, float]]],
+        out_path: str,
+        pattern: str,
+        params: dict,
+        scale: tuple[float, float],
+        border_polys: list[list[tuple[float, float]]] | None,
     ) -> None:
         try:
-            scaled = self._get_scaled_polys(active)
+            scaled = self._apply_scale(active, *scale)
             outline = polylines_to_outline(scaled)
-            pattern = self._pattern_var.get()
-            polys = self._extract_pattern_polys(outline, pattern)
-            # Determine close flag per pattern type
-            close = pattern not in ("Diamond Checkering", "Fish Scale")
-            write_polylines_dxf(polys, out_path, close=close)
+            polys = self._gen_pattern(outline, pattern, params)
+            close = pattern not in (
+                "Fish Scale",
+                "Diagonal Lines", "Square Grid",
+                "Concentric Rings", "Wave Fill", "Sunburst",
+            )
+            write_polylines_dxf(polys, out_path, close=close, border_polys=border_polys)
 
             count = len(polys)
             name = Path(out_path).name
-
-            def _done():
-                self._progress.stop()
-                self._progress.configure(mode="determinate")
-                self._progress.set(1)
-                self._gen_btn.configure(state="normal")
-                self._set_status(f"Done — {count} shapes → {name}", "#60c060")
-                self._last_out_path = out_path
-                self._reveal_btn.configure(state="normal")
-                # Show generated result in preview canvas
-                self._preview_canvas.load(polys)
-                self._preview_status.configure(
-                    text=f"{count} shapes generated", text_color="#60c060"
-                )
-
-            self.after(0, _done)
+            self._gen_done.emit((count, name, out_path, polys))
 
         except Exception as exc:
-            _exc_msg = str(exc)
+            self._gen_error.emit(str(exc))
 
-            def _err():
-                self._progress.stop()
-                self._progress.configure(mode="determinate")
-                self._progress.set(0)
-                self._gen_btn.configure(state="normal")
-                self._set_status(f"Error: {_exc_msg}", "#e06060")
+    def _handle_gen_done(self, payload: tuple) -> None:
+        count, name, out_path, polys = payload
+        self._progress.setRange(0, 100)
+        self._progress.setValue(100)
+        self._gen_btn.setEnabled(True)
+        self._set_status(f"Done — {count} shapes → {name}", "#3fb950")
+        self._last_out_path = out_path
+        self._reveal_btn.setEnabled(True)
+        self._preview_canvas.load(polys)
+        self._preview_status.setText(f"{count} shapes generated")
+        self._preview_status.setStyleSheet("color: #3fb950; font-size: 11px;")
 
-            self.after(0, _err)
+    def _handle_gen_error(self, msg: str) -> None:
+        self._progress.setRange(0, 100)
+        self._progress.setValue(0)
+        self._gen_btn.setEnabled(True)
+        self._set_status(f"Error: {msg}", "#f85149")
 
-    # ── Live preview ───────────────────────────────────────────────────────────────
+    # ── Live preview ─────────────────────────────────────────────────────────
 
     def _schedule_preview(self, *_) -> None:
-        """Debounce: rebuild preview 400ms after the last param change."""
-        if self._pattern_var.get() == "— None —":
+        if self._pattern_combo.currentText() == "— None —":
             return
         if not self._edit_polys:
             return
-        if self._preview_job:
-            self.after_cancel(self._preview_job)
-        self._preview_job = self.after(400, self._start_preview_thread)
+        self._preview_timer.start(400)
 
     def _start_preview_thread(self) -> None:
         if self._preview_running or not self._edit_polys:
             return
         self._preview_running = True
         polys_snap = list(self._edit_polys)
-        self._preview_status.configure(text="Previewing…", text_color=_DIM)
+        pattern = self._pattern_combo.currentText()
+        include_border = self._include_border_cb.isChecked()
+        try:
+            scale = self._collect_scale()
+            params = self._collect_pattern_params(pattern)
+        except ValueError:
+            self._preview_running = False
+            return
+        border_polys = self._apply_scale(polys_snap, *scale) if include_border else None
+        self._preview_status.setText("Previewing…")
+        self._preview_status.setStyleSheet(f"color: {_DIM}; font-size: 11px;")
         threading.Thread(
-            target=self._compute_preview, args=(polys_snap,), daemon=True
+            target=self._compute_preview,
+            args=(polys_snap, pattern, params, scale, border_polys),
+            daemon=True,
         ).start()
 
-    def _compute_preview(self, outline_polys) -> None:
+    def _compute_preview(
+        self,
+        outline_polys,
+        pattern: str,
+        params: dict,
+        scale: tuple[float, float],
+        border_polys: list[list[tuple[float, float]]] | None,
+    ) -> None:
         try:
-            scaled = self._get_scaled_polys(outline_polys)
+            scaled = self._apply_scale(outline_polys, *scale)
             outline = polylines_to_outline(scaled)
-            pattern = self._pattern_var.get()
-            polys = self._extract_pattern_polys(outline, pattern)
-            count = len(polys)
-
-            def _show():
-                self._preview_running = False
-                self._preview_canvas.reload(polys)
-                self._preview_status.configure(
-                    text=f"{count} shapes — live preview", text_color="#60c060"
-                )
-                # Only switch to Preview when pattern was explicitly chosen
-                if self._pattern_var.get() != "— None —":
-                    self._canvas_tabs.set("Preview")
-
-            self.after(0, _show)
-
+            polys = self._gen_pattern(outline, pattern, params)
+            if border_polys:
+                display_polys = polys + border_polys
+            else:
+                display_polys = polys
+            self._preview_done.emit((display_polys, len(polys)))
         except Exception as exc:
-            _msg = str(exc)
+            self._preview_error.emit(str(exc))
 
-            def _fail():
-                self._preview_running = False
-                self._preview_status.configure(
-                    text=f"Preview error: {_msg}", text_color="#e06060"
-                )
+    def _handle_preview_done(self, payload: tuple) -> None:
+        display_polys, count = payload
+        self._preview_running = False
+        self._preview_canvas.reload(display_polys)
+        self._preview_status.setText(f"{count} shapes — live preview")
+        self._preview_status.setStyleSheet("color: #3fb950; font-size: 11px;")
+        if self._pattern_combo.currentText() != "— None —":
+            self._canvas_tabs.setCurrentIndex(1)
 
-            self.after(0, _fail)
+    def _handle_preview_error(self, msg: str) -> None:
+        self._preview_running = False
+        self._preview_status.setText(f"Preview error: {msg}")
+        self._preview_status.setStyleSheet("color: #f85149; font-size: 11px;")
 
-    def _extract_pattern_polys(
-        self, outline, pattern: str
-    ) -> list[list[tuple[float, float]]]:
-        """Compute pattern polys for the given outline; shared by preview & generate."""
+    # ── Param collection (GUI thread only) ───────────────────────────────────
+
+    def _collect_scale(self) -> tuple[float, float]:
+        sw = (
+            float(self._scale_w.text())
+            if self._scale_w.text().strip()
+            else self._orig_w
+        )
+        sh = (
+            float(self._scale_h.text())
+            if self._scale_h.text().strip()
+            else self._orig_h
+        )
+        return sw, sh
+
+    def _collect_pattern_params(self, pattern: str) -> dict:
         if pattern == "Honeycomb":
-            r = float(self._hex_r.get())
-            gap = float(self._hex_gap.get())
-            return gen_honeycomb(outline, r, gap)
+            return {"r": float(self._hex_r.text()), "gap": float(self._hex_gap.text())}
         elif pattern == "Gradient Honeycomb":
-            r_min = float(self._grad_r_min.get())
-            r_max = float(self._grad_r_max.get())
-            gap = float(self._grad_gap.get())
-            angle = float(self._grad_angle.get())
-            return gen_gradient_honeycomb(outline, r_min, r_max, gap, angle)
+            return {
+                "r_min": float(self._grad_r_min.text()),
+                "r_max": float(self._grad_r_max.text()),
+                "gap": float(self._grad_gap.text()),
+                "angle": float(self._grad_angle.text()),
+            }
         elif pattern == "Diamond Checkering":
-            spacing = float(self._check_spacing.get())
-            angle = float(self._check_angle.get())
-            return gen_diamond_checkering(outline, spacing, angle)
+            return {
+                "cell_size": float(self._check_cell.text()),
+                "gap": float(self._check_gap.text()),
+            }
         elif pattern == "Fish Scale":
-            sw = float(self._fish_w.get())
-            sh = float(self._fish_h.get())
-            return gen_fish_scale(outline, sw, sh)
+            return {"sw": float(self._fish_w.text()), "sh": float(self._fish_h.text())}
         elif pattern == "Stipple Dots":
-            r = float(self._stip_r.get())
-            spacing = float(self._stip_spacing.get())
-            return gen_stipple_dots(outline, r, spacing)
+            return {
+                "r": float(self._stip_r.text()),
+                "spacing": float(self._stip_spacing.text()),
+            }
+        elif pattern == "Brick":
+            return {
+                "brick_w": float(self._brick_w_e.text()),
+                "brick_h": float(self._brick_h_e.text()),
+                "gap": float(self._brick_gap.text()),
+            }
+        elif pattern == "Diagonal Lines":
+            return {
+                "spacing": float(self._diag_spacing.text()),
+                "angle": float(self._diag_angle.text()),
+            }
+        elif pattern == "Square Grid":
+            return {"spacing": float(self._sq_spacing.text())}
+        elif pattern == "Concentric Rings":
+            return {"spacing": float(self._conc_spacing.text())}
+        elif pattern == "Wave Fill":
+            return {
+                "spacing": float(self._wave_spacing.text()),
+                "amplitude": float(self._wave_amplitude.text()),
+                "wavelength": float(self._wave_wavelength.text()),
+            }
+        elif pattern == "Sunburst":
+            return {
+                "spacing_deg": float(self._sunburst_spacing.text()),
+            }
+        elif pattern == "Voronoi":
+            return {
+                "n_cells": int(float(self._vor_cells.text())),
+                "gap": float(self._vor_gap.text()),
+                "seed": int(float(self._vor_seed.text())),
+            }
+        elif pattern == "Triangle Grid":
+            return {
+                "size": float(self._tri_size.text()),
+                "gap": float(self._tri_gap.text()),
+            }
         elif pattern == "Custom Tile":
-            tile_path = self._tile_path_var.get().strip()
+            tile_path = self._tile_path_edit.text().strip()
             if not tile_path:
                 raise ValueError("No tile DXF selected.")
-            tile_polys = load_dxf_polylines(tile_path)
-            gap = float(self._tile_gap.get())
-            angle = float(self._tile_angle.get())
-            return gen_custom_tile(outline, tile_polys, gap, angle)
+            return {
+                "tile_path": tile_path,
+                "gap": float(self._tile_gap.text()),
+                "angle": float(self._tile_angle.text()),
+            }
         else:  # Image Halftone
-            img_path = self._htone_img_var.get().strip()
+            img_path = self._htone_img_edit.text().strip()
             if not img_path:
                 raise ValueError("No image selected.")
-            r_min = float(self._htone_r_min.get())
-            r_max = float(self._htone_r_max.get())
-            spacing = float(self._htone_spacing.get())
-            invert = bool(self._htone_invert.get())
-            return gen_image_halftone(outline, img_path, r_min, r_max, spacing, invert)
+            return {
+                "img_path": img_path,
+                "r_min": float(self._htone_r_min.text()),
+                "r_max": float(self._htone_r_max.text()),
+                "spacing": float(self._htone_spacing.text()),
+                "invert": self._htone_invert.isChecked(),
+            }
+
+    # ── Pure helpers (safe from any thread) ──────────────────────────────────
+
+    def _apply_scale(
+        self,
+        polys: list[list[tuple[float, float]]],
+        sw: float,
+        sh: float,
+    ) -> list[list[tuple[float, float]]]:
+        if self._orig_w <= 0 or self._orig_h <= 0:
+            return polys
+        if sw <= 0 or sh <= 0:
+            return polys
+        sx = sw / self._orig_w
+        sy = sh / self._orig_h
+        if abs(sx - 1.0) < 1e-9 and abs(sy - 1.0) < 1e-9:
+            return polys
+        all_pts = [pt for p in polys for pt in p]
+        if not all_pts:
+            return polys
+        xs, ys = zip(*all_pts)
+        ox, oy = min(xs), min(ys)
+        return [
+            [(ox + (x - ox) * sx, oy + (y - oy) * sy) for x, y in poly]
+            for poly in polys
+        ]
+
+    @staticmethod
+    def _gen_pattern(
+        outline,
+        pattern: str,
+        params: dict,
+    ) -> list[list[tuple[float, float]]]:
+        if pattern == "Honeycomb":
+            return gen_honeycomb(outline, params["r"], params["gap"])
+        elif pattern == "Gradient Honeycomb":
+            return gen_gradient_honeycomb(
+                outline,
+                params["r_min"],
+                params["r_max"],
+                params["gap"],
+                params["angle"],
+            )
+        elif pattern == "Diamond Checkering":
+            return gen_diamond_checkering(outline, params["cell_size"], params["gap"])
+        elif pattern == "Fish Scale":
+            return gen_fish_scale(outline, params["sw"], params["sh"])
+        elif pattern == "Stipple Dots":
+            return gen_stipple_dots(outline, params["r"], params["spacing"])
+        elif pattern == "Brick":
+            return gen_brick(outline, params["brick_w"], params["brick_h"], params["gap"])
+        elif pattern == "Diagonal Lines":
+            return gen_diagonal_lines(outline, params["spacing"], params["angle"])
+        elif pattern == "Square Grid":
+            return gen_square_grid(outline, params["spacing"])
+        elif pattern == "Concentric Rings":
+            return gen_concentric_rings(outline, params["spacing"])
+        elif pattern == "Wave Fill":
+            return gen_wave_fill(
+                outline, params["spacing"], params["amplitude"], params["wavelength"]
+            )
+        elif pattern == "Sunburst":
+            return gen_sunburst(outline, params["spacing_deg"])
+        elif pattern == "Voronoi":
+            return gen_voronoi(outline, params["n_cells"], params["gap"], params["seed"])
+        elif pattern == "Triangle Grid":
+            return gen_triangle_grid(outline, params["size"], params["gap"])
+        elif pattern == "Custom Tile":
+            tile_polys = load_dxf_polylines(params["tile_path"])
+            return gen_custom_tile(outline, tile_polys, params["gap"], params["angle"])
+        else:  # Image Halftone
+            return gen_image_halftone(
+                outline,
+                params["img_path"],
+                params["r_min"],
+                params["r_max"],
+                params["spacing"],
+                params["invert"],
+            )
 
     def _reset_preview(self) -> None:
-        """Re-show the outline in the preview canvas and re-run preview."""
         if self._edit_polys:
             self._preview_canvas.reload(self._edit_polys)
-            self._preview_status.configure(
-                text="Preview reset — adjust params to regenerate", text_color=_DIM
-            )
+            self._preview_status.setText("Preview reset — adjust params to regenerate")
+            self._preview_status.setStyleSheet(f"color: {_DIM}; font-size: 11px;")
             self._schedule_preview()
