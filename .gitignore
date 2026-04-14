@@ -1,3 +1,20 @@
 .venv
 aa_laser.egg-info/
 .git/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Backups
+*.bak
+
+# macOS
+.DS_Store
+
+# Personal scratch files
+atlas/4oval.dxf
+atlas/4oval.svg
+atlas/Sketch1.svg
