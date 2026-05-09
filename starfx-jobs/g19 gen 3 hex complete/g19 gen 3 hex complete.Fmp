@@ -47,7 +47,7 @@ FOR _TEMPINT = 1 TO COUNTEX
    TEXTSCALEX 100.000
    IMAGEJUSTIFY 0
    IMAGEHEIGHT 65
-   DRAWFVI "C:\\Users\\LaserStar\\Documents\\aa-laser\\starfx-jobs\\NewFile\\9.Fvi"
+   DRAWFVI "C:\\Users\\LaserStar\\Documents\\aa-laser\\starfx-jobs\\g19 gen 3 hex complete\\9.Fvi"
    TEXTSCALEX 100
    TEXTSCALEY 100
 NEXT
@@ -70,7 +70,7 @@ FOR _TEMPINT = 1 TO COUNTEX
    TEXTSCALEX 100.000
    IMAGEJUSTIFY 0
    IMAGEHEIGHT 65
-   DRAWFVI "C:\\Users\\LaserStar\\Documents\\aa-laser\\starfx-jobs\\NewFile\\10.Fvi"
+   DRAWFVI "C:\\Users\\LaserStar\\Documents\\aa-laser\\starfx-jobs\\g19 gen 3 hex complete\\10.Fvi"
 NEXT
 RETURN
 

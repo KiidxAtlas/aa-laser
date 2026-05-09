@@ -193,7 +193,7 @@ FUNCTION Parameters(I AS INTEGER, FILL AS INTEGER)
       ELSE
          POINT 0, 0
          OBJECTFILL 0
-         DEFFILL 1,"2,90.000,0.030,0.000,0"
+         DEFFILL 1,"5,90.000,0.030,0.000,0"
          USEFILL 1
          FILLTYPE 1
       ENDIF
