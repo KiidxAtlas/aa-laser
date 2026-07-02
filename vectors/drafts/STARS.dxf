@@ -489,7 +489,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461223.6381828706
+2461223.769826389
   9
 $TDUCREATE
  40
@@ -497,7 +497,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461223.6381828706
+2461223.769826389
   9
 $TDUUPDATE
  40
@@ -549,7 +549,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-4B
+36
   9
 $SURFTAB1
  70
@@ -929,11 +929,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{0858838D-7507-4362-9022-EB3EC29673FF}
+{051E32C1-1151-42DB-B40C-27810A2BD549}
   9
 $VERSIONGUID
   2
-{40B771B4-C061-48E9-9285-9FE386BAEFA2}
+{67810500-F908-48D4-836E-CC8C3CB95F65}
   9
 $EXTNAMES
 290
@@ -1549,7 +1549,7 @@ LAYER
 100
 AcDbSymbolTable
  70
-15
+2
   0
 LAYER
   5
@@ -1594,318 +1594,6 @@ Defpoints
 Continuous
 290
 0
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-2F
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-Layer 1
- 70
-0
- 62
-5
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-30
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_1
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-32
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_2
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-34
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_3
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-36
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_4
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-38
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_5
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-3A
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_6
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-3C
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_7
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-3E
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_8
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-40
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_9
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-42
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_10
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-44
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_11
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-46
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_12
- 70
-0
- 62
-2
-  6
-Continuous
 370
 -3
 390
@@ -2013,7 +1701,7 @@ ACAD
   0
 APPID
   5
-48
+33
 330
 3
 100
@@ -2027,7 +1715,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-49
+34
 330
 3
 100
@@ -2337,13 +2025,13 @@ ENTITIES
   0
 LWPOLYLINE
   5
-31
+2F
 330
 17
 100
 AcDbEntity
   8
-shape_1
+0
 100
 AcDbPolyline
  90
@@ -2385,13 +2073,13 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-33
+30
 330
 17
 100
 AcDbEntity
   8
-shape_2
+0
 100
 AcDbPolyline
  90
@@ -2433,13 +2121,13 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-35
+31
 330
 17
 100
 AcDbEntity
   8
-shape_3
+0
 100
 AcDbPolyline
  90
@@ -2481,13 +2169,13 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-37
+32
 330
 17
 100
 AcDbEntity
   8
-shape_4
+0
 100
 AcDbPolyline
  90
@@ -2526,198 +2214,6 @@ AcDbPolyline
 7.2808860295254085
  20
 121.9385935551091
-  0
-LINE
-  5
-39
-330
-17
-100
-AcDbEntity
-  8
-shape_5
-100
-AcDbLine
- 10
-20.277790979969836
- 20
-125.58611204120156
- 30
-0.0
- 11
-20.277790979969836
- 21
-125.58611204120156
- 31
-0.0
-  0
-LINE
-  5
-3B
-330
-17
-100
-AcDbEntity
-  8
-shape_6
-100
-AcDbLine
- 10
-10.173745518495291
- 20
-124.91530404375926
- 30
-0.0
- 11
-10.173745518495291
- 21
-124.91530404375926
- 31
-0.0
-  0
-LINE
-  5
-3D
-330
-17
-100
-AcDbEntity
-  8
-shape_7
-100
-AcDbLine
- 10
-22.178776993721602
- 20
-121.83285744451226
- 30
-0.0
- 11
-22.178776993721602
- 21
-121.83285744451226
- 31
-0.0
-  0
-LINE
-  5
-3F
-330
-17
-100
-AcDbEntity
-  8
-shape_8
-100
-AcDbLine
- 10
-11.431510513699598
- 20
-129.27555602713417
- 30
-0.0
- 11
-11.431510513699598
- 21
-129.27555602713417
- 31
-0.0
-  0
-LINE
-  5
-41
-330
-17
-100
-AcDbEntity
-  8
-shape_9
-100
-AcDbLine
- 10
-17.38493149099994
- 20
-125.58611204120156
- 30
-0.0
- 11
-17.38493149099994
- 21
-125.58611204120156
- 31
-0.0
-  0
-LINE
-  5
-43
-330
-17
-100
-AcDbEntity
-  8
-shape_10
-100
-AcDbLine
- 10
-6.568152532242973
- 20
-127.93394003224958
- 30
-0.0
- 11
-6.568152532242973
- 21
-127.93394003224958
- 31
-0.0
-  0
-LINE
-  5
-45
-330
-17
-100
-AcDbEntity
-  8
-shape_11
-100
-AcDbLine
- 10
-3.0464105456709305
- 20
-121.5612640565478
- 30
-0.0
- 11
-3.0464105456709305
- 21
-121.5612640565478
- 31
-0.0
-  0
-LINE
-  5
-47
-330
-17
-100
-AcDbEntity
-  8
-shape_12
-100
-AcDbLine
- 10
-2.1659750490279173
- 20
-125.50226104152128
- 30
-0.0
- 11
-2.1659750490279173
- 21
-125.50226104152128
- 31
-0.0
   0
 ENDSEC
   0
@@ -3709,7 +3205,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-4A
+35
   0
 DICTIONARYVAR
   5
@@ -3721,11 +3217,11 @@ DictionaryVariables
 280
 0
   1
-1.4.3 @ 2026-07-01T22:18:59.330209+00:00
+1.4.3 @ 2026-07-02T01:28:33.379175+00:00
   0
 DICTIONARYVAR
   5
-4A
+35
 330
 2D
 100
@@ -3733,7 +3229,7 @@ DictionaryVariables
 280
 0
   1
-1.4.3 @ 2026-07-01T22:18:59.337664+00:00
+1.4.3 @ 2026-07-02T01:28:33.381227+00:00
   0
 ENDSEC
   0
