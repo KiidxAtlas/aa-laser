@@ -489,7 +489,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461224.5614814814
+2461226.127349537
   9
 $TDUCREATE
  40
@@ -497,7 +497,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461224.5614814814
+2461226.127349537
   9
 $TDUUPDATE
  40
@@ -549,7 +549,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-62
+56
   9
 $SURFTAB1
  70
@@ -929,11 +929,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{2028B530-9B59-49E5-ABED-CFAB156058D2}
+{6A3AA2DA-6DF2-4267-8F7C-D6CF91C26A7C}
   9
 $VERSIONGUID
   2
-{CE1BC288-A469-4D34-A2AA-2634395736DC}
+{C2C588F3-687B-4BBB-8DCF-811C273FBA9E}
   9
 $EXTNAMES
 290
@@ -1549,7 +1549,7 @@ LAYER
 100
 AcDbSymbolTable
  70
-17
+5
   0
 LAYER
   5
@@ -1611,155 +1611,11 @@ AcDbSymbolTableRecord
 100
 AcDbLayerTableRecord
   2
-Layer 1
- 70
-0
- 62
-5
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-30
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
 shape_1
  70
 0
  62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-32
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_2
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-34
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_3
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-36
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_4
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-38
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_5
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-3A
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_6
- 70
-0
- 62
-2
+5
   6
 Continuous
 370
@@ -1779,155 +1635,11 @@ AcDbSymbolTableRecord
 100
 AcDbLayerTableRecord
   2
-shape_7
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-3E
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_8
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-40
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_9
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-42
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_10
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-44
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_11
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-46
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-shape_12
- 70
-0
- 62
-2
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
-LAYER
-  5
-48
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
 group_2
  70
 0
  62
-2
+4
   6
 Continuous
 370
@@ -1939,7 +1651,7 @@ Continuous
   0
 LAYER
   5
-51
+45
 330
 1
 100
@@ -1951,7 +1663,7 @@ group_3
  70
 0
  62
-2
+6
   6
 Continuous
 370
@@ -2061,7 +1773,7 @@ ACAD
   0
 APPID
   5
-5F
+53
 330
 3
 100
@@ -2075,7 +1787,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-60
+54
 330
 3
 100
@@ -2385,7 +2097,7 @@ ENTITIES
   0
 LWPOLYLINE
   5
-31
+30
 330
 17
 100
@@ -2521,13 +2233,13 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-33
+31
 330
 17
 100
 AcDbEntity
   8
-shape_2
+shape_1
 100
 AcDbPolyline
  90
@@ -2577,13 +2289,13 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-35
+32
 330
 17
 100
 AcDbEntity
   8
-shape_3
+shape_1
 100
 AcDbPolyline
  90
@@ -2681,13 +2393,13 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-37
+33
 330
 17
 100
 AcDbEntity
   8
-shape_4
+shape_1
 100
 AcDbPolyline
  90
@@ -2741,13 +2453,13 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-39
+34
 330
 17
 100
 AcDbEntity
   8
-shape_5
+shape_1
 100
 AcDbPolyline
  90
@@ -2805,13 +2517,13 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-3B
+35
 330
 17
 100
 AcDbEntity
   8
-shape_6
+shape_1
 100
 AcDbPolyline
  90
@@ -2837,13 +2549,13 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-3D
+36
 330
 17
 100
 AcDbEntity
   8
-shape_7
+shape_1
 100
 AcDbPolyline
  90
@@ -2901,13 +2613,13 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-3F
+37
 330
 17
 100
 AcDbEntity
   8
-shape_8
+shape_1
 100
 AcDbPolyline
  90
@@ -3129,13 +2841,13 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-41
+38
 330
 17
 100
 AcDbEntity
   8
-shape_9
+shape_1
 100
 AcDbPolyline
  90
@@ -3209,13 +2921,13 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-43
+39
 330
 17
 100
 AcDbEntity
   8
-shape_10
+shape_1
 100
 AcDbPolyline
  90
@@ -3281,13 +2993,13 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-45
+3A
 330
 17
 100
 AcDbEntity
   8
-shape_11
+shape_1
 100
 AcDbPolyline
  90
@@ -3489,13 +3201,13 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-47
+3B
 330
 17
 100
 AcDbEntity
   8
-shape_12
+shape_1
 100
 AcDbPolyline
  90
@@ -3557,7 +3269,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-49
+3D
 330
 17
 100
@@ -3705,7 +3417,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-4A
+3E
 330
 17
 100
@@ -3801,7 +3513,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-4B
+3F
 330
 17
 100
@@ -3945,7 +3657,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-4C
+40
 330
 17
 100
@@ -4153,7 +3865,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-4D
+41
 330
 17
 100
@@ -4185,7 +3897,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-4E
+42
 330
 17
 100
@@ -4329,7 +4041,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-4F
+43
 330
 17
 100
@@ -4457,7 +4169,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-50
+44
 330
 17
 100
@@ -4585,7 +4297,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-52
+46
 330
 17
 100
@@ -5193,7 +4905,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-53
+47
 330
 17
 100
@@ -5385,7 +5097,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-54
+48
 330
 17
 100
@@ -5601,7 +5313,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-55
+49
 330
 17
 100
@@ -6005,7 +5717,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-56
+4A
 330
 17
 100
@@ -6405,7 +6117,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-57
+4B
 330
 17
 100
@@ -6437,7 +6149,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-58
+4C
 330
 17
 100
@@ -6581,7 +6293,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-59
+4D
 330
 17
 100
@@ -7041,7 +6753,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-5A
+4E
 330
 17
 100
@@ -7073,7 +6785,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-5B
+4F
 330
 17
 100
@@ -7121,7 +6833,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-5C
+50
 330
 17
 100
@@ -7525,7 +7237,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-5D
+51
 330
 17
 100
@@ -7985,7 +7697,7 @@ AcDbPolyline
   0
 LWPOLYLINE
   5
-5E
+52
 330
 17
 100
@@ -9321,7 +9033,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-61
+55
   0
 DICTIONARYVAR
   5
@@ -9333,11 +9045,11 @@ DictionaryVariables
 280
 0
   1
-1.4.3 @ 2026-07-02T20:28:32.876461+00:00
+1.4.3 @ 2026-07-04T10:03:23.316303+00:00
   0
 DICTIONARYVAR
   5
-61
+55
 330
 2D
 100
@@ -9345,7 +9057,7 @@ DictionaryVariables
 280
 0
   1
-1.4.3 @ 2026-07-02T20:28:32.880811+00:00
+1.4.3 @ 2026-07-04T10:03:23.320451+00:00
   0
 ENDSEC
   0
