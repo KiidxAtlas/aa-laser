@@ -1,0 +1,2450 @@
+  0
+SECTION
+  2
+HEADER
+  9
+$ACADVER
+  1
+AC1015
+  9
+$ACADMAINTVER
+ 70
+6
+  9
+$DWGCODEPAGE
+  3
+ANSI_1252
+  9
+$INSBASE
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$EXTMIN
+ 10
+25.7
+ 20
+19.5
+ 30
+0.0
+  9
+$EXTMAX
+ 10
+231.3
+ 20
+175.5
+ 30
+0.0
+  9
+$LIMMIN
+ 10
+-20.0
+ 20
+-7.5
+  9
+$LIMMAX
+ 10
+277.0
+ 20
+202.5
+  9
+$LTSCALE
+ 40
+1.0
+  9
+$ATTMODE
+ 70
+1
+  9
+$TEXTSIZE
+ 40
+2.5
+  9
+$TEXTSTYLE
+  7
+Standard
+  9
+$CLAYER
+  8
+0
+  9
+$CELTYPE
+  6
+ByLayer
+  9
+$CECOLOR
+ 62
+256
+  9
+$CELTSCALE
+ 40
+1.0
+  9
+$DIMSTYLE
+  2
+Standard
+  9
+$LUNITS
+ 70
+2
+  9
+$LUPREC
+ 70
+4
+  9
+$AUNITS
+ 70
+0
+  9
+$AUPREC
+ 70
+0
+  9
+$TDCREATE
+ 40
+2461249.8252314813
+  9
+$TDUCREATE
+ 40
+2461141.98795084
+  9
+$TDUPDATE
+ 40
+2461249.8252314813
+  9
+$TDUUPDATE
+ 40
+2461141.98795084
+  9
+$TDINDWG
+ 40
+0.0
+  9
+$ANGBASE
+ 50
+0.0
+  9
+$ANGDIR
+ 70
+0
+  9
+$PDMODE
+ 70
+0
+  9
+$PDSIZE
+ 40
+0.0
+  9
+$HANDSEED
+  5
+3E
+  9
+$PEXTMIN
+ 10
+25.7
+ 20
+19.5
+ 30
+0.0
+  9
+$PEXTMAX
+ 10
+231.3
+ 20
+175.5
+ 30
+0.0
+  9
+$PLIMMIN
+ 10
+-20.0
+ 20
+-7.5
+  9
+$PLIMMAX
+ 10
+277.0
+ 20
+202.5
+  9
+$PLINEGEN
+ 70
+0
+  9
+$CMLSTYLE
+  2
+Standard
+  9
+$CMLJUST
+ 70
+0
+  9
+$CMLSCALE
+ 40
+20.0
+  9
+$CELWEIGHT
+370
+-1
+  9
+$LWDISPLAY
+290
+0
+  9
+$INSUNITS
+ 70
+0
+  9
+$FINGERPRINTGUID
+  2
+{B30B3D09-B3B1-4A43-ABF0-5E4A2E2A3332}
+  9
+$VERSIONGUID
+  2
+{D6BFB9FB-1E7F-40BA-8BF2-43BB0E68E705}
+  9
+$EXTNAMES
+290
+1
+  0
+ENDSEC
+  0
+SECTION
+  2
+CLASSES
+  0
+CLASS
+  1
+RASTERVARIABLES
+  2
+AcDbRasterVariables
+  3
+ISM
+ 90
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+ACDBDICTIONARYWDFLT
+  2
+AcDbDictionaryWithDefault
+  3
+ObjectDBX Classes
+ 90
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+SUN
+  2
+AcDbSun
+  3
+SCENEOE
+ 90
+1153
+280
+0
+281
+0
+  0
+CLASS
+  1
+VISUALSTYLE
+  2
+AcDbVisualStyle
+  3
+ObjectDBX Classes
+ 90
+4095
+280
+0
+281
+0
+  0
+CLASS
+  1
+MATERIAL
+  2
+AcDbMaterial
+  3
+ObjectDBX Classes
+ 90
+1153
+280
+0
+281
+0
+  0
+CLASS
+  1
+SCALE
+  2
+AcDbScale
+  3
+ObjectDBX Classes
+ 90
+1153
+280
+0
+281
+0
+  0
+CLASS
+  1
+TABLESTYLE
+  2
+AcDbTableStyle
+  3
+ObjectDBX Classes
+ 90
+4095
+280
+0
+281
+0
+  0
+CLASS
+  1
+MLEADERSTYLE
+  2
+AcDbMLeaderStyle
+  3
+ACDB_MLEADERSTYLE_CLASS
+ 90
+4095
+280
+0
+281
+0
+  0
+CLASS
+  1
+DICTIONARYVAR
+  2
+AcDbDictionaryVar
+  3
+ObjectDBX Classes
+ 90
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+CELLSTYLEMAP
+  2
+AcDbCellStyleMap
+  3
+ObjectDBX Classes
+ 90
+1152
+280
+0
+281
+0
+  0
+CLASS
+  1
+MENTALRAYRENDERSETTINGS
+  2
+AcDbMentalRayRenderSettings
+  3
+SCENEOE
+ 90
+1024
+280
+0
+281
+0
+  0
+CLASS
+  1
+ACDBDETAILVIEWSTYLE
+  2
+AcDbDetailViewStyle
+  3
+ObjectDBX Classes
+ 90
+1025
+280
+0
+281
+0
+  0
+CLASS
+  1
+ACDBSECTIONVIEWSTYLE
+  2
+AcDbSectionViewStyle
+  3
+ObjectDBX Classes
+ 90
+1025
+280
+0
+281
+0
+  0
+CLASS
+  1
+ACDBPLACEHOLDER
+  2
+AcDbPlaceHolder
+  3
+ObjectDBX Classes
+ 90
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+LAYOUT
+  2
+AcDbLayout
+  3
+ObjectDBX Classes
+ 90
+0
+280
+0
+281
+0
+  0
+ENDSEC
+  0
+SECTION
+  2
+TABLES
+  0
+TABLE
+  2
+VPORT
+  5
+1
+330
+0
+100
+AcDbSymbolTable
+ 70
+1
+  0
+VPORT
+  5
+E
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbViewportTableRecord
+  2
+*Active
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 11
+1.0
+ 21
+1.0
+ 12
+-1.0
+ 22
+1.0
+ 13
+0.0
+ 23
+0.0
+ 14
+0.5
+ 24
+0.5
+ 15
+10.0
+ 25
+10.0
+ 16
+0.0
+ 26
+0.0
+ 36
+1.0
+ 17
+0.0
+ 27
+0.0
+ 37
+0.0
+ 40
+1000.0
+ 41
+1.34
+ 42
+50.0
+ 43
+0.0
+ 44
+0.0
+ 50
+0.0
+ 51
+0.0
+ 71
+0
+ 72
+1000
+ 73
+1
+ 74
+3
+ 75
+0
+ 76
+0
+ 77
+0
+ 78
+0
+281
+0
+ 65
+0
+146
+0.0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LTYPE
+  5
+5
+330
+0
+100
+AcDbSymbolTable
+ 70
+3
+  0
+LTYPE
+  5
+10
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+Continuous
+ 70
+0
+  3
+Solid line
+ 72
+65
+ 73
+0
+ 40
+0.0
+  0
+LTYPE
+  5
+11
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByLayer
+ 70
+0
+  3
+
+ 72
+65
+ 73
+0
+ 40
+0.0
+  0
+LTYPE
+  5
+12
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByBlock
+ 70
+0
+  3
+
+ 72
+65
+ 73
+0
+ 40
+0.0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LAYER
+  5
+4
+330
+0
+100
+AcDbSymbolTable
+ 70
+3
+  0
+LAYER
+  5
+F
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+0
+ 70
+0
+ 62
+7
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+1D
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Group_24286_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+38
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Defpoints
+ 70
+0
+ 62
+7
+  6
+Continuous
+290
+0
+370
+-3
+390
+31
+  0
+ENDTAB
+  0
+TABLE
+  2
+STYLE
+  5
+6
+330
+0
+100
+AcDbSymbolTable
+ 70
+1
+  0
+STYLE
+  5
+13
+330
+6
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+Standard
+ 70
+0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+0
+ 42
+0.0
+  3
+simplex.shx
+  4
+
+  0
+ENDTAB
+  0
+TABLE
+  2
+VIEW
+  5
+2
+330
+0
+100
+AcDbSymbolTable
+ 70
+0
+  0
+ENDTAB
+  0
+TABLE
+  2
+UCS
+  5
+9
+330
+0
+100
+AcDbSymbolTable
+ 70
+0
+  0
+ENDTAB
+  0
+TABLE
+  2
+APPID
+  5
+3
+330
+0
+100
+AcDbSymbolTable
+ 70
+4
+  0
+APPID
+  5
+14
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+ACAD
+ 70
+0
+  0
+APPID
+  5
+26
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+AcCmTransparency
+ 70
+0
+  0
+APPID
+  5
+3A
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+HATCHBACKGROUNDCOLOR
+ 70
+0
+  0
+APPID
+  5
+3B
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+EZDXF
+ 70
+0
+  0
+ENDTAB
+  0
+TABLE
+  2
+DIMSTYLE
+  5
+7
+330
+0
+100
+AcDbSymbolTable
+ 70
+1
+100
+AcDbDimStyleTable
+  0
+DIMSTYLE
+105
+15
+330
+7
+100
+AcDbSymbolTableRecord
+100
+AcDbDimStyleTableRecord
+  2
+Standard
+ 70
+0
+  3
+<>
+  4
+
+ 40
+1.0
+ 41
+0.18
+ 42
+0.0625
+ 43
+0.38
+ 44
+0.18
+ 45
+0.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+140
+0.18
+141
+0.09
+142
+0.0
+143
+0.03937007874
+144
+1.0
+145
+0.0
+146
+1.0
+147
+0.09
+148
+0.0
+ 71
+0
+ 72
+0
+ 73
+0
+ 74
+0
+ 75
+0
+ 76
+0
+ 77
+1
+ 78
+8
+ 79
+3
+170
+0
+171
+3
+172
+1
+173
+0
+174
+0
+175
+0
+176
+0
+177
+0
+178
+0
+179
+0
+271
+2
+272
+2
+273
+2
+274
+3
+275
+0
+276
+0
+277
+2
+278
+46
+279
+0
+280
+0
+281
+0
+282
+0
+283
+0
+284
+8
+285
+0
+286
+0
+288
+0
+289
+3
+340
+13
+371
+-2
+372
+-2
+  0
+ENDTAB
+  0
+TABLE
+  2
+BLOCK_RECORD
+  5
+A
+330
+0
+100
+AcDbSymbolTable
+ 70
+2
+  0
+BLOCK_RECORD
+  5
+17
+330
+A
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Model_Space
+340
+1B
+  0
+BLOCK_RECORD
+  5
+20
+330
+A
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Paper_Space
+340
+25
+  0
+ENDTAB
+  0
+ENDSEC
+  0
+SECTION
+  2
+BLOCKS
+  0
+BLOCK
+  5
+19
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Model_Space
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*Model_Space
+  1
+
+  0
+ENDBLK
+  5
+18
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+22
+330
+20
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Paper_Space
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*Paper_Space
+  1
+
+  0
+ENDBLK
+  5
+21
+330
+20
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+ENDSEC
+  0
+SECTION
+  2
+ENTITIES
+  0
+LWPOLYLINE
+  5
+1E
+330
+17
+100
+AcDbEntity
+  8
+Group_24286_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+38
+ 70
+1
+ 10
+-49.6716229197623
+ 20
+53.4888505902432
+ 10
+-45.6990175435957
+ 20
+51.343641063451
+ 10
+-43.077098205134
+ 20
+49.1984315366589
+ 10
+-40.8524392135541
+ 20
+45.4641776951887
+ 10
+-37.673682429313
+ 20
+32.0753753170056
+ 10
+-41.0677380609434
+ 20
+22.2113884586677
+ 10
+-46.9012711182036
+ 20
+10.8625001887651
+ 10
+-53.2651251890922
+ 20
+0.256061670970459
+ 10
+-58.6744015308171
+ 20
+-10.1382472563083
+ 10
+-61.6442002084938
+ 20
+-18.5173327030815
+ 10
+-64.2958062303097
+ 20
+-25.8357749656473
+ 10
+-64.80845
+ 20
+-27.6706694829888
+ 10
+-62.8821927804633
+ 20
+-29.0575765681077
+ 10
+-58.0665499700399
+ 20
+-30.1362821052466
+ 10
+-50.438571762144
+ 20
+-31.0994119724862
+ 10
+-27.8085562115465
+ 20
+-33.5957677165
+ 10
+-27.7977960721928
+ 20
+-31.326528077879
+ 10
+-27.5872047688905
+ 20
+-27.6411753169455
+ 10
+-26.165713434347
+ 20
+-23.429343794523
+ 10
+-8.89953308402784
+ 20
+18.2702674015006
+ 10
+-16.9532423876531
+ 20
+20.8274265582234
+ 10
+-14.1483706822851
+ 20
+28.9052234036402
+ 10
+-5.8121373270895
+ 20
+26.0596628848726
+ 10
+-0.725669662398822
+ 20
+36.0189713974146
+ 10
+2.06658684167097
+ 20
+40.4068087581641
+ 10
+5.4571839740946
+ 20
+42.8666566576626
+ 10
+8.91426339855756
+ 20
+43.5314804803321
+ 10
+12.5043071686806
+ 20
+43.5979628596189
+ 10
+20.0521262055217
+ 20
+43.7182590012647
+ 10
+23.6736846138741
+ 20
+54.0935364040988
+ 10
+-3.59017246490693
+ 20
+54.3717809261716
+ 10
+-8.41515603652734
+ 20
+41.7328698207041
+ 10
+-32.0041157132603
+ 20
+41.7588308283357
+ 10
+-33.906098588509
+ 20
+42.7494481520654
+ 10
+-34.8174653431626
+ 20
+44.6910582281692
+ 10
+-31.159284656397
+ 20
+54.2833728407145
+ 10
+-53.2469705288102
+ 20
+54.3628250489978
+ 10
+-49.6716257379439
+ 20
+53.4888507355295
+  0
+LWPOLYLINE
+  5
+1F
+330
+17
+100
+AcDbEntity
+  8
+Group_24286_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+10
+ 70
+1
+ 10
+29.6125454943859
+ 20
+45.6065251746936
+ 10
+33.0532283996533
+ 20
+54.3606792818099
+ 10
+64.80845
+ 20
+54.4042322835
+ 10
+62.4565909075776
+ 20
+47.8277286036145
+ 10
+51.0457179020934
+ 20
+47.6970695910936
+ 10
+47.3872704249919
+ 20
+46.826009467885
+ 10
+44.0772463581924
+ 20
+44.9532302387493
+ 10
+42.4984698500882
+ 20
+43.4412924822469
+ 10
+28.5078064934802
+ 20
+43.6406393864712
+ 10
+29.6125429909914
+ 20
+45.6065255099697
+  0
+VIEWPORT
+  5
+24
+330
+20
+100
+AcDbEntity
+ 67
+1
+  8
+0
+  6
+ByLayer
+100
+AcDbViewport
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 40
+297.0
+ 41
+210.0
+ 68
+1
+ 69
+1
+ 12
+50.0
+ 22
+100.0
+ 13
+0.0
+ 23
+0.0
+ 14
+10.0
+ 24
+10.0
+ 15
+10.0
+ 25
+10.0
+ 16
+0.0
+ 26
+0.0
+ 36
+1.0
+ 17
+0.0
+ 27
+0.0
+ 37
+0.0
+ 42
+50.0
+ 43
+0.0
+ 44
+0.0
+ 45
+250.0
+ 50
+0.0
+ 51
+0.0
+ 72
+1000
+ 90
+819232
+  1
+
+281
+0
+ 71
+0
+ 74
+0
+110
+0.0
+120
+0.0
+130
+0.0
+111
+1.0
+121
+0.0
+131
+0.0
+112
+0.0
+122
+1.0
+132
+0.0
+ 79
+0
+146
+0.0
+  0
+ENDSEC
+  0
+SECTION
+  2
+OBJECTS
+  0
+DICTIONARY
+  5
+27
+330
+0
+100
+AcDbDictionary
+281
+1
+  3
+ACAD_GROUP
+350
+28
+  3
+ACAD_LAYOUT
+350
+29
+  3
+ACAD_MLINESTYLE
+350
+2A
+  3
+ACAD_COLOR
+350
+2C
+  3
+ACAD_MATERIAL
+350
+2D
+  3
+ACAD_MLEADERSTYLE
+350
+2E
+  3
+ACAD_PLOTSETTINGS
+350
+2F
+  3
+ACAD_PLOTSTYLENAME
+350
+30
+  3
+ACAD_SCALELIST
+350
+32
+  3
+ACAD_TABLESTYLE
+350
+33
+  3
+ACAD_VISUALSTYLE
+350
+34
+  3
+EZDXF_META
+350
+3C
+  0
+DICTIONARY
+  5
+28
+330
+27
+100
+AcDbDictionary
+281
+1
+  0
+DICTIONARY
+  5
+29
+330
+27
+100
+AcDbDictionary
+281
+1
+  3
+Model
+350
+1B
+  3
+Layout1
+350
+25
+  0
+DICTIONARY
+  5
+2A
+330
+27
+100
+AcDbDictionary
+281
+1
+  3
+Standard
+350
+16
+  0
+LAYOUT
+  5
+1B
+330
+29
+100
+AcDbPlotSettings
+  1
+
+  2
+none_device
+  4
+ISO_A4_(210.00_x_297.00_MM)
+  6
+
+ 40
+7.5
+ 41
+20.0
+ 42
+7.5
+ 43
+20.0
+ 44
+210.0
+ 45
+297.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+11952
+ 72
+1
+ 73
+1
+ 74
+5
+  7
+
+ 75
+16
+ 76
+0
+ 77
+2
+ 78
+300
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Model
+ 70
+1
+ 71
+0
+ 10
+-20.0
+ 20
+-7.5
+ 11
+277.0
+ 21
+202.5
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+25.7
+ 24
+19.5
+ 34
+0.0
+ 15
+231.3
+ 25
+175.5
+ 35
+0.0
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+1.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+1.0
+ 37
+0.0
+ 76
+0
+330
+17
+  0
+LAYOUT
+  5
+25
+330
+29
+100
+AcDbPlotSettings
+  1
+
+  2
+none_device
+  4
+ISO_A4_(210.00_x_297.00_MM)
+  6
+
+ 40
+7.5
+ 41
+20.0
+ 42
+7.5
+ 43
+20.0
+ 44
+210.0
+ 45
+297.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+688
+ 72
+1
+ 73
+1
+ 74
+5
+  7
+
+ 75
+16
+ 76
+0
+ 77
+2
+ 78
+300
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Layout1
+ 70
+1
+ 71
+1
+ 10
+-20.0
+ 20
+-7.5
+ 11
+277.0
+ 21
+202.5
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+25.7
+ 24
+19.5
+ 34
+0.0
+ 15
+231.3
+ 25
+175.5
+ 35
+0.0
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+1.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+1.0
+ 37
+0.0
+ 76
+0
+330
+20
+  0
+MLINESTYLE
+  5
+16
+330
+2A
+100
+AcDbMlineStyle
+  2
+Standard
+ 70
+0
+  3
+
+ 62
+256
+ 51
+90.0
+ 52
+90.0
+ 71
+2
+ 49
+0.5
+ 62
+256
+  6
+ByLayer
+ 49
+-0.5
+ 62
+256
+  6
+ByLayer
+  0
+DICTIONARY
+  5
+2C
+330
+27
+100
+AcDbDictionary
+281
+1
+  0
+DICTIONARY
+  5
+2D
+330
+27
+100
+AcDbDictionary
+281
+1
+  3
+ByBlock
+350
+35
+  3
+ByLayer
+350
+36
+  3
+Global
+350
+37
+  0
+DICTIONARY
+  5
+2E
+330
+27
+100
+AcDbDictionary
+281
+1
+  3
+Standard
+350
+39
+  0
+DICTIONARY
+  5
+2F
+330
+27
+100
+AcDbDictionary
+281
+1
+  0
+ACDBDICTIONARYWDFLT
+  5
+30
+330
+27
+100
+AcDbDictionary
+281
+1
+  3
+Normal
+350
+31
+100
+AcDbDictionaryWithDefault
+340
+31
+  0
+ACDBPLACEHOLDER
+  5
+31
+330
+30
+  0
+DICTIONARY
+  5
+32
+330
+27
+100
+AcDbDictionary
+281
+1
+  0
+DICTIONARY
+  5
+33
+330
+27
+100
+AcDbDictionary
+281
+1
+  0
+DICTIONARY
+  5
+34
+330
+27
+100
+AcDbDictionary
+281
+1
+  0
+MATERIAL
+  5
+35
+102
+{ACAD_REACTORS
+330
+2D
+102
+}
+330
+2D
+100
+AcDbMaterial
+  1
+ByBlock
+  2
+
+ 70
+0
+ 40
+1.0
+ 71
+1
+ 41
+1.0
+ 91
+-1023410177
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 44
+0.5
+ 73
+0
+ 45
+1.0
+ 46
+1.0
+ 77
+1
+  4
+
+ 78
+1
+ 79
+1
+170
+1
+ 48
+1.0
+171
+1
+  6
+
+172
+1
+173
+1
+174
+1
+140
+1.0
+141
+1.0
+175
+1
+  7
+
+176
+1
+177
+1
+178
+1
+143
+1.0
+179
+1
+  8
+
+270
+1
+271
+1
+272
+1
+145
+1.0
+146
+1.0
+273
+1
+  9
+
+274
+1
+275
+1
+276
+1
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 94
+63
+  0
+MATERIAL
+  5
+36
+102
+{ACAD_REACTORS
+330
+2D
+102
+}
+330
+2D
+100
+AcDbMaterial
+  1
+ByLayer
+  2
+
+ 70
+0
+ 40
+1.0
+ 71
+1
+ 41
+1.0
+ 91
+-1023410177
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 44
+0.5
+ 73
+0
+ 45
+1.0
+ 46
+1.0
+ 77
+1
+  4
+
+ 78
+1
+ 79
+1
+170
+1
+ 48
+1.0
+171
+1
+  6
+
+172
+1
+173
+1
+174
+1
+140
+1.0
+141
+1.0
+175
+1
+  7
+
+176
+1
+177
+1
+178
+1
+143
+1.0
+179
+1
+  8
+
+270
+1
+271
+1
+272
+1
+145
+1.0
+146
+1.0
+273
+1
+  9
+
+274
+1
+275
+1
+276
+1
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 94
+63
+  0
+MATERIAL
+  5
+37
+102
+{ACAD_REACTORS
+330
+2D
+102
+}
+330
+2D
+100
+AcDbMaterial
+  1
+Global
+  2
+
+ 70
+0
+ 40
+1.0
+ 71
+1
+ 41
+1.0
+ 91
+-1023410177
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 44
+0.5
+ 73
+0
+ 45
+1.0
+ 46
+1.0
+ 77
+1
+  4
+
+ 78
+1
+ 79
+1
+170
+1
+ 48
+1.0
+171
+1
+  6
+
+172
+1
+173
+1
+174
+1
+140
+1.0
+141
+1.0
+175
+1
+  7
+
+176
+1
+177
+1
+178
+1
+143
+1.0
+179
+1
+  8
+
+270
+1
+271
+1
+272
+1
+145
+1.0
+146
+1.0
+273
+1
+  9
+
+274
+1
+275
+1
+276
+1
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 94
+63
+  0
+MLEADERSTYLE
+  5
+39
+102
+{ACAD_REACTORS
+330
+2E
+102
+}
+330
+2E
+100
+AcDbMLeaderStyle
+179
+2
+170
+2
+171
+1
+172
+0
+ 90
+2
+ 40
+0.0
+ 41
+0.0
+173
+1
+ 91
+-1056964608
+ 92
+-2
+290
+1
+ 42
+2.0
+291
+1
+ 43
+8.0
+  3
+Standard
+ 44
+4.0
+300
+
+342
+13
+174
+1
+175
+1
+176
+0
+178
+1
+ 93
+-1056964608
+ 45
+4.0
+292
+0
+297
+0
+ 46
+4.0
+ 94
+-1056964608
+ 47
+1.0
+ 49
+1.0
+140
+1.0
+294
+1
+141
+0.0
+177
+0
+142
+1.0
+295
+0
+296
+0
+143
+3.75
+271
+0
+272
+9
+273
+9
+  0
+DICTIONARY
+  5
+3C
+330
+27
+100
+AcDbDictionary
+280
+1
+281
+1
+  3
+WRITTEN_BY_EZDXF
+350
+3D
+  0
+DICTIONARYVAR
+  5
+3D
+330
+3C
+100
+DictionaryVariables
+280
+0
+  1
+1.4.3 @ 2026-07-28T02:48:20.134460+00:00
+  0
+ENDSEC
+  0
+EOF

@@ -1,0 +1,17828 @@
+  0
+SECTION
+  2
+HEADER
+  9
+$ACADVER
+  1
+AC1015
+  9
+$ACADMAINTVER
+ 70
+6
+  9
+$DWGCODEPAGE
+  3
+ANSI_1252
+  9
+$INSBASE
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$EXTMIN
+ 10
+25.7
+ 20
+19.5
+ 30
+0.0
+  9
+$EXTMAX
+ 10
+231.3
+ 20
+175.5
+ 30
+0.0
+  9
+$LIMMIN
+ 10
+-20.0
+ 20
+-7.5
+  9
+$LIMMAX
+ 10
+277.0
+ 20
+202.5
+  9
+$LTSCALE
+ 40
+1.0
+  9
+$ATTMODE
+ 70
+1
+  9
+$TEXTSIZE
+ 40
+2.5
+  9
+$TEXTSTYLE
+  7
+Standard
+  9
+$CLAYER
+  8
+0
+  9
+$CELTYPE
+  6
+ByLayer
+  9
+$CECOLOR
+ 62
+256
+  9
+$CELTSCALE
+ 40
+1.0
+  9
+$DIMSTYLE
+  2
+Standard
+  9
+$LUNITS
+ 70
+2
+  9
+$LUPREC
+ 70
+4
+  9
+$AUNITS
+ 70
+0
+  9
+$AUPREC
+ 70
+0
+  9
+$TDCREATE
+ 40
+2461249.8252199073
+  9
+$TDUCREATE
+ 40
+2461141.97489069
+  9
+$TDUPDATE
+ 40
+2461249.8252199073
+  9
+$TDUUPDATE
+ 40
+2461141.97489069
+  9
+$TDINDWG
+ 40
+0.0
+  9
+$ANGBASE
+ 50
+0.0
+  9
+$ANGDIR
+ 70
+0
+  9
+$PDMODE
+ 70
+0
+  9
+$PDSIZE
+ 40
+0.0
+  9
+$HANDSEED
+  5
+215
+  9
+$PEXTMIN
+ 10
+25.7
+ 20
+19.5
+ 30
+0.0
+  9
+$PEXTMAX
+ 10
+231.3
+ 20
+175.5
+ 30
+0.0
+  9
+$PLIMMIN
+ 10
+-20.0
+ 20
+-7.5
+  9
+$PLIMMAX
+ 10
+277.0
+ 20
+202.5
+  9
+$PLINEGEN
+ 70
+0
+  9
+$CMLSTYLE
+  2
+Standard
+  9
+$CMLJUST
+ 70
+0
+  9
+$CMLSCALE
+ 40
+20.0
+  9
+$CELWEIGHT
+370
+-1
+  9
+$LWDISPLAY
+290
+0
+  9
+$INSUNITS
+ 70
+0
+  9
+$FINGERPRINTGUID
+  2
+{C49C3F19-BF82-4A5E-A67A-2F7CCD2544B2}
+  9
+$VERSIONGUID
+  2
+{D3EE24AE-7B65-4E68-9FAA-CF0CFF2A3BAE}
+  9
+$EXTNAMES
+290
+1
+  0
+ENDSEC
+  0
+SECTION
+  2
+CLASSES
+  0
+CLASS
+  1
+RASTERVARIABLES
+  2
+AcDbRasterVariables
+  3
+ISM
+ 90
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+ACDBDICTIONARYWDFLT
+  2
+AcDbDictionaryWithDefault
+  3
+ObjectDBX Classes
+ 90
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+SUN
+  2
+AcDbSun
+  3
+SCENEOE
+ 90
+1153
+280
+0
+281
+0
+  0
+CLASS
+  1
+VISUALSTYLE
+  2
+AcDbVisualStyle
+  3
+ObjectDBX Classes
+ 90
+4095
+280
+0
+281
+0
+  0
+CLASS
+  1
+MATERIAL
+  2
+AcDbMaterial
+  3
+ObjectDBX Classes
+ 90
+1153
+280
+0
+281
+0
+  0
+CLASS
+  1
+SCALE
+  2
+AcDbScale
+  3
+ObjectDBX Classes
+ 90
+1153
+280
+0
+281
+0
+  0
+CLASS
+  1
+TABLESTYLE
+  2
+AcDbTableStyle
+  3
+ObjectDBX Classes
+ 90
+4095
+280
+0
+281
+0
+  0
+CLASS
+  1
+MLEADERSTYLE
+  2
+AcDbMLeaderStyle
+  3
+ACDB_MLEADERSTYLE_CLASS
+ 90
+4095
+280
+0
+281
+0
+  0
+CLASS
+  1
+DICTIONARYVAR
+  2
+AcDbDictionaryVar
+  3
+ObjectDBX Classes
+ 90
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+CELLSTYLEMAP
+  2
+AcDbCellStyleMap
+  3
+ObjectDBX Classes
+ 90
+1152
+280
+0
+281
+0
+  0
+CLASS
+  1
+MENTALRAYRENDERSETTINGS
+  2
+AcDbMentalRayRenderSettings
+  3
+SCENEOE
+ 90
+1024
+280
+0
+281
+0
+  0
+CLASS
+  1
+ACDBDETAILVIEWSTYLE
+  2
+AcDbDetailViewStyle
+  3
+ObjectDBX Classes
+ 90
+1025
+280
+0
+281
+0
+  0
+CLASS
+  1
+ACDBSECTIONVIEWSTYLE
+  2
+AcDbSectionViewStyle
+  3
+ObjectDBX Classes
+ 90
+1025
+280
+0
+281
+0
+  0
+CLASS
+  1
+ACDBPLACEHOLDER
+  2
+AcDbPlaceHolder
+  3
+ObjectDBX Classes
+ 90
+0
+280
+0
+281
+0
+  0
+CLASS
+  1
+LAYOUT
+  2
+AcDbLayout
+  3
+ObjectDBX Classes
+ 90
+0
+280
+0
+281
+0
+  0
+ENDSEC
+  0
+SECTION
+  2
+TABLES
+  0
+TABLE
+  2
+VPORT
+  5
+1
+330
+0
+100
+AcDbSymbolTable
+ 70
+1
+  0
+VPORT
+  5
+E
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbViewportTableRecord
+  2
+*Active
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 11
+1.0
+ 21
+1.0
+ 12
+-1.0
+ 22
+1.0
+ 13
+0.0
+ 23
+0.0
+ 14
+0.5
+ 24
+0.5
+ 15
+10.0
+ 25
+10.0
+ 16
+0.0
+ 26
+0.0
+ 36
+1.0
+ 17
+0.0
+ 27
+0.0
+ 37
+0.0
+ 40
+1000.0
+ 41
+1.34
+ 42
+50.0
+ 43
+0.0
+ 44
+0.0
+ 50
+0.0
+ 51
+0.0
+ 71
+0
+ 72
+1000
+ 73
+1
+ 74
+3
+ 75
+0
+ 76
+0
+ 77
+0
+ 78
+0
+281
+0
+ 65
+0
+146
+0.0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LTYPE
+  5
+5
+330
+0
+100
+AcDbSymbolTable
+ 70
+3
+  0
+LTYPE
+  5
+10
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+Continuous
+ 70
+0
+  3
+Solid line
+ 72
+65
+ 73
+0
+ 40
+0.0
+  0
+LTYPE
+  5
+11
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByLayer
+ 70
+0
+  3
+
+ 72
+65
+ 73
+0
+ 40
+0.0
+  0
+LTYPE
+  5
+12
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByBlock
+ 70
+0
+  3
+
+ 72
+65
+ 73
+0
+ 40
+0.0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LAYER
+  5
+4
+330
+0
+100
+AcDbSymbolTable
+ 70
+239
+  0
+LAYER
+  5
+F
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+0
+ 70
+0
+ 62
+7
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+1D
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_60_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+1E
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_62_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+1F
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_64_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+20
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_66_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+21
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_68_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+22
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_70_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+23
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_72_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+24
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_74_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+25
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_76_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+26
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_78_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+27
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_80_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+28
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_82_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+29
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_84_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+2A
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_86_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+2B
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_88_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+2C
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_90_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+2D
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_92_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+2E
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_94_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+2F
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_96_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+30
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_98_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+31
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_100_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+32
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_102_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+33
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_104_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+34
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_106_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+35
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_108_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+36
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_110_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+37
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_112_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+38
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_114_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+39
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_116_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+3A
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_118_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+3B
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_120_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+3C
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_122_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+3D
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_124_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+3E
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_126_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+3F
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_128_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+40
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_130_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+41
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_132_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+42
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_134_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+43
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_136_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+44
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_138_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+45
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_140_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+46
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_142_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+47
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_144_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+48
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_146_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+49
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_148_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+4A
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_150_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+4B
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_152_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+4C
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_154_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+4D
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_156_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+4E
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_158_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+4F
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_160_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+50
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_162_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+51
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_164_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+52
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_166_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+53
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_168_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+54
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_170_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+55
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_172_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+56
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_174_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+57
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_176_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+58
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_178_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+59
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_180_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+5A
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_182_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+5B
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_184_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+5C
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_186_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+5D
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_188_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+5E
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_190_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+5F
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_192_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+60
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_194_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+61
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_196_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+62
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_198_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+63
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_200_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+64
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_202_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+65
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_204_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+66
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_206_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+67
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_208_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+68
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_210_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+69
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_212_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+6A
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_214_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+6B
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_216_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+6C
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_218_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+6D
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_220_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+6E
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_222_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+6F
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_224_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+70
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_226_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+71
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_228_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+72
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_230_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+73
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_232_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+74
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_234_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+75
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_236_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+76
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_238_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+77
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_240_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+78
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_242_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+79
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_244_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+7A
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_246_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+7B
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_248_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+7C
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_250_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+7D
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_252_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+7E
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_254_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+7F
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_256_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+80
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_258_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+81
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_260_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+82
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_262_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+83
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_264_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+84
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_266_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+85
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_268_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+86
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_270_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+87
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_272_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+88
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_274_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+89
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_276_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+8A
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_278_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+8B
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_280_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+8C
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_282_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+8D
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_284_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+8E
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_286_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+8F
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_288_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+90
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_290_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+91
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_292_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+92
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_294_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+93
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_296_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+94
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_298_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+95
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_300_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+96
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_302_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+97
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_304_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+98
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_306_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+99
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_308_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+9A
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_310_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+9B
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_312_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+9C
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_314_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+9D
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_316_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+9E
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_318_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+9F
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_320_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+A0
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_322_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+A1
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_324_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+A2
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_326_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+A3
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_328_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+A4
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_330_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+A5
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_332_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+A6
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_334_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+A7
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_336_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+A8
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_338_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+A9
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_340_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+AA
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_342_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+AB
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_344_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+AC
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_346_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+AD
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_348_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+AE
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_350_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+AF
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_352_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+B0
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_354_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+B1
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_356_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+B2
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_358_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+B3
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_360_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+B4
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_362_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+B5
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_364_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+B6
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_366_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+B7
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_368_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+B8
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_370_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+B9
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_372_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+BA
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_374_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+BB
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_376_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+BC
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_378_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+BD
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_380_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+BE
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_382_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+BF
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_384_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+C0
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_386_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+C1
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_388_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+C2
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_390_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+C3
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_392_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+C4
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_394_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+C5
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_396_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+C6
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_398_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+C7
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_400_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+C8
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_402_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+C9
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_404_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+CA
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_406_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+CB
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_408_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+CC
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_410_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+CD
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_412_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+CE
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_414_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+CF
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_416_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+D0
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_418_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+D1
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_420_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+D2
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_422_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+D3
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_424_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+D4
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_426_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+D5
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_428_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+D6
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_430_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+D7
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_432_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+D8
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_434_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+D9
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_436_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+DA
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_438_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+DB
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_440_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+DC
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_442_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+DD
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_444_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+DE
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_446_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+DF
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_448_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+E0
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_450_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+E1
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_452_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+E2
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_454_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+E3
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_456_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+E4
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_458_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+E5
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_460_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+E6
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_462_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+E7
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_464_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+E8
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_466_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+E9
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_468_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+EA
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_470_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+EB
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_472_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+EC
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_474_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+ED
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_476_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+EE
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_478_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+EF
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_480_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+F0
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_482_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+F1
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_484_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+F2
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_486_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+F3
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_488_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+F4
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_490_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+F5
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_492_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+F6
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_494_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+F7
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_496_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+F8
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_498_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+F9
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_500_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+FA
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_502_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+FB
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_504_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+FC
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_506_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+FD
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_508_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+FE
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_510_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+FF
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_512_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+100
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_514_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+101
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_516_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+102
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_518_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+103
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_520_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+104
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_522_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+105
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_524_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+106
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_526_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+107
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_528_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+108
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_1248_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+109
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Polyline_3422_Red
+ 70
+0
+ 62
+1
+  6
+Continuous
+370
+-3
+390
+0
+  0
+LAYER
+  5
+20F
+330
+4
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+Defpoints
+ 70
+0
+ 62
+7
+  6
+Continuous
+290
+0
+370
+-3
+390
+208
+  0
+ENDTAB
+  0
+TABLE
+  2
+STYLE
+  5
+6
+330
+0
+100
+AcDbSymbolTable
+ 70
+1
+  0
+STYLE
+  5
+13
+330
+6
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+Standard
+ 70
+0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+0
+ 42
+0.0
+  3
+simplex.shx
+  4
+
+  0
+ENDTAB
+  0
+TABLE
+  2
+VIEW
+  5
+2
+330
+0
+100
+AcDbSymbolTable
+ 70
+0
+  0
+ENDTAB
+  0
+TABLE
+  2
+UCS
+  5
+9
+330
+0
+100
+AcDbSymbolTable
+ 70
+0
+  0
+ENDTAB
+  0
+TABLE
+  2
+APPID
+  5
+3
+330
+0
+100
+AcDbSymbolTable
+ 70
+4
+  0
+APPID
+  5
+14
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+ACAD
+ 70
+0
+  0
+APPID
+  5
+1FD
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+AcCmTransparency
+ 70
+0
+  0
+APPID
+  5
+211
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+HATCHBACKGROUNDCOLOR
+ 70
+0
+  0
+APPID
+  5
+212
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+EZDXF
+ 70
+0
+  0
+ENDTAB
+  0
+TABLE
+  2
+DIMSTYLE
+  5
+7
+330
+0
+100
+AcDbSymbolTable
+ 70
+1
+100
+AcDbDimStyleTable
+  0
+DIMSTYLE
+105
+15
+330
+7
+100
+AcDbSymbolTableRecord
+100
+AcDbDimStyleTableRecord
+  2
+Standard
+ 70
+0
+  3
+<>
+  4
+
+ 40
+1.0
+ 41
+0.18
+ 42
+0.0625
+ 43
+0.38
+ 44
+0.18
+ 45
+0.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+140
+0.18
+141
+0.09
+142
+0.0
+143
+0.03937007874
+144
+1.0
+145
+0.0
+146
+1.0
+147
+0.09
+148
+0.0
+ 71
+0
+ 72
+0
+ 73
+0
+ 74
+0
+ 75
+0
+ 76
+0
+ 77
+1
+ 78
+8
+ 79
+3
+170
+0
+171
+3
+172
+1
+173
+0
+174
+0
+175
+0
+176
+0
+177
+0
+178
+0
+179
+0
+271
+2
+272
+2
+273
+2
+274
+3
+275
+0
+276
+0
+277
+2
+278
+46
+279
+0
+280
+0
+281
+0
+282
+0
+283
+0
+284
+8
+285
+0
+286
+0
+288
+0
+289
+3
+340
+13
+371
+-2
+372
+-2
+  0
+ENDTAB
+  0
+TABLE
+  2
+BLOCK_RECORD
+  5
+A
+330
+0
+100
+AcDbSymbolTable
+ 70
+2
+  0
+BLOCK_RECORD
+  5
+17
+330
+A
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Model_Space
+340
+1B
+  0
+BLOCK_RECORD
+  5
+1F7
+330
+A
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Paper_Space
+340
+1FC
+  0
+ENDTAB
+  0
+ENDSEC
+  0
+SECTION
+  2
+BLOCKS
+  0
+BLOCK
+  5
+19
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Model_Space
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*Model_Space
+  1
+
+  0
+ENDBLK
+  5
+18
+330
+17
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1F9
+330
+1F7
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Paper_Space
+ 70
+0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*Paper_Space
+  1
+
+  0
+ENDBLK
+  5
+1F8
+330
+1F7
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+ENDSEC
+  0
+SECTION
+  2
+ENTITIES
+  0
+LWPOLYLINE
+  5
+10A
+330
+17
+100
+AcDbEntity
+  8
+Polyline_60_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+0.615860615617529
+ 20
+50.2167914688801
+ 10
+0.615860615617529
+ 20
+52.2167909058469
+ 10
+-0.124349646401449
+ 20
+52.6441517970428
+ 10
+-2.10416536229661
+ 20
+52.6463837964134
+ 10
+-2.84824164256609
+ 20
+52.2167909205152
+ 10
+-2.84824164256609
+ 20
+50.2167914835484
+ 10
+-1.11619000683462
+ 20
+49.216791765065
+ 10
+0.615860556012863
+ 20
+50.2167914835484
+  0
+LWPOLYLINE
+  5
+10B
+330
+17
+100
+AcDbEntity
+  8
+Polyline_62_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+5.07996204014488
+ 20
+50.2167914835484
+ 10
+5.07996204014488
+ 20
+52.2167909205152
+ 10
+4.34848380211073
+ 20
+52.6391097966244
+ 10
+2.35123705923095
+ 20
+52.6413607959014
+ 10
+1.61585978196126
+ 20
+52.2167909212137
+ 10
+1.61585978196126
+ 20
+50.2167914842469
+ 10
+3.34791034480874
+ 20
+49.2167917657634
+ 10
+5.07996198054022
+ 20
+50.2167914842469
+  0
+LWPOLYLINE
+  5
+10C
+330
+17
+100
+AcDbEntity
+  8
+Polyline_64_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+9.5440644183469
+ 20
+50.2167914842469
+ 10
+9.5440644183469
+ 20
+52.2167909212137
+ 10
+8.82132017125156
+ 20
+52.6340678120384
+ 10
+6.80664049403784
+ 20
+52.6363388114621
+ 10
+6.07996221976794
+ 20
+52.2167909247062
+ 10
+6.07996221976794
+ 20
+50.2167914877393
+ 10
+7.81201278261542
+ 20
+49.2167917692559
+ 10
+9.5440644183469
+ 20
+50.2167914877393
+  0
+LWPOLYLINE
+  5
+10D
+330
+17
+100
+AcDbEntity
+  8
+Polyline_66_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+7
+ 70
+1
+ 10
+-48.4892701341639
+ 20
+52.2167909247062
+ 10
+-49.195487378246
+ 20
+52.624525800042
+ 10
+-51.2344521422131
+ 20
+52.6318597979426
+ 10
+-51.7997223514834
+ 20
+52.3055018993145
+ 10
+-49.6684836038651
+ 20
+51.7845370658494
+ 10
+-48.4892701341639
+ 20
+51.1477682483949
+ 10
+-48.4892701341639
+ 20
+52.2167909605621
+  0
+LWPOLYLINE
+  5
+10E
+330
+17
+100
+AcDbEntity
+  8
+Polyline_68_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+14.0081659024789
+ 20
+50.2167915235952
+ 10
+14.0081659024789
+ 20
+52.2167909605621
+ 10
+13.2941546330431
+ 20
+52.6290258363
+ 10
+11.2620429751701
+ 20
+52.6313158356302
+ 10
+10.5440637039
+ 20
+52.2167909500847
+ 10
+10.5440637039
+ 20
+50.2167915131179
+ 10
+12.2761153396314
+ 20
+49.2167917946344
+ 10
+14.0081659024789
+ 20
+50.2167915131179
+  0
+LWPOLYLINE
+  5
+10F
+330
+17
+100
+AcDbEntity
+  8
+Polyline_70_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+18.4722683402856
+ 20
+50.2167915131179
+ 10
+18.4722683402856
+ 20
+52.2167909500847
+ 10
+17.7669901081139
+ 20
+52.6239828272594
+ 10
+15.7174452774883
+ 20
+52.6262938265108
+ 10
+15.008165009218
+ 20
+52.2167909288971
+ 10
+15.008165009218
+ 20
+50.2167914919303
+ 10
+16.7402166449495
+ 20
+49.2167917734468
+ 10
+18.4722682806809
+ 20
+50.2167914919303
+  0
+LWPOLYLINE
+  5
+110
+330
+17
+100
+AcDbEntity
+  8
+Polyline_72_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+22.9363716721623
+ 20
+50.2167914919303
+ 10
+22.9363716721623
+ 20
+52.2167909288971
+ 10
+22.2398264176501
+ 20
+52.6189408207874
+ 10
+20.1728496063652
+ 20
+52.6212708201781
+ 10
+19.4722683410947
+ 20
+52.2167909237748
+ 10
+19.4722683410947
+ 20
+50.216791486808
+ 10
+21.2043199768261
+ 20
+49.2167917683246
+ 10
+22.9363716125576
+ 20
+50.216791486808
+  0
+LWPOLYLINE
+  5
+111
+330
+17
+100
+AcDbEntity
+  8
+Polyline_74_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+0
+ 10
+25.1551223620191
+ 20
+52.6395780273434
+ 10
+24.6282523259161
+ 20
+52.6162487935964
+ 10
+23.9363710769247
+ 20
+52.2167909149273
+ 10
+23.9363710769247
+ 20
+50.2167914779604
+ 10
+24.2732966210279
+ 20
+50.048090135451
+ 10
+25.1191294746317
+ 20
+52.6575744710371
+  0
+LWPOLYLINE
+  5
+112
+330
+17
+100
+AcDbEntity
+  8
+Polyline_76_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+9
+ 70
+1
+ 10
+-44.0251668022872
+ 20
+50.2167915375651
+ 10
+-44.0251668022872
+ 20
+52.2167909745319
+ 10
+-44.7033970330113
+ 20
+52.6083668564042
+ 10
+-46.7979886861188
+ 20
+52.615901854149
+ 10
+-47.4892689412615
+ 20
+52.2167909638217
+ 10
+-47.4892689412615
+ 20
+50.6077744022832
+ 10
+-45.6938652940299
+ 20
+49.6382666829481
+ 10
+-45.4180562051681
+ 20
+49.412606750204
+ 10
+-44.0251666830779
+ 20
+50.2167914970525
+  0
+LWPOLYLINE
+  5
+113
+330
+17
+100
+AcDbEntity
+  8
+Polyline_78_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-39.5610642452712
+ 20
+50.2167914970525
+ 10
+-39.5610642452712
+ 20
+52.2167909340194
+ 10
+-40.2113074626373
+ 20
+52.5922088357068
+ 10
+-42.3615281506532
+ 20
+52.5999428337467
+ 10
+-43.0251673975248
+ 20
+52.2167909335537
+ 10
+-43.0251673975248
+ 20
+50.2167914965869
+ 10
+-41.2931157617934
+ 20
+49.2167917781035
+ 10
+-39.5610641260619
+ 20
+50.2167914965869
+  0
+LWPOLYLINE
+  5
+114
+330
+17
+100
+AcDbEntity
+  8
+Polyline_80_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-35.0969616882552
+ 20
+50.2167914965869
+ 10
+-35.0969616882552
+ 20
+52.2167909335537
+ 10
+-35.7192169385886
+ 20
+52.5760498417776
+ 10
+-37.9250657078382
+ 20
+52.583984839196
+ 10
+-38.5610639464388
+ 20
+52.2167909456609
+ 10
+-38.5610639464388
+ 20
+50.2167915086941
+ 10
+-36.8290133835914
+ 20
+49.2167917902106
+ 10
+-35.0969617478599
+ 20
+50.2167915086941
+  0
+LWPOLYLINE
+  5
+115
+330
+17
+100
+AcDbEntity
+  8
+Polyline_82_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+7
+ 70
+1
+ 10
+-31.183594265834
+ 20
+52.5347577941668
+ 10
+-31.2271272825329
+ 20
+52.5598917880183
+ 10
+-33.4886031793415
+ 20
+52.568026785972
+ 10
+-34.0969614229505
+ 20
+52.2167908990948
+ 10
+-34.0969614229505
+ 20
+50.216791462128
+ 10
+-32.4337988337848
+ 20
+49.2565637065348
+ 10
+-31.183594418571
+ 20
+52.534757687996
+  0
+LWPOLYLINE
+  5
+116
+330
+17
+100
+AcDbEntity
+  8
+Polyline_84_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+-3.84824412069409
+ 20
+50.2167914025233
+ 10
+-3.84824412069409
+ 20
+51.954109906054
+ 10
+-4.69899642167548
+ 20
+49.7256094519473
+ 10
+-3.84824412069409
+ 20
+50.2167913131164
+  0
+LWPOLYLINE
+  5
+117
+330
+17
+100
+AcDbEntity
+  8
+Polyline_86_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+5
+ 70
+1
+ 10
+23.9180215219702
+ 20
+49.0654178866303
+ 10
+23.4363770034591
+ 20
+49.3507665263038
+ 10
+21.7043253677276
+ 20
+48.3507668078204
+ 10
+21.7043253677276
+ 20
+46.3507673708536
+ 10
+22.7815765358206
+ 20
+45.7301989055391
+  0
+LWPOLYLINE
+  5
+118
+330
+17
+100
+AcDbEntity
+  8
+Polyline_88_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+20.7043259629652
+ 20
+46.3507673708536
+ 10
+20.7043259629652
+ 20
+48.3507668078204
+ 10
+18.9722743272338
+ 20
+49.3507665263038
+ 10
+17.2402226915023
+ 20
+48.3507668078204
+ 10
+17.2402226915023
+ 20
+46.3507673708536
+ 10
+18.9722743272338
+ 20
+45.3507676523702
+  0
+LWPOLYLINE
+  5
+119
+330
+17
+100
+AcDbEntity
+  8
+Polyline_90_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+16.2402225714839
+ 20
+46.3507673708536
+ 10
+16.2402225714839
+ 20
+48.3507668078204
+ 10
+14.5081709357524
+ 20
+49.3507665263038
+ 10
+12.7761213265796
+ 20
+48.3507668078204
+ 10
+12.7761213265796
+ 20
+46.3507673708536
+ 10
+14.5081709357524
+ 20
+45.3507676523702
+  0
+LWPOLYLINE
+  5
+11A
+330
+17
+100
+AcDbEntity
+  8
+Polyline_92_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+11.7761210873519
+ 20
+46.3507673708536
+ 10
+11.7761210873519
+ 20
+48.3507668078204
+ 10
+10.0440694516204
+ 20
+49.3507665263038
+ 10
+8.31201781588895
+ 20
+48.3507668078204
+ 10
+8.31201781588895
+ 20
+46.3507673708536
+ 10
+10.0440694516204
+ 20
+45.3507676523702
+  0
+LWPOLYLINE
+  5
+11B
+330
+17
+100
+AcDbEntity
+  8
+Polyline_94_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+7.31201769587056
+ 20
+46.3507673708536
+ 10
+7.31201769587056
+ 20
+48.3507668078204
+ 10
+5.57996606013908
+ 20
+49.3507665263038
+ 10
+3.8479154972916
+ 20
+48.3507668078204
+ 10
+3.8479154972916
+ 20
+46.3507673708536
+ 10
+5.57996606013908
+ 20
+45.3507676523702
+  0
+LWPOLYLINE
+  5
+11C
+330
+17
+100
+AcDbEntity
+  8
+Polyline_96_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+2.84791525806388
+ 20
+46.3507673708536
+ 10
+2.84791525806388
+ 20
+48.3507668078204
+ 10
+1.11586469521639
+ 20
+49.3507665263038
+ 10
+-0.616185867631088
+ 20
+48.3507668078204
+ 10
+-0.616185867631088
+ 20
+46.3507673708536
+ 10
+1.11586469521639
+ 20
+45.3507676523702
+  0
+LWPOLYLINE
+  5
+11D
+330
+17
+100
+AcDbEntity
+  8
+Polyline_98_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-1.61618527239348
+ 20
+46.3507673708536
+ 10
+-1.61618527239348
+ 20
+48.3507668078204
+ 10
+-3.34823690812496
+ 20
+49.3507665263038
+ 10
+-5.08028854385643
+ 20
+48.3507668078204
+ 10
+-5.08028854385643
+ 20
+46.3507673708536
+ 10
+-3.34823690812496
+ 20
+45.3507676523702
+  0
+LWPOLYLINE
+  5
+11E
+330
+17
+100
+AcDbEntity
+  8
+Polyline_100_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-33.7331554024656
+ 20
+45.8494824954369
+ 10
+-32.8649050788549
+ 20
+48.1261468268233
+ 10
+-32.8649050788549
+ 20
+48.3507667631169
+ 10
+-34.5969556417024
+ 20
+49.3507664816004
+ 10
+-36.3290072774338
+ 20
+48.3507667631169
+ 10
+-36.3290072774338
+ 20
+46.3507673261501
+ 10
+-34.5969556417024
+ 20
+45.3507676076667
+ 10
+-33.733155342861
+ 20
+45.8494824805357
+  0
+LWPOLYLINE
+  5
+11F
+330
+17
+100
+AcDbEntity
+  8
+Polyline_102_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-37.3290075762662
+ 20
+46.3507673559524
+ 10
+-37.3290075762662
+ 20
+48.3507667929193
+ 10
+-39.0610592119977
+ 20
+49.3507665114027
+ 10
+-40.7931097748452
+ 20
+48.3507667929193
+ 10
+-40.7931097748452
+ 20
+46.3507673559524
+ 10
+-39.0610592119977
+ 20
+45.350767637469
+  0
+LWPOLYLINE
+  5
+120
+330
+17
+100
+AcDbEntity
+  8
+Polyline_104_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+7
+ 70
+1
+ 10
+-41.7931100140729
+ 20
+46.3507673559524
+ 10
+-41.7931100140729
+ 20
+48.3507667929193
+ 10
+-43.5251616498044
+ 20
+49.3507665114027
+ 10
+-44.5906240249229
+ 20
+48.7356216569387
+ 10
+-43.0698205051098
+ 20
+47.4913390463333
+ 10
+-42.2374812179877
+ 20
+46.0942094271363
+ 10
+-41.7931100438752
+ 20
+46.3507673559524
+  0
+LWPOLYLINE
+  5
+121
+330
+17
+100
+AcDbEntity
+  8
+Polyline_106_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+9
+ 70
+0
+ 10
+21.4628307928799
+ 20
+42.0662992482215
+ 10
+21.4191000202647
+ 20
+41.9392227017597
+ 10
+21.5325428466146
+ 20
+42.1661083544596
+ 10
+22.4178027607168
+ 20
+44.7716697721853
+ 10
+21.2043538360018
+ 20
+45.484742612912
+ 10
+19.4723022002703
+ 20
+44.4847428944286
+ 10
+19.4723022002703
+ 20
+42.4847434574617
+ 10
+20.4113255547342
+ 20
+41.9425975829967
+ 10
+21.4743551523003
+ 20
+41.9712336655832
+  0
+LWPOLYLINE
+  5
+122
+330
+17
+100
+AcDbEntity
+  8
+Polyline_108_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+17.5024687162323
+ 20
+41.9248095885308
+ 10
+18.4723030935312
+ 20
+42.4847434509425
+ 10
+18.4723030935312
+ 20
+44.4847428879093
+ 10
+16.7402514577998
+ 20
+45.4847426063928
+ 10
+15.0081998220683
+ 20
+44.4847428879093
+ 10
+15.0081998220683
+ 20
+42.4847434509425
+ 10
+15.9940121838007
+ 20
+41.9155846398605
+ 10
+17.5024687162323
+ 20
+41.9248096369595
+  0
+LWPOLYLINE
+  5
+123
+330
+17
+100
+AcDbEntity
+  8
+Polyline_110_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+9
+ 70
+1
+ 10
+12.5043027477641
+ 20
+41.8942436461161
+ 10
+12.9905749292889
+ 20
+41.8972176453398
+ 10
+14.0081993146196
+ 20
+42.4847435033294
+ 10
+14.0081993146196
+ 20
+44.4847429402962
+ 10
+12.2761487517721
+ 20
+45.4847426587796
+ 10
+10.5440981889246
+ 20
+44.4847429402962
+ 10
+10.5440981889246
+ 20
+42.4847435033294
+ 10
+11.5960065821722
+ 20
+41.8774236636379
+ 10
+12.5043028967757
+ 20
+41.8942436593874
+  0
+LWPOLYLINE
+  5
+124
+330
+17
+100
+AcDbEntity
+  8
+Polyline_112_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+8.15284421806423
+ 20
+41.6815027168371
+ 10
+9.54409771127821
+ 20
+42.484743505192
+ 10
+9.54409771127821
+ 20
+44.4847429421589
+ 10
+7.81204607554674
+ 20
+45.4847426606423
+ 10
+6.07999443981527
+ 20
+44.4847429421589
+ 10
+6.07999443981527
+ 20
+42.484743505192
+ 10
+7.64155098117084
+ 20
+41.5831777304028
+ 10
+8.15284415845957
+ 20
+41.6815027019359
+  0
+LWPOLYLINE
+  5
+125
+330
+17
+100
+AcDbEntity
+  8
+Polyline_114_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+5.07999402177354
+ 20
+42.4847434902909
+ 10
+5.07999402177354
+ 20
+44.4847429272577
+ 10
+3.34794238604207
+ 20
+45.4847426457411
+ 10
+1.61589277686925
+ 20
+44.4847429272577
+ 10
+1.61589277686925
+ 20
+42.4847434902909
+ 10
+3.34794238604207
+ 20
+41.4847428181334
+  0
+LWPOLYLINE
+  5
+126
+330
+17
+100
+AcDbEntity
+  8
+Polyline_116_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+0.615892537641524
+ 20
+42.4847434902909
+ 10
+0.615892537641524
+ 20
+44.4847429272577
+ 10
+-1.11615802520596
+ 20
+45.4847426457411
+ 10
+-2.84820966093743
+ 20
+44.4847429272577
+ 10
+-2.84820966093743
+ 20
+42.4847434902909
+ 10
+-1.11615802520596
+ 20
+41.4847428181334
+  0
+LWPOLYLINE
+  5
+127
+330
+17
+100
+AcDbEntity
+  8
+Polyline_118_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-3.8482089464905
+ 20
+42.4847434902909
+ 10
+-3.8482089464905
+ 20
+44.4847429272577
+ 10
+-5.58026058222197
+ 20
+45.4847426457411
+ 10
+-6.52656190484026
+ 20
+44.9383957774903
+ 10
+-7.31231215834878
+ 20
+42.8801652415753
+ 10
+-7.31231215834878
+ 20
+42.4847433412793
+ 10
+-5.5802605226173
+ 20
+41.4847426691218
+ 10
+-3.84820888688583
+ 20
+42.4847433412793
+  0
+LWPOLYLINE
+  5
+128
+330
+17
+100
+AcDbEntity
+  8
+Polyline_120_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-35.0969269052072
+ 20
+42.4847433412793
+ 10
+-35.0969269052072
+ 20
+44.4847427782461
+ 10
+-36.8289785409387
+ 20
+45.4847424967296
+ 10
+-38.5610301766702
+ 20
+44.4847427782461
+ 10
+-38.5610301766702
+ 20
+42.4847433412793
+ 10
+-36.8289785409387
+ 20
+41.4847426691218
+  0
+LWPOLYLINE
+  5
+129
+330
+17
+100
+AcDbEntity
+  8
+Polyline_122_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+7
+ 70
+1
+ 10
+-39.5610302966886
+ 20
+42.4847433412793
+ 10
+-39.5610302966886
+ 20
+44.4847427782461
+ 10
+-41.2930819324201
+ 20
+45.4847424967296
+ 10
+-41.7256170801515
+ 20
+45.2350185663386
+ 10
+-40.843456755999
+ 20
+43.7542599585768
+ 10
+-40.4237836097669
+ 20
+41.9866325017103
+ 10
+-39.5610303264909
+ 20
+42.4847433710816
+  0
+LWPOLYLINE
+  5
+12A
+330
+17
+100
+AcDbEntity
+  8
+Polyline_124_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+5.45316503799528
+ 20
+41.1623376898177
+ 10
+6.14127629185335
+ 20
+41.2946656562102
+ 10
+5.58000209861034
+ 20
+41.6187175709904
+ 10
+3.84795046287887
+ 20
+40.6187168988329
+ 10
+3.84795046287887
+ 20
+39.9977800838527
+ 10
+5.45316503799528
+ 20
+41.162337809027
+  0
+LWPOLYLINE
+  5
+12B
+330
+17
+100
+AcDbEntity
+  8
+Polyline_126_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+9
+ 70
+1
+ 10
+1.51925158913233
+ 20
+37.8515927865433
+ 10
+2.05919380880586
+ 20
+38.7000665734101
+ 10
+2.84795010444181
+ 20
+39.2722963937403
+ 10
+2.84795010444181
+ 20
+40.6187170180422
+ 10
+1.11590049526899
+ 20
+41.6187176901996
+ 10
+-0.616150067578495
+ 20
+40.6187170180422
+ 10
+-0.616150067578495
+ 20
+38.6187175810753
+ 10
+1.11590049526899
+ 20
+37.6187178625919
+ 10
+1.51925164873699
+ 20
+37.8515928014445
+  0
+LWPOLYLINE
+  5
+12C
+330
+17
+100
+AcDbEntity
+  8
+Polyline_128_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-1.61615048562022
+ 20
+38.6187175959765
+ 10
+-1.61615048562022
+ 20
+40.6187170329433
+ 10
+-3.34820212135169
+ 20
+41.6187177051008
+ 10
+-5.08025375708316
+ 20
+40.6187170329433
+ 10
+-5.08025375708316
+ 20
+38.6187175959765
+ 10
+-3.34820212135169
+ 20
+37.6187178774931
+  0
+LWPOLYLINE
+  5
+12D
+330
+17
+100
+AcDbEntity
+  8
+Polyline_130_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+9
+ 70
+1
+ 10
+-32.8648704112909
+ 20
+38.6187175959765
+ 10
+-32.8648704112909
+ 20
+40.4819821089731
+ 10
+-33.9140417582694
+ 20
+41.0284199338863
+ 10
+-34.0402667981726
+ 20
+41.2973328590049
+ 10
+-34.5969209741384
+ 20
+41.6187177647054
+ 10
+-36.3289715369859
+ 20
+40.6187170925479
+ 10
+-36.3289715369859
+ 20
+38.6187176555811
+ 10
+-34.5969209741384
+ 20
+37.6187179370977
+ 10
+-32.8648704112909
+ 20
+38.6187176555811
+  0
+LWPOLYLINE
+  5
+12E
+330
+17
+100
+AcDbEntity
+  8
+Polyline_132_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+7
+ 70
+1
+ 10
+-37.328971895423
+ 20
+38.6187176555811
+ 10
+-37.328971895423
+ 20
+40.6187170925479
+ 10
+-39.0610235311544
+ 20
+41.6187177647054
+ 10
+-40.182680947091
+ 20
+40.9711289191308
+ 10
+-39.4384876628619
+ 20
+37.836646702556
+ 10
+-39.0610235311544
+ 20
+37.6187177582838
+ 10
+-37.328971895423
+ 20
+38.6187174767672
+  0
+LWPOLYLINE
+  5
+12F
+330
+17
+100
+AcDbEntity
+  8
+Polyline_134_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-6.08025387710156
+ 20
+38.6187174767672
+ 10
+-6.08025387710156
+ 20
+40.6187169137341
+ 10
+-7.79720943903978
+ 20
+41.6100016607444
+ 10
+-8.4083526510694
+ 20
+40.0091441383137
+ 10
+-9.54435607568051
+ 20
+40.0103941379338
+ 10
+-9.54435607568051
+ 20
+38.6187175077337
+ 10
+-7.81230551283303
+ 20
+37.6187177892503
+ 10
+-6.08025387710156
+ 20
+38.6187175077337
+  0
+LWPOLYLINE
+  5
+130
+330
+17
+100
+AcDbEntity
+  8
+Polyline_136_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-28.4007670198096
+ 20
+38.6187175077337
+ 10
+-28.4007670198096
+ 20
+40.0311460852168
+ 10
+-31.8648702912726
+ 20
+40.0349590840736
+ 10
+-31.8648702912726
+ 20
+38.6187174793284
+ 10
+-30.1328186555411
+ 20
+37.6187177608449
+ 10
+-28.4007670198096
+ 20
+38.6187174793284
+  0
+LWPOLYLINE
+  5
+131
+330
+17
+100
+AcDbEntity
+  8
+Polyline_138_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-23.9366645820029
+ 20
+38.6187174793284
+ 10
+-23.9366645820029
+ 20
+40.0262330857443
+ 10
+-27.4007678534659
+ 20
+40.0300460846011
+ 10
+-27.4007678534659
+ 20
+38.618717450923
+ 10
+-25.6687162177344
+ 20
+37.6187177324396
+ 10
+-23.9366645820029
+ 20
+38.618717450923
+  0
+LWPOLYLINE
+  5
+132
+330
+17
+100
+AcDbEntity
+  8
+Polyline_140_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-19.4725630978709
+ 20
+38.618717450923
+ 10
+-19.4725630978709
+ 20
+40.0213210399458
+ 10
+-22.9366642235659
+ 20
+40.0251330387953
+ 10
+-22.9366642235659
+ 20
+38.6187173761844
+ 10
+-21.2046136607184
+ 20
+37.618717657701
+ 10
+-19.4725630978709
+ 20
+38.6187173761844
+  0
+LWPOLYLINE
+  5
+133
+330
+17
+100
+AcDbEntity
+  8
+Polyline_142_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-15.0084597063896
+ 20
+38.6187173761844
+ 10
+-15.0084597063896
+ 20
+40.0164079941401
+ 10
+-18.4725629778525
+ 20
+40.0202199929895
+ 10
+-18.4725629778525
+ 20
+38.6187174206551
+ 10
+-16.740511342121
+ 20
+37.6187177021716
+ 10
+-15.0084597063896
+ 20
+38.6187174206551
+  0
+LWPOLYLINE
+  5
+134
+330
+17
+100
+AcDbEntity
+  8
+Polyline_144_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-10.5443572685829
+ 20
+38.6187174206551
+ 10
+-10.5443572685829
+ 20
+40.0114950675435
+ 10
+-14.0084605400458
+ 20
+40.015307066393
+ 10
+-14.0084605400458
+ 20
+38.6187174651257
+ 10
+-12.2764089043144
+ 20
+37.6187177466423
+ 10
+-10.5443572685829
+ 20
+38.6187174651257
+  0
+LWPOLYLINE
+  5
+135
+330
+17
+100
+AcDbEntity
+  8
+Polyline_146_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+9
+ 70
+1
+ 10
+-0.976283427349781
+ 20
+33.8334319088819
+ 10
+-0.734373344965187
+ 20
+34.3102117720092
+ 10
+0.615925186097403
+ 20
+36.4320921828128
+ 10
+0.615925186097403
+ 20
+36.752693079039
+ 10
+-1.11612537675008
+ 20
+37.7526927975224
+ 10
+-2.84817593959756
+ 20
+36.752693079039
+ 10
+-2.84817593959756
+ 20
+34.7526936420721
+ 10
+-1.11612537675008
+ 20
+33.7526939235887
+ 10
+-0.976283323041615
+ 20
+33.8334319014314
+  0
+LWPOLYLINE
+  5
+136
+330
+17
+100
+AcDbEntity
+  8
+Polyline_148_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-3.84817632783695
+ 20
+34.7526936346216
+ 10
+-3.84817632783695
+ 20
+36.7526930715884
+ 10
+-5.58022796356842
+ 20
+37.7526927900718
+ 10
+-7.3122795992999
+ 20
+36.7526930715884
+ 10
+-7.3122795992999
+ 20
+34.7526936346216
+ 10
+-5.58022796356842
+ 20
+33.7526939161381
+  0
+LWPOLYLINE
+  5
+137
+330
+17
+100
+AcDbEntity
+  8
+Polyline_150_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-8.31227876564363
+ 20
+34.7526936346216
+ 10
+-8.31227876564363
+ 20
+36.7526930715884
+ 10
+-10.0443293284911
+ 20
+37.7526927900718
+ 10
+-11.7763809642226
+ 20
+36.7526930715884
+ 10
+-11.7763809642226
+ 20
+34.7526936346216
+ 10
+-10.0443293284911
+ 20
+33.7526939161381
+  0
+LWPOLYLINE
+  5
+138
+330
+17
+100
+AcDbEntity
+  8
+Polyline_152_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-12.7763812034503
+ 20
+34.7526936346216
+ 10
+-12.7763812034503
+ 20
+36.7526930715884
+ 10
+-14.5084328391818
+ 20
+37.7526927900718
+ 10
+-16.2404844749133
+ 20
+36.7526930715884
+ 10
+-16.2404844749133
+ 20
+34.7526936346216
+ 10
+-14.5084328391818
+ 20
+33.7526939161381
+  0
+LWPOLYLINE
+  5
+139
+330
+17
+100
+AcDbEntity
+  8
+Polyline_154_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-17.240483641257
+ 20
+34.7526936346216
+ 10
+-17.240483641257
+ 20
+36.7526930715884
+ 10
+-18.9725352769885
+ 20
+37.7526927900718
+ 10
+-20.7045869127199
+ 20
+36.7526930715884
+ 10
+-20.7045869127199
+ 20
+34.7526936346216
+ 10
+-18.9725352769885
+ 20
+33.7526939161381
+  0
+LWPOLYLINE
+  5
+13A
+330
+17
+100
+AcDbEntity
+  8
+Polyline_156_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-21.7045870327383
+ 20
+34.7526936346216
+ 10
+-21.7045870327383
+ 20
+36.7526930715884
+ 10
+-23.4366366419112
+ 20
+37.7526927900718
+ 10
+-25.1686882776426
+ 20
+36.7526930715884
+ 10
+-25.1686882776426
+ 20
+34.7526936346216
+ 10
+-23.4366366419112
+ 20
+33.7526939161381
+  0
+LWPOLYLINE
+  5
+13B
+330
+17
+100
+AcDbEntity
+  8
+Polyline_158_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-26.1686885168703
+ 20
+34.7526936346216
+ 10
+-26.1686885168703
+ 20
+36.7526930715884
+ 10
+-27.9007401526018
+ 20
+37.7526927900718
+ 10
+-29.6327917883333
+ 20
+36.7526930715884
+ 10
+-29.6327917883333
+ 20
+34.7526936346216
+ 10
+-27.9007401526018
+ 20
+33.7526939161381
+  0
+LWPOLYLINE
+  5
+13C
+330
+17
+100
+AcDbEntity
+  8
+Polyline_160_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-30.632790954677
+ 20
+34.7526936346216
+ 10
+-30.632790954677
+ 20
+36.7526930715884
+ 10
+-32.3648425904085
+ 20
+37.7526927900718
+ 10
+-34.096893153256
+ 20
+36.7526930715884
+ 10
+-34.096893153256
+ 20
+34.7526936346216
+ 10
+-32.3648425904085
+ 20
+33.7526939161381
+  0
+LWPOLYLINE
+  5
+13D
+330
+17
+100
+AcDbEntity
+  8
+Polyline_162_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-35.0968933924837
+ 20
+34.7526936346216
+ 10
+-35.0968933924837
+ 20
+36.7526930715884
+ 10
+-36.8289450282152
+ 20
+37.7526927900718
+ 10
+-38.5609966639466
+ 20
+36.7526930715884
+ 10
+-38.5609966639466
+ 20
+34.7526936346216
+ 10
+-36.8289450282152
+ 20
+33.7526939161381
+  0
+LWPOLYLINE
+  5
+13E
+330
+17
+100
+AcDbEntity
+  8
+Polyline_164_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-2.82577892005116
+ 20
+30.1882718353233
+ 10
+-1.61611950609499
+ 20
+32.5723820917383
+ 10
+-1.61611950609499
+ 20
+32.8866679968377
+ 10
+-3.34817006894248
+ 20
+33.8866677153211
+ 10
+-5.08022170467395
+ 20
+32.8866679968377
+ 10
+-5.08022170467395
+ 20
+30.8866685598708
+ 10
+-3.34817006894248
+ 20
+29.8866688413874
+ 10
+-2.8257788604465
+ 20
+30.1882717459163
+  0
+LWPOLYLINE
+  5
+13F
+330
+17
+100
+AcDbEntity
+  8
+Polyline_166_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-6.08022200350634
+ 20
+30.8866685300685
+ 10
+-6.08022200350634
+ 20
+32.8866679670353
+ 10
+-7.81227363923781
+ 20
+33.8866676855188
+ 10
+-9.54432420208529
+ 20
+32.8866679670353
+ 10
+-9.54432420208529
+ 20
+30.8866685300685
+ 10
+-7.81227363923781
+ 20
+29.8866688115851
+  0
+LWPOLYLINE
+  5
+140
+330
+17
+100
+AcDbEntity
+  8
+Polyline_168_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-10.5443234876384
+ 20
+30.8866685300685
+ 10
+-10.5443234876384
+ 20
+32.8866679670353
+ 10
+-12.2763751233698
+ 20
+33.8866676855188
+ 10
+-14.0084267591013
+ 20
+32.8866679670353
+ 10
+-14.0084267591013
+ 20
+30.8866685300685
+ 10
+-12.2763751233698
+ 20
+29.8866688115851
+  0
+LWPOLYLINE
+  5
+141
+330
+17
+100
+AcDbEntity
+  8
+Polyline_170_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-15.0084268791197
+ 20
+30.8866685300685
+ 10
+-15.0084268791197
+ 20
+32.8866679670353
+ 10
+-16.7404785148512
+ 20
+33.8866676855188
+ 10
+-18.4725301505826
+ 20
+32.8866679670353
+ 10
+-18.4725301505826
+ 20
+30.8866685300685
+ 10
+-16.7404785148512
+ 20
+29.8866688115851
+  0
+LWPOLYLINE
+  5
+142
+330
+17
+100
+AcDbEntity
+  8
+Polyline_172_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-19.4725293169264
+ 20
+30.8866685300685
+ 10
+-19.4725293169264
+ 20
+32.8866679670353
+ 10
+-21.2045809526578
+ 20
+33.8866676855188
+ 10
+-22.9366315155053
+ 20
+32.8866679670353
+ 10
+-22.9366315155053
+ 20
+30.8866685300685
+ 10
+-21.2045809526578
+ 20
+29.8866688115851
+  0
+LWPOLYLINE
+  5
+143
+330
+17
+100
+AcDbEntity
+  8
+Polyline_174_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-23.936631754733
+ 20
+30.8866685300685
+ 10
+-23.936631754733
+ 20
+32.8866679670353
+ 10
+-25.6686823175805
+ 20
+33.8866676855188
+ 10
+-27.400733953312
+ 20
+32.8866679670353
+ 10
+-27.400733953312
+ 20
+30.8866685300685
+ 10
+-25.6686823175805
+ 20
+29.8866688115851
+  0
+LWPOLYLINE
+  5
+144
+330
+17
+100
+AcDbEntity
+  8
+Polyline_176_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-28.4007341925397
+ 20
+30.8866685300685
+ 10
+-28.4007341925397
+ 20
+32.8866679670353
+ 10
+-30.1327858282712
+ 20
+33.8866676855188
+ 10
+-31.8648374640027
+ 20
+32.8866679670353
+ 10
+-31.8648374640027
+ 20
+30.8866685300685
+ 10
+-30.1327858282712
+ 20
+29.8866688115851
+  0
+LWPOLYLINE
+  5
+145
+330
+17
+100
+AcDbEntity
+  8
+Polyline_178_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-32.8648366303464
+ 20
+30.8866685300685
+ 10
+-32.8648366303464
+ 20
+32.8866679670353
+ 10
+-34.5968871931939
+ 20
+33.8866676855188
+ 10
+-36.3289388289254
+ 20
+32.8866679670353
+ 10
+-36.3289388289254
+ 20
+30.8866685300685
+ 10
+-34.5968871931939
+ 20
+29.8866688115851
+  0
+LWPOLYLINE
+  5
+146
+330
+17
+100
+AcDbEntity
+  8
+Polyline_180_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+5
+ 70
+1
+ 10
+-37.3289390681531
+ 20
+30.8866685300685
+ 10
+-37.3289390681531
+ 20
+32.8866679670353
+ 10
+-38.4116714184483
+ 20
+33.5117827684149
+ 10
+-37.7330221669213
+ 20
+30.6533705920722
+ 10
+-37.3289390085484
+ 20
+30.8866685300685
+  0
+LWPOLYLINE
+  5
+147
+330
+17
+100
+AcDbEntity
+  8
+Polyline_182_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-4.67527892780601
+ 20
+26.543095705768
+ 10
+-3.84814163792126
+ 20
+28.1732962289332
+ 10
+-3.84814163792126
+ 20
+29.0206439651679
+ 10
+-5.58019220076874
+ 20
+30.0206436836513
+ 10
+-7.31224383650022
+ 20
+29.0206439651679
+ 10
+-7.31224383650022
+ 20
+27.020643574527
+ 10
+-5.58019220076874
+ 20
+26.0206438560436
+ 10
+-4.67527886820135
+ 20
+26.543095705768
+  0
+LWPOLYLINE
+  5
+148
+330
+17
+100
+AcDbEntity
+  8
+Polyline_184_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+7
+ 70
+1
+ 10
+-8.31224425454194
+ 20
+27.020643574527
+ 10
+-8.31224425454194
+ 20
+29.0206439651679
+ 10
+-10.0442948173894
+ 20
+30.0206436836513
+ 10
+-11.7763464531209
+ 20
+29.0206439651679
+ 10
+-11.7763464531209
+ 20
+27.551647377067
+ 10
+-8.90207736791456
+ 20
+26.6801036189344
+ 10
+-8.31224413533261
+ 20
+27.0206435149224
+  0
+LWPOLYLINE
+  5
+149
+330
+17
+100
+AcDbEntity
+  8
+Polyline_186_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-13.9161823393645
+ 20
+28.2004951915941
+ 10
+-12.7763459770926
+ 20
+27.8548702757802
+ 10
+-12.7763459770926
+ 20
+29.0206439353656
+ 10
+-14.5083976128241
+ 20
+30.020643653849
+ 10
+-16.2404492485556
+ 20
+29.0206439353656
+ 10
+-16.2404492485556
+ 20
+27.0206435447247
+ 10
+-14.6247816839289
+ 20
+26.0878377923104
+ 10
+-13.9161824585739
+ 20
+28.2004952213964
+  0
+LWPOLYLINE
+  5
+14A
+330
+17
+100
+AcDbEntity
+  8
+Polyline_188_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-17.2404496069926
+ 20
+27.0206435447247
+ 10
+-17.2404496069926
+ 20
+29.0206439353656
+ 10
+-18.9725012427241
+ 20
+30.020643653849
+ 10
+-20.7045528784556
+ 20
+29.0206439353656
+ 10
+-20.7045528784556
+ 20
+27.0206435447247
+ 10
+-18.9725012427241
+ 20
+26.0206438262413
+  0
+LWPOLYLINE
+  5
+14B
+330
+17
+100
+AcDbEntity
+  8
+Polyline_190_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-21.7045520447993
+ 20
+27.0206435447247
+ 10
+-21.7045520447993
+ 20
+29.0206439353656
+ 10
+-23.4366026076468
+ 20
+30.020643653849
+ 10
+-25.1686542433783
+ 20
+29.0206439353656
+ 10
+-25.1686542433783
+ 20
+27.0206435447247
+ 10
+-23.4366026076468
+ 20
+26.0206438262413
+  0
+LWPOLYLINE
+  5
+14C
+330
+17
+100
+AcDbEntity
+  8
+Polyline_192_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-26.168654482606
+ 20
+27.0206435447247
+ 10
+-26.168654482606
+ 20
+29.0206439353656
+ 10
+-27.9007050454535
+ 20
+30.020643653849
+ 10
+-29.6327566811849
+ 20
+29.0206439353656
+ 10
+-29.6327566811849
+ 20
+27.0206435447247
+ 10
+-27.9007050454535
+ 20
+26.0206438262413
+  0
+LWPOLYLINE
+  5
+14D
+330
+17
+100
+AcDbEntity
+  8
+Polyline_194_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-30.6327569204127
+ 20
+27.0206435447247
+ 10
+-30.6327569204127
+ 20
+29.0206439353656
+ 10
+-32.3648085561441
+ 20
+30.020643653849
+ 10
+-34.0968591189916
+ 20
+29.0206439353656
+ 10
+-34.0968591189916
+ 20
+27.0206435447247
+ 10
+-32.3648085561441
+ 20
+26.0206438262413
+  0
+LWPOLYLINE
+  5
+14E
+330
+17
+100
+AcDbEntity
+  8
+Polyline_196_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-35.0968584045447
+ 20
+27.0206435447247
+ 10
+-35.0968584045447
+ 20
+29.0206439353656
+ 10
+-36.8289100402762
+ 20
+30.020643653849
+ 10
+-38.0167875250382
+ 20
+29.3348228501577
+ 10
+-38.5609617356123
+ 20
+27.7533302753165
+ 10
+-38.5609617356123
+ 20
+27.0206434851201
+ 10
+-36.8289100998808
+ 20
+26.0206437666367
+ 10
+-35.0968584641494
+ 20
+27.0206434851201
+  0
+LWPOLYLINE
+  5
+14F
+330
+17
+100
+AcDbEntity
+  8
+Polyline_198_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-15.7527429489611
+ 20
+22.7248688041019
+ 10
+-15.008391652762
+ 20
+24.9441202888732
+ 10
+-15.008391652762
+ 20
+25.1546192331438
+ 10
+-16.7404432884935
+ 20
+26.1546189516272
+ 10
+-18.472494924225
+ 20
+25.1546192331438
+ 10
+-18.472494924225
+ 20
+23.1546197961769
+ 10
+-16.7404432884935
+ 20
+22.1546200776935
+ 10
+-15.7527429489611
+ 20
+22.7248689382123
+  0
+LWPOLYLINE
+  5
+150
+330
+17
+100
+AcDbEntity
+  8
+Polyline_200_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-19.4724951634527
+ 20
+23.1546198259792
+ 10
+-19.4724951634527
+ 20
+25.1546192629461
+ 10
+-21.2045467991842
+ 20
+26.1546189814295
+ 10
+-22.936596408357
+ 20
+25.1546192629461
+ 10
+-22.936596408357
+ 20
+23.1546198259792
+ 10
+-21.2045467991842
+ 20
+22.1546201074958
+  0
+LWPOLYLINE
+  5
+151
+330
+17
+100
+AcDbEntity
+  8
+Polyline_202_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-23.9365966475847
+ 20
+23.1546198259792
+ 10
+-23.9365966475847
+ 20
+25.1546192629461
+ 10
+-25.6686482833162
+ 20
+26.1546189814295
+ 10
+-27.4006999190477
+ 20
+25.1546192629461
+ 10
+-27.4006999190477
+ 20
+23.1546198259792
+ 10
+-25.6686482833162
+ 20
+22.1546201074958
+  0
+LWPOLYLINE
+  5
+152
+330
+17
+100
+AcDbEntity
+  8
+Polyline_204_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-28.400700039066
+ 20
+23.1546198259792
+ 10
+-28.400700039066
+ 20
+25.1546192629461
+ 10
+-30.1327506019135
+ 20
+26.1546189814295
+ 10
+-31.864802237645
+ 20
+25.1546192629461
+ 10
+-31.864802237645
+ 20
+23.1546198259792
+ 10
+-30.1327506019135
+ 20
+22.1546201074958
+  0
+LWPOLYLINE
+  5
+153
+330
+17
+100
+AcDbEntity
+  8
+Polyline_206_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-32.8648024768727
+ 20
+23.1546198259792
+ 10
+-32.8648024768727
+ 20
+25.1546192629461
+ 10
+-34.5968530397202
+ 20
+26.1546189814295
+ 10
+-36.3289046754517
+ 20
+25.1546192629461
+ 10
+-36.3289046754517
+ 20
+23.1546198259792
+ 10
+-34.5968530397202
+ 20
+22.1546201074958
+  0
+LWPOLYLINE
+  5
+154
+330
+17
+100
+AcDbEntity
+  8
+Polyline_208_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+7
+ 70
+1
+ 10
+-37.3289039610047
+ 20
+23.1546198259792
+ 10
+-37.3289039610047
+ 20
+25.1546192629461
+ 10
+-39.0609555967362
+ 20
+26.1546189814295
+ 10
+-39.1234826200523
+ 20
+26.1185189914492
+ 10
+-40.251002989369
+ 20
+22.8416940090838
+ 10
+-39.0609555371316
+ 20
+22.1546201969028
+ 10
+-37.3289039014001
+ 20
+23.1546199153862
+  0
+LWPOLYLINE
+  5
+155
+330
+17
+100
+AcDbEntity
+  8
+Polyline_210_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-17.2404147978676
+ 20
+19.288595079054
+ 10
+-17.2404147978676
+ 20
+21.2885945160208
+ 10
+-18.9724664335991
+ 20
+22.2885942345042
+ 10
+-20.7045180693306
+ 20
+21.2885945160208
+ 10
+-20.7045180693306
+ 20
+19.288595079054
+ 10
+-18.9724664335991
+ 20
+18.2885953605705
+  0
+LWPOLYLINE
+  5
+156
+330
+17
+100
+AcDbEntity
+  8
+Polyline_212_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-21.7045181893489
+ 20
+19.288595079054
+ 10
+-21.7045181893489
+ 20
+21.2885945160208
+ 10
+-23.4365687521964
+ 20
+22.2885942345042
+ 10
+-25.1686193150439
+ 20
+21.2885945160208
+ 10
+-25.1686193150439
+ 20
+19.288595079054
+ 10
+-23.4365687521964
+ 20
+18.2885953605705
+  0
+LWPOLYLINE
+  5
+157
+330
+17
+100
+AcDbEntity
+  8
+Polyline_214_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-26.168619673481
+ 20
+19.288595079054
+ 10
+-26.168619673481
+ 20
+21.2885945160208
+ 10
+-27.9006713092124
+ 20
+22.2885942345042
+ 10
+-29.6327229449439
+ 20
+21.2885945160208
+ 10
+-29.6327229449439
+ 20
+19.288595079054
+ 10
+-27.9006713092124
+ 20
+18.2885953605705
+  0
+LWPOLYLINE
+  5
+158
+330
+17
+100
+AcDbEntity
+  8
+Polyline_216_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-30.6327230649623
+ 20
+19.288595079054
+ 10
+-30.6327230649623
+ 20
+21.2885945160208
+ 10
+-32.3647736278098
+ 20
+22.2885942345042
+ 10
+-34.0968241906573
+ 20
+21.2885945160208
+ 10
+-34.0968241906573
+ 20
+19.288595079054
+ 10
+-32.3647736278098
+ 20
+18.2885953605705
+  0
+LWPOLYLINE
+  5
+159
+330
+17
+100
+AcDbEntity
+  8
+Polyline_218_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-35.0968245490943
+ 20
+19.288595079054
+ 10
+-35.0968245490943
+ 20
+21.2885945160208
+ 10
+-36.8288761848258
+ 20
+22.2885942345042
+ 10
+-38.5609278205573
+ 20
+21.2885945160208
+ 10
+-38.5609278205573
+ 20
+19.288595079054
+ 10
+-36.8288761848258
+ 20
+18.2885953605705
+  0
+LWPOLYLINE
+  5
+15A
+330
+17
+100
+AcDbEntity
+  8
+Polyline_220_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+7
+ 70
+1
+ 10
+-39.560926986901
+ 20
+19.288595079054
+ 10
+-39.560926986901
+ 20
+21.2885945160208
+ 10
+-40.582466325913
+ 20
+21.8783803430855
+ 10
+-41.0589054958625
+ 20
+20.4937427810331
+ 10
+-41.9865658167735
+ 20
+18.6890373116479
+ 10
+-41.2929785630278
+ 20
+18.2885954201752
+ 10
+-39.5609269272963
+ 20
+19.2885951386586
+  0
+LWPOLYLINE
+  5
+15B
+330
+17
+100
+AcDbEntity
+  8
+Polyline_222_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+3
+ 70
+1
+ 10
+-16.2330510577896
+ 20
+21.2928465313681
+ 10
+-16.2404150606229
+ 20
+21.2885945327846
+ 10
+-16.2404150606229
+ 20
+21.270890537072
+  0
+LWPOLYLINE
+  5
+15C
+330
+17
+100
+AcDbEntity
+  8
+Polyline_224_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-15.0083576781023
+ 20
+15.4225712560004
+ 10
+-15.0083576781023
+ 20
+17.4225706929672
+ 10
+-16.7404093138338
+ 20
+18.4225704114507
+ 10
+-18.4724609495653
+ 20
+17.4225706929672
+ 10
+-18.4724609495653
+ 20
+15.4225712560004
+ 10
+-16.7404093138338
+ 20
+14.422571537517
+  0
+LWPOLYLINE
+  5
+15D
+330
+17
+100
+AcDbEntity
+  8
+Polyline_226_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-19.472460115909
+ 20
+15.4225712560004
+ 10
+-19.472460115909
+ 20
+17.4225706929672
+ 10
+-21.2045117516405
+ 20
+18.4225704114507
+ 10
+-22.936562314488
+ 20
+17.4225706929672
+ 10
+-22.936562314488
+ 20
+15.4225712560004
+ 10
+-21.2045117516405
+ 20
+14.422571537517
+  0
+LWPOLYLINE
+  5
+15E
+330
+17
+100
+AcDbEntity
+  8
+Polyline_228_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-23.9365625537157
+ 20
+15.4225712560004
+ 10
+-23.9365625537157
+ 20
+17.4225706929672
+ 10
+-25.6686141894472
+ 20
+18.4225704114507
+ 10
+-27.4006647522946
+ 20
+17.4225706929672
+ 10
+-27.4006647522946
+ 20
+15.4225712560004
+ 10
+-25.6686141894472
+ 20
+14.422571537517
+  0
+LWPOLYLINE
+  5
+15F
+330
+17
+100
+AcDbEntity
+  8
+Polyline_230_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-28.4006649915224
+ 20
+15.4225712560004
+ 10
+-28.4006649915224
+ 20
+17.4225706929672
+ 10
+-30.1327166272538
+ 20
+18.4225704114507
+ 10
+-31.8647682629853
+ 20
+17.4225706929672
+ 10
+-31.8647682629853
+ 20
+15.4225712560004
+ 10
+-30.1327166272538
+ 20
+14.422571537517
+  0
+LWPOLYLINE
+  5
+160
+330
+17
+100
+AcDbEntity
+  8
+Polyline_232_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-32.8647683830037
+ 20
+15.4225712560004
+ 10
+-32.8647683830037
+ 20
+17.4225706929672
+ 10
+-34.5968179921765
+ 20
+18.4225704114507
+ 10
+-36.328869627908
+ 20
+17.4225706929672
+ 10
+-36.328869627908
+ 20
+15.4225712560004
+ 10
+-34.5968179921765
+ 20
+14.422571537517
+  0
+LWPOLYLINE
+  5
+161
+330
+17
+100
+AcDbEntity
+  8
+Polyline_234_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-37.3288698671357
+ 20
+15.4225712560004
+ 10
+-37.3288698671357
+ 20
+17.4225706929672
+ 10
+-39.0609215028672
+ 20
+18.4225704114507
+ 10
+-40.7929731385987
+ 20
+17.4225706929672
+ 10
+-40.7929731385987
+ 20
+15.4225712560004
+ 10
+-39.0609215028672
+ 20
+14.422571537517
+  0
+LWPOLYLINE
+  5
+162
+330
+17
+100
+AcDbEntity
+  8
+Polyline_236_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+-14.465559441246
+ 20
+18.3133084526162
+ 10
+-14.6557725042393
+ 20
+18.3737024358763
+ 10
+-14.5083624460711
+ 20
+18.2885954611533
+ 10
+-14.4655594300702
+ 20
+18.3133084544789
+  0
+LWPOLYLINE
+  5
+163
+330
+17
+100
+AcDbEntity
+  8
+Polyline_238_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+7
+ 70
+1
+ 10
+-10.5442540370265
+ 20
+15.422571257863
+ 10
+-10.5442540370265
+ 20
+17.0682538447316
+ 10
+-13.1751858806233
+ 20
+17.9036016196305
+ 10
+-14.0083561760007
+ 20
+17.4225707544345
+ 10
+-14.0083561760007
+ 20
+15.4225713174677
+ 10
+-12.2763045402693
+ 20
+14.4225715989843
+ 10
+-10.5442539774218
+ 20
+15.4225713174677
+  0
+LWPOLYLINE
+  5
+164
+330
+17
+100
+AcDbEntity
+  8
+Polyline_240_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-41.7929719957432
+ 20
+15.4225713174677
+ 10
+-41.7929719957432
+ 20
+17.4225707544345
+ 10
+-42.4442712289793
+ 20
+17.7985986498848
+ 10
+-44.0298187676655
+ 20
+14.7140155205199
+ 10
+-43.52502357187
+ 20
+14.4225715989843
+ 10
+-41.7929719361385
+ 20
+15.4225713174677
+  0
+LWPOLYLINE
+  5
+165
+330
+17
+100
+AcDbEntity
+  8
+Polyline_242_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+5
+ 70
+1
+ 10
+-8.91301630309203
+ 20
+16.5503199662047
+ 10
+-9.54425254610074
+ 20
+16.7507439104029
+ 10
+-9.54425254610074
+ 20
+15.4225712429619
+ 10
+-9.41167250139727
+ 20
+15.3460262644343
+ 10
+-8.9130163179932
+ 20
+16.5503198916989
+  0
+LWPOLYLINE
+  5
+166
+330
+17
+100
+AcDbEntity
+  8
+Polyline_244_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-9.79754163608877
+ 20
+14.4141224492508
+ 10
+-10.0442257244055
+ 20
+14.5565454130684
+ 10
+-11.776277360137
+ 20
+13.5565456945849
+ 10
+-11.776277360137
+ 20
+11.5565462576181
+ 10
+-11.134247129323
+ 20
+11.1858703511224
+ 10
+-9.79754168079227
+ 20
+14.4141223300416
+  0
+LWPOLYLINE
+  5
+167
+330
+17
+100
+AcDbEntity
+  8
+Polyline_246_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-12.776277718574
+ 20
+11.5565460490019
+ 10
+-12.776277718574
+ 20
+13.5565454859687
+ 10
+-14.5083282814215
+ 20
+14.5565452044522
+ 10
+-16.240379917153
+ 20
+13.5565454859687
+ 10
+-16.240379917153
+ 20
+11.5565460490019
+ 10
+-14.5083282814215
+ 20
+10.5565463305185
+  0
+LWPOLYLINE
+  5
+168
+330
+17
+100
+AcDbEntity
+  8
+Polyline_248_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-17.2403801563807
+ 20
+11.5565460490019
+ 10
+-17.2403801563807
+ 20
+13.5565454859687
+ 10
+-18.9724317921122
+ 20
+14.5565452044522
+ 10
+-20.7044834278437
+ 20
+13.5565454859687
+ 10
+-20.7044834278437
+ 20
+11.5565460490019
+ 10
+-18.9724317921122
+ 20
+10.5565463305185
+  0
+LWPOLYLINE
+  5
+169
+330
+17
+100
+AcDbEntity
+  8
+Polyline_250_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-21.7044825941874
+ 20
+11.5565460490019
+ 10
+-21.7044825941874
+ 20
+13.5565454859687
+ 10
+-23.4365331570349
+ 20
+14.5565452044522
+ 10
+-25.1685847927664
+ 20
+13.5565454859687
+ 10
+-25.1685847927664
+ 20
+11.5565460490019
+ 10
+-23.4365331570349
+ 20
+10.5565463305185
+  0
+LWPOLYLINE
+  5
+16A
+330
+17
+100
+AcDbEntity
+  8
+Polyline_252_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-26.1685850319941
+ 20
+11.5565460490019
+ 10
+-26.1685850319941
+ 20
+13.5565454859687
+ 10
+-27.9006366677255
+ 20
+14.5565452044522
+ 10
+-29.632687230573
+ 20
+13.5565454859687
+ 10
+-29.632687230573
+ 20
+11.5565460490019
+ 10
+-27.9006366677255
+ 20
+10.5565463305185
+  0
+LWPOLYLINE
+  5
+16B
+330
+17
+100
+AcDbEntity
+  8
+Polyline_254_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-30.6326874698008
+ 20
+11.5565460490019
+ 10
+-30.6326874698008
+ 20
+13.5565454859687
+ 10
+-32.3647391055322
+ 20
+14.5565452044522
+ 10
+-34.0967896683797
+ 20
+13.5565454859687
+ 10
+-34.0967896683797
+ 20
+11.5565460490019
+ 10
+-32.3647391055322
+ 20
+10.5565463305185
+  0
+LWPOLYLINE
+  5
+16C
+330
+17
+100
+AcDbEntity
+  8
+Polyline_256_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-35.0967899076074
+ 20
+11.5565460490019
+ 10
+-35.0967899076074
+ 20
+13.5565454859687
+ 10
+-36.8288404704549
+ 20
+14.5565452044522
+ 10
+-38.5608921061864
+ 20
+13.5565454859687
+ 10
+-38.5608921061864
+ 20
+11.5565460490019
+ 10
+-36.8288404704549
+ 20
+10.5565463305185
+  0
+LWPOLYLINE
+  5
+16D
+330
+17
+100
+AcDbEntity
+  8
+Polyline_258_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-39.5608923454141
+ 20
+11.5565460490019
+ 10
+-39.5608923454141
+ 20
+13.5565454859687
+ 10
+-41.2929439811456
+ 20
+14.5565452044522
+ 10
+-43.0249956168771
+ 20
+13.5565454859687
+ 10
+-43.0249956168771
+ 20
+11.5565460490019
+ 10
+-41.2929439811456
+ 20
+10.5565463305185
+  0
+LWPOLYLINE
+  5
+16E
+330
+17
+100
+AcDbEntity
+  8
+Polyline_260_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-44.0249947832208
+ 20
+11.5565460490019
+ 10
+-44.0249947832208
+ 20
+13.5565454859687
+ 10
+-44.4875189458365
+ 20
+13.8235833985022
+ 10
+-46.0730655308481
+ 20
+10.7390002691373
+ 10
+-45.757045405673
+ 20
+10.5565463156173
+ 10
+-44.0249948428255
+ 20
+11.5565460341007
+  0
+LWPOLYLINE
+  5
+16F
+330
+17
+100
+AcDbEntity
+  8
+Polyline_262_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-11.5201194528642
+ 20
+10.2539573419251
+ 10
+-12.2762707444236
+ 20
+10.6905212174859
+ 10
+-14.0083223801551
+ 20
+9.69052149900246
+ 10
+-14.0083223801551
+ 20
+7.69052206203562
+ 10
+-12.8568259146742
+ 20
+7.02570527359905
+ 10
+-11.5201193932595
+ 20
+10.2539572525182
+  0
+LWPOLYLINE
+  5
+170
+330
+17
+100
+AcDbEntity
+  8
+Polyline_264_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-15.0083227385921
+ 20
+7.69052194282636
+ 10
+-15.0083227385921
+ 20
+9.69052137979321
+ 10
+-16.7403733014396
+ 20
+10.6905210982766
+ 10
+-18.4724249371711
+ 20
+9.6905213797932
+ 10
+-18.4724249371711
+ 20
+7.69052194282636
+ 10
+-16.7403733014396
+ 20
+6.69052222434294
+  0
+LWPOLYLINE
+  5
+171
+330
+17
+100
+AcDbEntity
+  8
+Polyline_266_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-19.4724251763988
+ 20
+7.69052194282636
+ 10
+-19.4724251763988
+ 20
+9.6905213797932
+ 10
+-21.2044768121303
+ 20
+10.6905210982766
+ 10
+-22.9365273749778
+ 20
+9.6905213797932
+ 10
+-22.9365273749778
+ 20
+7.69052194282636
+ 10
+-21.2044768121303
+ 20
+6.69052222434294
+  0
+LWPOLYLINE
+  5
+172
+330
+17
+100
+AcDbEntity
+  8
+Polyline_268_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-23.9365266605308
+ 20
+7.69052194282636
+ 10
+-23.9365266605308
+ 20
+9.6905213797932
+ 10
+-25.6685782962623
+ 20
+10.6905210982766
+ 10
+-27.4006299319938
+ 20
+9.6905213797932
+ 10
+-27.4006299319938
+ 20
+7.69052194282636
+ 10
+-25.6685782962623
+ 20
+6.69052222434294
+  0
+LWPOLYLINE
+  5
+173
+330
+17
+100
+AcDbEntity
+  8
+Polyline_270_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-28.4006300520122
+ 20
+7.69052194282636
+ 10
+-28.4006300520122
+ 20
+9.6905213797932
+ 10
+-30.1326816877436
+ 20
+10.6905210982766
+ 10
+-31.8647322505911
+ 20
+9.6905213797932
+ 10
+-31.8647322505911
+ 20
+7.69052194282636
+ 10
+-30.1326816877436
+ 20
+6.69052222434294
+  0
+LWPOLYLINE
+  5
+174
+330
+17
+100
+AcDbEntity
+  8
+Polyline_272_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-32.8647324898188
+ 20
+7.69052194282636
+ 10
+-32.8647324898188
+ 20
+9.6905213797932
+ 10
+-34.5967830526663
+ 20
+10.6905210982766
+ 10
+-36.3288346883978
+ 20
+9.6905213797932
+ 10
+-36.3288346883978
+ 20
+7.69052194282636
+ 10
+-34.5967830526663
+ 20
+6.69052222434294
+  0
+LWPOLYLINE
+  5
+175
+330
+17
+100
+AcDbEntity
+  8
+Polyline_274_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-37.3288349276255
+ 20
+7.69052194282636
+ 10
+-37.3288349276255
+ 20
+9.6905213797932
+ 10
+-39.060885490473
+ 20
+10.6905210982766
+ 10
+-40.7929371262045
+ 20
+9.6905213797932
+ 10
+-40.7929371262045
+ 20
+7.69052194282636
+ 10
+-39.060885490473
+ 20
+6.69052222434294
+  0
+LWPOLYLINE
+  5
+176
+330
+17
+100
+AcDbEntity
+  8
+Polyline_276_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-41.7929373654322
+ 20
+7.69052194282636
+ 10
+-41.7929373654322
+ 20
+9.6905213797932
+ 10
+-43.5249890011637
+ 20
+10.6905210982766
+ 10
+-45.2570395640111
+ 20
+9.6905213797932
+ 10
+-45.2570395640111
+ 20
+7.69052194282636
+ 10
+-43.5249890011637
+ 20
+6.69052222434294
+  0
+LWPOLYLINE
+  5
+177
+330
+17
+100
+AcDbEntity
+  8
+Polyline_278_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+7
+ 70
+1
+ 10
+-46.2570388495642
+ 20
+7.69052194282636
+ 10
+-46.2570388495642
+ 20
+9.6905213797932
+ 10
+-46.5307719377067
+ 20
+9.84856133729073
+ 10
+-46.8929700627178
+ 20
+9.14392651158644
+ 10
+-48.2683025535591
+ 20
+6.85172516102969
+ 10
+-47.9890904554934
+ 20
+6.69052220944178
+ 10
+-46.2570388197619
+ 20
+7.6905219279252
+  0
+LWPOLYLINE
+  5
+178
+330
+17
+100
+AcDbEntity
+  8
+Polyline_280_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-13.2426913538764
+ 20
+6.09380239718848
+ 10
+-14.5082928464475
+ 20
+6.82449720071729
+ 10
+-16.240344482179
+ 20
+5.82449748223387
+ 10
+-16.240344482179
+ 20
+3.82449804526702
+ 10
+-14.5793978752911
+ 20
+2.8655502990601
+ 10
+-13.2426913538764
+ 20
+6.09380227797923
+  0
+LWPOLYLINE
+  5
+179
+330
+17
+100
+AcDbEntity
+  8
+Polyline_282_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-17.2403448406161
+ 20
+3.82449792605777
+ 10
+-17.2403448406161
+ 20
+5.82449736302461
+ 10
+-18.9723954034635
+ 20
+6.82449708150803
+ 10
+-20.704447039195
+ 20
+5.82449736302461
+ 10
+-20.704447039195
+ 20
+3.82449792605777
+ 10
+-18.9723954034635
+ 20
+2.82449820757435
+  0
+LWPOLYLINE
+  5
+17A
+330
+17
+100
+AcDbEntity
+  8
+Polyline_284_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-21.7044472784227
+ 20
+3.82449792605777
+ 10
+-21.7044472784227
+ 20
+5.82449736302461
+ 10
+-23.4364978412702
+ 20
+6.82449708150803
+ 10
+-25.1685494770017
+ 20
+5.82449736302461
+ 10
+-25.1685494770017
+ 20
+3.82449792605777
+ 10
+-23.4364978412702
+ 20
+2.82449820757435
+  0
+LWPOLYLINE
+  5
+17B
+330
+17
+100
+AcDbEntity
+  8
+Polyline_286_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-26.1685487625548
+ 20
+3.82449792605777
+ 10
+-26.1685487625548
+ 20
+5.82449736302461
+ 10
+-27.9006003982862
+ 20
+6.82449708150803
+ 10
+-29.6326520340177
+ 20
+5.82449736302461
+ 10
+-29.6326520340177
+ 20
+3.82449792605777
+ 10
+-27.9006003982862
+ 20
+2.82449820757435
+  0
+LWPOLYLINE
+  5
+17C
+330
+17
+100
+AcDbEntity
+  8
+Polyline_288_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-30.6326521540361
+ 20
+3.82449792605777
+ 10
+-30.6326521540361
+ 20
+5.82449736302461
+ 10
+-32.3647037897676
+ 20
+6.82449708150803
+ 10
+-34.0967533989404
+ 20
+5.82449736302461
+ 10
+-34.0967533989404
+ 20
+3.82449792605777
+ 10
+-32.3647037897676
+ 20
+2.82449820757435
+  0
+LWPOLYLINE
+  5
+17D
+330
+17
+100
+AcDbEntity
+  8
+Polyline_290_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-35.0967536381681
+ 20
+3.82449792605777
+ 10
+-35.0967536381681
+ 20
+5.82449736302461
+ 10
+-36.8288052738996
+ 20
+6.82449708150803
+ 10
+-38.5608569096311
+ 20
+5.82449736302461
+ 10
+-38.5608569096311
+ 20
+3.82449792605777
+ 10
+-36.8288052738996
+ 20
+2.82449820757435
+  0
+LWPOLYLINE
+  5
+17E
+330
+17
+100
+AcDbEntity
+  8
+Polyline_292_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-39.5608570296494
+ 20
+3.82449792605777
+ 10
+-39.5608570296494
+ 20
+5.82449736302461
+ 10
+-41.2929075924969
+ 20
+6.82449708150803
+ 10
+-43.0249592282284
+ 20
+5.82449736302461
+ 10
+-43.0249592282284
+ 20
+3.82449792605777
+ 10
+-41.2929075924969
+ 20
+2.82449820757435
+  0
+LWPOLYLINE
+  5
+17F
+330
+17
+100
+AcDbEntity
+  8
+Polyline_294_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-44.0249594674561
+ 20
+3.82449792605777
+ 10
+-44.0249594674561
+ 20
+5.82449736302461
+ 10
+-45.7570100303036
+ 20
+6.82449708150803
+ 10
+-47.4890616660351
+ 20
+5.82449736302461
+ 10
+-47.4890616660351
+ 20
+3.82449792605777
+ 10
+-45.7570100303036
+ 20
+2.82449820757435
+  0
+LWPOLYLINE
+  5
+180
+330
+17
+100
+AcDbEntity
+  8
+Polyline_296_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-48.4890609515882
+ 20
+3.82449792605777
+ 10
+-48.4890609515882
+ 20
+5.82449736302461
+ 10
+-48.7828640633086
+ 20
+5.99412431119294
+ 10
+-50.565392745026
+ 20
+3.02326824255488
+ 10
+-50.221112617122
+ 20
+2.82449829698129
+ 10
+-48.4890609813905
+ 20
+3.82449801546471
+  0
+LWPOLYLINE
+  5
+181
+330
+17
+100
+AcDbEntity
+  8
+Polyline_298_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-16.0265401903509
+ 20
+-0.629415849855489
+ 10
+-15.0082857836991
+ 20
+1.82974855413173
+ 10
+-15.0082857836991
+ 20
+1.95847251179123
+ 10
+-16.7403374194306
+ 20
+2.95847223027465
+ 10
+-18.4723890551621
+ 20
+1.95847251179123
+ 10
+-18.4723890551621
+ 20
+-0.0415269251756172
+ 10
+-16.7403374194306
+ 20
+-1.04152664365904
+ 10
+-16.0265401903508
+ 20
+-0.62941574554739
+  0
+LWPOLYLINE
+  5
+182
+330
+17
+100
+AcDbEntity
+  8
+Polyline_300_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-19.4723884599245
+ 20
+-0.0415268953733032
+ 10
+-19.4723884599245
+ 20
+1.95847254159354
+ 10
+-21.2044400956559
+ 20
+2.95847226007696
+ 10
+-22.9364906585034
+ 20
+1.95847254159354
+ 10
+-22.9364906585034
+ 20
+-0.0415268953733032
+ 10
+-21.2044400956559
+ 20
+-1.04152661385673
+  0
+LWPOLYLINE
+  5
+183
+330
+17
+100
+AcDbEntity
+  8
+Polyline_302_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-23.9364908977311
+ 20
+-0.0415268953733032
+ 10
+-23.9364908977311
+ 20
+1.95847254159354
+ 10
+-25.6685425334626
+ 20
+2.95847226007696
+ 10
+-27.4005941691941
+ 20
+1.95847254159354
+ 10
+-27.4005941691941
+ 20
+-0.0415268953733032
+ 10
+-25.6685425334626
+ 20
+-1.04152661385673
+  0
+LWPOLYLINE
+  5
+184
+330
+17
+100
+AcDbEntity
+  8
+Polyline_304_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-28.4005933355378
+ 20
+-0.0415268953733032
+ 10
+-28.4005933355378
+ 20
+1.95847254159354
+ 10
+-30.1326449712693
+ 20
+2.95847226007696
+ 10
+-31.8646966070008
+ 20
+1.95847254159354
+ 10
+-31.8646966070008
+ 20
+-0.0415268953733032
+ 10
+-30.1326449712693
+ 20
+-1.04152661385673
+  0
+LWPOLYLINE
+  5
+185
+330
+17
+100
+AcDbEntity
+  8
+Polyline_306_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-32.8646967270192
+ 20
+-0.0415268953733032
+ 10
+-32.8646967270192
+ 20
+1.95847254159354
+ 10
+-34.596746336192
+ 20
+2.95847226007696
+ 10
+-36.3287979719234
+ 20
+1.95847254159354
+ 10
+-36.3287979719234
+ 20
+-0.0415268953733032
+ 10
+-34.596746336192
+ 20
+-1.04152661385673
+  0
+LWPOLYLINE
+  5
+186
+330
+17
+100
+AcDbEntity
+  8
+Polyline_308_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-37.3287982111512
+ 20
+-0.0415268953733032
+ 10
+-37.3287982111512
+ 20
+1.95847254159354
+ 10
+-39.0608498468826
+ 20
+2.95847226007696
+ 10
+-40.7929014826141
+ 20
+1.95847254159354
+ 10
+-40.7929014826141
+ 20
+-0.0415268953733032
+ 10
+-39.0608498468826
+ 20
+-1.04152661385673
+  0
+LWPOLYLINE
+  5
+187
+330
+17
+100
+AcDbEntity
+  8
+Polyline_310_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-41.7929006489579
+ 20
+-0.0415268953733032
+ 10
+-41.7929006489579
+ 20
+1.95847254159354
+ 10
+-43.5249522846893
+ 20
+2.95847226007696
+ 10
+-45.2570028475368
+ 20
+1.95847254159354
+ 10
+-45.2570028475368
+ 20
+-0.0415268953733032
+ 10
+-43.5249522846893
+ 20
+-1.04152661385673
+  0
+LWPOLYLINE
+  5
+188
+330
+17
+100
+AcDbEntity
+  8
+Polyline_312_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-46.2570030867645
+ 20
+-0.0415268953733032
+ 10
+-46.2570030867645
+ 20
+1.95847254159354
+ 10
+-47.989054722496
+ 20
+2.95847226007696
+ 10
+-49.7211063582275
+ 20
+1.95847254159354
+ 10
+-49.7211063582275
+ 20
+-0.0415268953733032
+ 10
+-47.989054722496
+ 20
+-1.04152661385673
+  0
+LWPOLYLINE
+  5
+189
+330
+17
+100
+AcDbEntity
+  8
+Polyline_314_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-50.7211055245712
+ 20
+-0.0415268953733032
+ 10
+-50.7211055245712
+ 20
+1.95847254159354
+ 10
+-51.0799616457541
+ 20
+2.16565848182625
+ 10
+-52.8624903274715
+ 20
+-0.805198778904365
+ 10
+-52.453157190105
+ 20
+-1.04152671816482
+ 10
+-50.7211055543735
+ 20
+-0.0415269996814018
+  0
+LWPOLYLINE
+  5
+18A
+330
+17
+100
+AcDbEntity
+  8
+Polyline_316_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-17.4290098810227
+ 20
+-4.01649884399375
+ 10
+-17.2403078112172
+ 20
+-3.56076796781303
+ 10
+-17.2403078112172
+ 20
+-1.9075524288491
+ 10
+-18.9723594469487
+ 20
+-0.907551756691631
+ 10
+-20.7044110826802
+ 20
+-1.9075524288491
+ 10
+-20.7044110826802
+ 20
+-3.90755186581594
+ 10
+-18.9723594469487
+ 20
+-4.90755158429937
+ 10
+-17.4290098661215
+ 20
+-4.01649881419143
+  0
+LWPOLYLINE
+  5
+18B
+330
+17
+100
+AcDbEntity
+  8
+Polyline_318_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-21.7044106066519
+ 20
+-3.90755184346421
+ 10
+-21.7044106066519
+ 20
+-1.90755240649736
+ 10
+-23.4364611694994
+ 20
+-0.907551734339895
+ 10
+-25.1685128052309
+ 20
+-1.90755240649736
+ 10
+-25.1685128052309
+ 20
+-3.90755184346421
+ 10
+-23.4364611694994
+ 20
+-4.90755156194763
+  0
+LWPOLYLINE
+  5
+18C
+330
+17
+100
+AcDbEntity
+  8
+Polyline_320_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-26.1685130444586
+ 20
+-3.90755184346421
+ 10
+-26.1685130444586
+ 20
+-1.90755240649736
+ 10
+-27.90056468019
+ 20
+-0.907551734339895
+ 10
+-29.6326163159215
+ 20
+-1.90755240649736
+ 10
+-29.6326163159215
+ 20
+-3.90755184346421
+ 10
+-27.90056468019
+ 20
+-4.90755156194763
+  0
+LWPOLYLINE
+  5
+18D
+330
+17
+100
+AcDbEntity
+  8
+Polyline_322_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-30.6326154822653
+ 20
+-3.90755184346421
+ 10
+-30.6326154822653
+ 20
+-1.90755240649736
+ 10
+-32.3646671179967
+ 20
+-0.907551734339895
+ 10
+-34.0967176808442
+ 20
+-1.90755240649736
+ 10
+-34.0967176808442
+ 20
+-3.90755184346421
+ 10
+-32.3646671179967
+ 20
+-4.90755156194763
+  0
+LWPOLYLINE
+  5
+18E
+330
+17
+100
+AcDbEntity
+  8
+Polyline_324_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-35.0967179200719
+ 20
+-3.90755184346421
+ 10
+-35.0967179200719
+ 20
+-1.90755240649736
+ 10
+-36.8287695558034
+ 20
+-0.907551734339895
+ 10
+-38.5608201186509
+ 20
+-1.90755240649736
+ 10
+-38.5608201186509
+ 20
+-3.90755184346421
+ 10
+-36.8287695558034
+ 20
+-4.90755156194763
+  0
+LWPOLYLINE
+  5
+18F
+330
+17
+100
+AcDbEntity
+  8
+Polyline_326_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-39.5608203578786
+ 20
+-3.90755184346421
+ 10
+-39.5608203578786
+ 20
+-1.90755240649736
+ 10
+-41.2928719936101
+ 20
+-0.907551734339895
+ 10
+-43.0249236293416
+ 20
+-1.90755240649736
+ 10
+-43.0249236293416
+ 20
+-3.90755184346421
+ 10
+-41.2928719936101
+ 20
+-4.90755156194763
+  0
+LWPOLYLINE
+  5
+190
+330
+17
+100
+AcDbEntity
+  8
+Polyline_328_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-44.0249227956853
+ 20
+-3.90755184346421
+ 10
+-44.0249227956853
+ 20
+-1.90755240649736
+ 10
+-45.7569733585328
+ 20
+-0.907551734339895
+ 10
+-47.4890249942642
+ 20
+-1.90755240649736
+ 10
+-47.4890249942642
+ 20
+-3.90755184346421
+ 10
+-45.7569733585328
+ 20
+-4.90755156194763
+  0
+LWPOLYLINE
+  5
+191
+330
+17
+100
+AcDbEntity
+  8
+Polyline_330_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-48.489025233492
+ 20
+-3.90755184346421
+ 10
+-48.489025233492
+ 20
+-1.90755240649736
+ 10
+-50.2210768692234
+ 20
+-0.907551734339895
+ 10
+-51.9531285049549
+ 20
+-1.90755240649736
+ 10
+-51.9531285049549
+ 20
+-3.90755184346421
+ 10
+-50.2210768692234
+ 20
+-4.90755156194763
+  0
+LWPOLYLINE
+  5
+192
+330
+17
+100
+AcDbEntity
+  8
+Polyline_332_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-52.9531276712987
+ 20
+-3.90755184346421
+ 10
+-52.9531276712987
+ 20
+-1.90755240649736
+ 10
+-53.3647948081818
+ 20
+-1.66987647877247
+ 10
+-54.9654983829554
+ 20
+-4.74570964874761
+ 10
+-54.6851792772278
+ 20
+-4.9075516066511
+ 10
+-52.9531276414963
+ 20
+-3.90755188816768
+  0
+LWPOLYLINE
+  5
+193
+330
+17
+100
+AcDbEntity
+  8
+Polyline_334_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-19.472353159061
+ 20
+-7.77357672449991
+ 10
+-19.472353159061
+ 20
+-5.77357728753306
+ 10
+-21.2044047947924
+ 20
+-4.77357756904964
+ 10
+-22.9364553576399
+ 20
+-5.77357728753306
+ 10
+-22.9364553576399
+ 20
+-7.77357672449991
+ 10
+-21.2044047947924
+ 20
+-8.77357644298333
+  0
+LWPOLYLINE
+  5
+194
+330
+17
+100
+AcDbEntity
+  8
+Polyline_336_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-23.936454643193
+ 20
+-7.77357672449991
+ 10
+-23.936454643193
+ 20
+-5.77357728753306
+ 10
+-25.6685062789244
+ 20
+-4.77357756904964
+ 10
+-27.4005579146559
+ 20
+-5.77357728753306
+ 10
+-27.4005579146559
+ 20
+-7.77357672449991
+ 10
+-25.6685062789244
+ 20
+-8.77357644298333
+  0
+LWPOLYLINE
+  5
+195
+330
+17
+100
+AcDbEntity
+  8
+Polyline_338_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-28.4005580346743
+ 20
+-7.77357672449991
+ 10
+-28.4005580346743
+ 20
+-5.77357728753306
+ 10
+-30.1326096704058
+ 20
+-4.77357756904964
+ 10
+-31.8646613061373
+ 20
+-5.77357728753306
+ 10
+-31.8646613061373
+ 20
+-7.77357672449991
+ 10
+-30.1326096704058
+ 20
+-8.77357644298333
+  0
+LWPOLYLINE
+  5
+196
+330
+17
+100
+AcDbEntity
+  8
+Polyline_340_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-32.864660472481
+ 20
+-7.77357672449991
+ 10
+-32.864660472481
+ 20
+-5.77357728753306
+ 10
+-34.5967110353285
+ 20
+-4.77357756904964
+ 10
+-36.3287626710599
+ 20
+-5.77357728753306
+ 10
+-36.3287626710599
+ 20
+-7.77357672449991
+ 10
+-34.5967110353285
+ 20
+-8.77357644298333
+  0
+LWPOLYLINE
+  5
+197
+330
+17
+100
+AcDbEntity
+  8
+Polyline_342_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-37.3287629102877
+ 20
+-7.77357672449991
+ 10
+-37.3287629102877
+ 20
+-5.77357728753306
+ 10
+-39.0608145460191
+ 20
+-4.77357756904964
+ 10
+-40.7928651088666
+ 20
+-5.77357728753306
+ 10
+-40.7928651088666
+ 20
+-7.77357672449991
+ 10
+-39.0608145460191
+ 20
+-8.77357644298333
+  0
+LWPOLYLINE
+  5
+198
+330
+17
+100
+AcDbEntity
+  8
+Polyline_344_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-41.7928653480943
+ 20
+-7.77357672449991
+ 10
+-41.7928653480943
+ 20
+-5.77357728753306
+ 10
+-43.5249169838258
+ 20
+-4.77357756904964
+ 10
+-45.2569675466733
+ 20
+-5.77357728753306
+ 10
+-45.2569675466733
+ 20
+-7.77357672449991
+ 10
+-43.5249169838258
+ 20
+-8.77357644298333
+  0
+LWPOLYLINE
+  5
+199
+330
+17
+100
+AcDbEntity
+  8
+Polyline_346_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-46.2569668322264
+ 20
+-7.77357672449991
+ 10
+-46.2569668322264
+ 20
+-5.77357728753306
+ 10
+-47.9890184679578
+ 20
+-4.77357756904964
+ 10
+-49.7210701036893
+ 20
+-5.77357728753306
+ 10
+-49.7210701036893
+ 20
+-7.77357672449991
+ 10
+-47.9890184679578
+ 20
+-8.77357644298333
+  0
+LWPOLYLINE
+  5
+19A
+330
+17
+100
+AcDbEntity
+  8
+Polyline_348_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-50.7210702237077
+ 20
+-7.77357672449991
+ 10
+-50.7210702237077
+ 20
+-5.77357728753306
+ 10
+-52.4531218594392
+ 20
+-4.77357756904964
+ 10
+-54.1851734951707
+ 20
+-5.77357728753306
+ 10
+-54.1851734951707
+ 20
+-7.77357672449991
+ 10
+-52.4531218594392
+ 20
+-8.77357644298333
+  0
+LWPOLYLINE
+  5
+19B
+330
+17
+100
+AcDbEntity
+  8
+Polyline_350_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+-18.0573393385743
+ 20
+-5.53397025926805
+ 10
+-18.4723504760419
+ 20
+-5.77357719812612
+ 10
+-18.4723504760419
+ 20
+-6.53625501057263
+ 10
+-18.0573393385743
+ 20
+-5.53397028907036
+  0
+LWPOLYLINE
+  5
+19C
+330
+17
+100
+AcDbEntity
+  8
+Polyline_352_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-55.1851717078397
+ 20
+-7.77357675430222
+ 10
+-55.1851717078397
+ 20
+-5.77357731733538
+ 10
+-55.4275787888318
+ 20
+-5.63362335602331
+ 10
+-57.0282814099307
+ 20
+-8.70945652599845
+ 10
+-56.9172223675448
+ 20
+-8.77357651003854
+ 10
+-55.1851718046973
+ 20
+-7.77357679155511
+  0
+LWPOLYLINE
+  5
+19D
+330
+17
+100
+AcDbEntity
+  8
+Polyline_354_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-21.7043744340702
+ 20
+-11.6396006742133
+ 10
+-21.7043744340702
+ 20
+-9.63960123724645
+ 10
+-23.4364249969176
+ 20
+-8.63960151876303
+ 10
+-25.1684766326491
+ 20
+-9.63960123724645
+ 10
+-25.1684766326491
+ 20
+-11.6396006742133
+ 10
+-23.4364249969176
+ 20
+-12.6396003926967
+  0
+LWPOLYLINE
+  5
+19E
+330
+17
+100
+AcDbEntity
+  8
+Polyline_356_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-26.1684759182022
+ 20
+-11.6396006742133
+ 10
+-26.1684759182022
+ 20
+-9.63960123724645
+ 10
+-27.9005275539336
+ 20
+-8.63960151876303
+ 10
+-29.6325791896651
+ 20
+-9.63960123724645
+ 10
+-29.6325791896651
+ 20
+-11.6396006742133
+ 10
+-27.9005275539336
+ 20
+-12.6396003926967
+  0
+LWPOLYLINE
+  5
+19F
+330
+17
+100
+AcDbEntity
+  8
+Polyline_358_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-30.6325793096835
+ 20
+-11.6396006742133
+ 10
+-30.6325793096835
+ 20
+-9.63960123724645
+ 10
+-32.364630945415
+ 20
+-8.63960151876303
+ 10
+-34.0966815082625
+ 20
+-9.63960123724645
+ 10
+-34.0966815082625
+ 20
+-11.6396006742133
+ 10
+-32.364630945415
+ 20
+-12.6396003926967
+  0
+LWPOLYLINE
+  5
+1A0
+330
+17
+100
+AcDbEntity
+  8
+Polyline_360_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-35.0966807938155
+ 20
+-11.6396006742133
+ 10
+-35.0966807938155
+ 20
+-9.63960123724645
+ 10
+-36.828732429547
+ 20
+-8.63960151876303
+ 10
+-38.5607840652785
+ 20
+-9.63960123724645
+ 10
+-38.5607840652785
+ 20
+-11.6396006742133
+ 10
+-36.828732429547
+ 20
+-12.6396003926967
+  0
+LWPOLYLINE
+  5
+1A1
+330
+17
+100
+AcDbEntity
+  8
+Polyline_362_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-39.5607841852969
+ 20
+-11.6396006742133
+ 10
+-39.5607841852969
+ 20
+-9.63960123724645
+ 10
+-41.2928358210283
+ 20
+-8.63960151876303
+ 10
+-43.0248863838758
+ 20
+-9.63960123724645
+ 10
+-43.0248863838758
+ 20
+-11.6396006742133
+ 10
+-41.2928358210283
+ 20
+-12.6396003926967
+  0
+LWPOLYLINE
+  5
+1A2
+330
+17
+100
+AcDbEntity
+  8
+Polyline_364_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-44.0248866231036
+ 20
+-11.6396006742133
+ 10
+-44.0248866231036
+ 20
+-9.63960123724645
+ 10
+-45.756937185951
+ 20
+-8.63960151876303
+ 10
+-47.4889888216825
+ 20
+-9.63960123724645
+ 10
+-47.4889888216825
+ 20
+-11.6396006742133
+ 10
+-45.756937185951
+ 20
+-12.6396003926967
+  0
+LWPOLYLINE
+  5
+1A3
+330
+17
+100
+AcDbEntity
+  8
+Polyline_366_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-48.4889881072356
+ 20
+-11.6396006742133
+ 10
+-48.4889881072356
+ 20
+-9.63960123724645
+ 10
+-50.2210397429671
+ 20
+-8.63960151876303
+ 10
+-51.9530913786985
+ 20
+-9.63960123724645
+ 10
+-51.9530913786985
+ 20
+-11.6396006742133
+ 10
+-50.2210397429671
+ 20
+-12.6396003926967
+  0
+LWPOLYLINE
+  5
+1A4
+330
+17
+100
+AcDbEntity
+  8
+Polyline_368_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-52.9530914987169
+ 20
+-11.6396006742133
+ 10
+-52.9530914987169
+ 20
+-9.63960123724645
+ 10
+-54.6851431344484
+ 20
+-8.63960151876303
+ 10
+-56.4171936972959
+ 20
+-9.63960123724645
+ 10
+-56.4171936972959
+ 20
+-11.6396006742133
+ 10
+-54.6851431344484
+ 20
+-12.6396003926967
+  0
+LWPOLYLINE
+  5
+1A5
+330
+17
+100
+AcDbEntity
+  8
+Polyline_370_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+5
+ 70
+1
+ 10
+-19.4598086194641
+ 20
+-8.92105242639209
+ 10
+-20.7043720490745
+ 20
+-9.63960123724645
+ 10
+-20.7043720490745
+ 20
+-11.6396006742133
+ 10
+-20.6084060182921
+ 20
+-11.6950066590807
+ 10
+-19.4598086045629
+ 20
+-8.92105233325986
+  0
+LWPOLYLINE
+  5
+1A6
+330
+17
+100
+AcDbEntity
+  8
+Polyline_372_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-57.4171929679478
+ 20
+-11.6396005810811
+ 10
+-57.4171929679478
+ 20
+-9.63960114411422
+ 10
+-57.4903559969015
+ 20
+-9.59736015636673
+ 10
+-58.6657544103418
+ 20
+-11.8559495035227
+ 10
+-58.8905744938391
+ 20
+-12.4902573054919
+ 10
+-57.4171929232443
+ 20
+-11.6396005587293
+  0
+LWPOLYLINE
+  5
+1A7
+330
+17
+100
+AcDbEntity
+  8
+Polyline_374_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-20.9942787143624
+ 20
+-12.6269192733974
+ 10
+-21.2043667893672
+ 20
+-12.505625308289
+ 10
+-22.9364173522147
+ 20
+-13.5056250267724
+ 10
+-22.9364173522147
+ 20
+-15.5056244637392
+ 10
+-22.3309851612713
+ 20
+-15.8551713640752
+ 10
+-20.9942786398565
+ 20
+-12.6269193851561
+  0
+LWPOLYLINE
+  5
+1A8
+330
+17
+100
+AcDbEntity
+  8
+Polyline_376_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-23.9364176510471
+ 20
+-15.5056245531462
+ 10
+-23.9364176510471
+ 20
+-13.5056251161793
+ 10
+-25.6684692867785
+ 20
+-12.5056253976959
+ 10
+-27.40052092251
+ 20
+-13.5056251161793
+ 10
+-27.40052092251
+ 20
+-15.5056245531462
+ 10
+-25.6684692867785
+ 20
+-16.5056252253037
+  0
+LWPOLYLINE
+  5
+1A9
+330
+17
+100
+AcDbEntity
+  8
+Polyline_378_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-28.4005200888538
+ 20
+-15.5056245531462
+ 10
+-28.4005200888538
+ 20
+-13.5056251161793
+ 10
+-30.1325717245852
+ 20
+-12.5056253976959
+ 10
+-31.8646233603167
+ 20
+-13.5056251161793
+ 10
+-31.8646233603167
+ 20
+-15.5056245531462
+ 10
+-30.1325717245852
+ 20
+-16.5056252253037
+  0
+LWPOLYLINE
+  5
+1AA
+330
+17
+100
+AcDbEntity
+  8
+Polyline_380_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-32.8646234803351
+ 20
+-15.5056245531462
+ 10
+-32.8646234803351
+ 20
+-13.5056251161793
+ 10
+-34.5966740431826
+ 20
+-12.5056253976959
+ 10
+-36.3287246060301
+ 20
+-13.5056251161793
+ 10
+-36.3287246060301
+ 20
+-15.5056245531462
+ 10
+-34.5966740431826
+ 20
+-16.5056252253037
+  0
+LWPOLYLINE
+  5
+1AB
+330
+17
+100
+AcDbEntity
+  8
+Polyline_382_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-37.3287249644671
+ 20
+-15.5056245531462
+ 10
+-37.3287249644671
+ 20
+-13.5056251161794
+ 10
+-39.0607766001986
+ 20
+-12.5056253976959
+ 10
+-40.7928282359301
+ 20
+-13.5056251161794
+ 10
+-40.7928282359301
+ 20
+-15.5056245531462
+ 10
+-39.0607766001986
+ 20
+-16.5056252253037
+  0
+LWPOLYLINE
+  5
+1AC
+330
+17
+100
+AcDbEntity
+  8
+Polyline_384_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-41.7928283559485
+ 20
+-15.5056245531462
+ 10
+-41.7928283559485
+ 20
+-13.5056251161794
+ 10
+-43.5248789187959
+ 20
+-12.5056253976959
+ 10
+-45.2569294816434
+ 20
+-13.5056251161794
+ 10
+-45.2569294816434
+ 20
+-15.5056245531462
+ 10
+-43.5248789187959
+ 20
+-16.5056252253037
+  0
+LWPOLYLINE
+  5
+1AD
+330
+17
+100
+AcDbEntity
+  8
+Polyline_386_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-46.2569298400805
+ 20
+-15.5056245531462
+ 10
+-46.2569298400805
+ 20
+-13.5056251161794
+ 10
+-47.9889814758119
+ 20
+-12.5056253976959
+ 10
+-49.7210331115434
+ 20
+-13.5056251161794
+ 10
+-49.7210331115434
+ 20
+-15.5056245531462
+ 10
+-47.9889814758119
+ 20
+-16.5056252253037
+  0
+LWPOLYLINE
+  5
+1AE
+330
+17
+100
+AcDbEntity
+  8
+Polyline_388_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-50.7210322778872
+ 20
+-15.5056245531462
+ 10
+-50.7210322778872
+ 20
+-13.5056251161794
+ 10
+-52.4530839136186
+ 20
+-12.5056253976959
+ 10
+-54.1851355493501
+ 20
+-13.5056251161794
+ 10
+-54.1851355493501
+ 20
+-15.5056245531462
+ 10
+-52.4530839136186
+ 20
+-16.5056252253037
+  0
+LWPOLYLINE
+  5
+1AF
+330
+17
+100
+AcDbEntity
+  8
+Polyline_390_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-55.1851356693685
+ 20
+-15.5056245531462
+ 10
+-55.1851356693685
+ 20
+-13.5056251161794
+ 10
+-56.917186232216
+ 20
+-12.5056253976959
+ 10
+-58.6492367950635
+ 20
+-13.5056251161794
+ 10
+-58.6492367950635
+ 20
+-15.5056245531462
+ 10
+-56.917186232216
+ 20
+-16.5056252253037
+  0
+LWPOLYLINE
+  5
+1B0
+330
+17
+100
+AcDbEntity
+  8
+Polyline_392_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+-59.6492371535005
+ 20
+-15.5056245531462
+ 10
+-59.6492371535005
+ 20
+-14.6307577773983
+ 10
+-60.0390972974274
+ 20
+-15.730710523125
+ 10
+-59.6492371535005
+ 20
+-15.5056245829485
+  0
+LWPOLYLINE
+  5
+1B1
+330
+17
+100
+AcDbEntity
+  8
+Polyline_394_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-22.7168546833931
+ 20
+-16.787075209061
+ 10
+-23.4363909477521
+ 20
+-16.3716503234351
+ 10
+-25.1684425834836
+ 20
+-17.3716509955926
+ 10
+-25.1684425834836
+ 20
+-19.3716504325594
+ 10
+-24.0535611452031
+ 20
+-20.0153272475848
+ 10
+-22.7168546237884
+ 20
+-16.7870752686656
+  0
+LWPOLYLINE
+  5
+1B2
+330
+17
+100
+AcDbEntity
+  8
+Polyline_396_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-26.1684428227113
+ 20
+-19.3716504325594
+ 10
+-26.1684428227113
+ 20
+-17.3716509955926
+ 10
+-27.9004944584428
+ 20
+-16.3716503234351
+ 10
+-29.6325460941743
+ 20
+-17.3716509955926
+ 10
+-29.6325460941743
+ 20
+-19.3716504325594
+ 10
+-27.9004944584428
+ 20
+-20.3716501510429
+  0
+LWPOLYLINE
+  5
+1B3
+330
+17
+100
+AcDbEntity
+  8
+Polyline_398_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-30.632545260518
+ 20
+-19.3716504325594
+ 10
+-30.632545260518
+ 20
+-17.3716509955926
+ 10
+-32.3645968962495
+ 20
+-16.3716503234351
+ 10
+-34.096647459097
+ 20
+-17.3716509955926
+ 10
+-34.096647459097
+ 20
+-19.3716504325594
+ 10
+-32.3645968962495
+ 20
+-20.3716501510429
+  0
+LWPOLYLINE
+  5
+1B4
+330
+17
+100
+AcDbEntity
+  8
+Polyline_400_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-35.0966476983247
+ 20
+-19.3716504325594
+ 10
+-35.0966476983247
+ 20
+-17.3716509955926
+ 10
+-36.8286993340562
+ 20
+-16.3716503234351
+ 10
+-38.5607509697876
+ 20
+-17.3716509955926
+ 10
+-38.5607509697876
+ 20
+-19.3716504325594
+ 10
+-36.8286993340562
+ 20
+-20.3716501510429
+  0
+LWPOLYLINE
+  5
+1B5
+330
+17
+100
+AcDbEntity
+  8
+Polyline_402_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-39.5607501361314
+ 20
+-19.3716504325594
+ 10
+-39.5607501361314
+ 20
+-17.3716509955926
+ 10
+-41.2928017718628
+ 20
+-16.3716503234351
+ 10
+-43.0248534075943
+ 20
+-17.3716509955926
+ 10
+-43.0248534075943
+ 20
+-19.3716504325594
+ 10
+-41.2928017718628
+ 20
+-20.3716501510429
+  0
+LWPOLYLINE
+  5
+1B6
+330
+17
+100
+AcDbEntity
+  8
+Polyline_404_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-44.0248535276127
+ 20
+-19.3716504325594
+ 10
+-44.0248535276127
+ 20
+-17.3716509955926
+ 10
+-45.7569031367855
+ 20
+-16.3716503234351
+ 10
+-47.488954772517
+ 20
+-17.3716509955926
+ 10
+-47.488954772517
+ 20
+-19.3716504325594
+ 10
+-45.7569031367855
+ 20
+-20.3716501510429
+  0
+LWPOLYLINE
+  5
+1B7
+330
+17
+100
+AcDbEntity
+  8
+Polyline_406_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-48.4889550117447
+ 20
+-19.3716504325594
+ 10
+-48.4889550117447
+ 20
+-17.3716509955926
+ 10
+-50.2210066474762
+ 20
+-16.3716503234351
+ 10
+-51.9530582832077
+ 20
+-17.3716509955926
+ 10
+-51.9530582832077
+ 20
+-19.3716504325594
+ 10
+-50.2210066474762
+ 20
+-20.3716501510429
+  0
+LWPOLYLINE
+  5
+1B8
+330
+17
+100
+AcDbEntity
+  8
+Polyline_408_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-52.9530574495514
+ 20
+-19.3716504325594
+ 10
+-52.9530574495514
+ 20
+-17.3716509955926
+ 10
+-54.6851090852829
+ 20
+-16.3716503234351
+ 10
+-56.4171596481304
+ 20
+-17.3716509955926
+ 10
+-56.4171596481304
+ 20
+-19.3716504325594
+ 10
+-54.6851090852829
+ 20
+-20.3716501510429
+  0
+LWPOLYLINE
+  5
+1B9
+330
+17
+100
+AcDbEntity
+  8
+Polyline_410_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-57.4171598873581
+ 20
+-19.3716504325594
+ 10
+-57.4171598873581
+ 20
+-17.3716509955926
+ 10
+-59.1492115230896
+ 20
+-16.3716503234351
+ 10
+-60.5536639927829
+ 20
+-17.1825120999209
+ 10
+-60.8812630992164
+ 20
+-18.1068008278317
+ 10
+-60.8812630992164
+ 20
+-19.3716504921641
+ 10
+-59.1492114634849
+ 20
+-20.3716502106475
+ 10
+-57.4171598277534
+ 20
+-19.3716504921641
+  0
+LWPOLYLINE
+  5
+1BA
+330
+17
+100
+AcDbEntity
+  8
+Polyline_412_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-24.4394334687443
+ 20
+-20.947240063067
+ 10
+-25.6684368618402
+ 20
+-20.2376752789766
+ 10
+-27.4004884975717
+ 20
+-21.23767499746
+ 10
+-27.4004884975717
+ 20
+-23.2376744344269
+ 10
+-25.7761398709497
+ 20
+-24.1754921611954
+ 10
+-24.439433349535
+ 20
+-20.9472401822763
+  0
+LWPOLYLINE
+  5
+1BB
+330
+17
+100
+AcDbEntity
+  8
+Polyline_414_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-28.4004888560087
+ 20
+-23.2376746132407
+ 10
+-28.4004888560087
+ 20
+-21.2376751762739
+ 10
+-30.1325404917402
+ 20
+-20.2376754577905
+ 10
+-31.8645921274717
+ 20
+-21.2376751762739
+ 10
+-31.8645921274717
+ 20
+-23.2376746132407
+ 10
+-30.1325404917402
+ 20
+-24.2376743317242
+  0
+LWPOLYLINE
+  5
+1BC
+330
+17
+100
+AcDbEntity
+  8
+Polyline_416_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-32.8645912938154
+ 20
+-23.2376746132407
+ 10
+-32.8645912938154
+ 20
+-21.2376751762739
+ 10
+-34.5966418566629
+ 20
+-20.2376754577905
+ 10
+-36.3286934923944
+ 20
+-21.2376751762739
+ 10
+-36.3286934923944
+ 20
+-23.2376746132407
+ 10
+-34.5966418566629
+ 20
+-24.2376743317242
+  0
+LWPOLYLINE
+  5
+1BD
+330
+17
+100
+AcDbEntity
+  8
+Polyline_418_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-37.3286937316221
+ 20
+-23.2376746132407
+ 10
+-37.3286937316221
+ 20
+-21.2376751762739
+ 10
+-39.0607453673535
+ 20
+-20.2376754577905
+ 10
+-40.792797003085
+ 20
+-21.2376751762739
+ 10
+-40.792797003085
+ 20
+-23.2376746132407
+ 10
+-39.0607453673535
+ 20
+-24.2376743317242
+  0
+LWPOLYLINE
+  5
+1BE
+330
+17
+100
+AcDbEntity
+  8
+Polyline_420_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-41.7927961694288
+ 20
+-23.2376746132407
+ 10
+-41.7927961694288
+ 20
+-21.2376751762739
+ 10
+-43.5248478051602
+ 20
+-20.2376754577905
+ 10
+-45.2568983680077
+ 20
+-21.2376751762739
+ 10
+-45.2568983680077
+ 20
+-23.2376746132407
+ 10
+-43.5248478051602
+ 20
+-24.2376743317242
+  0
+LWPOLYLINE
+  5
+1BF
+330
+17
+100
+AcDbEntity
+  8
+Polyline_422_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-46.2568986072354
+ 20
+-23.2376746132407
+ 10
+-46.2568986072354
+ 20
+-21.2376751762739
+ 10
+-47.9889491700829
+ 20
+-20.2376754577905
+ 10
+-49.7210008058144
+ 20
+-21.2376751762739
+ 10
+-49.7210008058144
+ 20
+-23.2376746132407
+ 10
+-47.9889491700829
+ 20
+-24.2376743317242
+  0
+LWPOLYLINE
+  5
+1C0
+330
+17
+100
+AcDbEntity
+  8
+Polyline_424_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-50.7210010450421
+ 20
+-23.2376746132407
+ 10
+-50.7210010450421
+ 20
+-21.2376751762739
+ 10
+-52.4530526807736
+ 20
+-20.2376754577905
+ 10
+-54.1851043165051
+ 20
+-21.2376751762739
+ 10
+-54.1851043165051
+ 20
+-23.2376746132407
+ 10
+-52.4530526807736
+ 20
+-24.2376743317242
+  0
+LWPOLYLINE
+  5
+1C1
+330
+17
+100
+AcDbEntity
+  8
+Polyline_426_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-55.1851034828488
+ 20
+-23.2376746132407
+ 10
+-55.1851034828488
+ 20
+-21.2376751762739
+ 10
+-56.9171540456963
+ 20
+-20.2376754577905
+ 10
+-58.6492056814278
+ 20
+-21.2376751762739
+ 10
+-58.6492056814278
+ 20
+-23.2376746132407
+ 10
+-56.9171540456963
+ 20
+-24.2376743317242
+  0
+LWPOLYLINE
+  5
+1C2
+330
+17
+100
+AcDbEntity
+  8
+Polyline_428_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+7
+ 70
+1
+ 10
+-59.6492059206555
+ 20
+-23.2376746132407
+ 10
+-59.6492059206555
+ 20
+-21.2376751762739
+ 10
+-61.3812575563869
+ 20
+-20.2376754577905
+ 10
+-61.7040696630711
+ 20
+-20.4240514107337
+ 10
+-62.790942034267
+ 20
+-23.423793551028
+ 10
+-61.3812575861893
+ 20
+-24.2376743019219
+ 10
+-59.6492059504578
+ 20
+-23.2376745834384
+  0
+LWPOLYLINE
+  5
+1C3
+330
+17
+100
+AcDbEntity
+  8
+Polyline_430_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+9
+ 70
+1
+ 10
+-27.0003295018011
+ 20
+-27.5840092477818
+ 10
+-26.1753122306816
+ 20
+-25.1395290399476
+ 10
+-26.1684092280314
+ 20
+-25.1228580445922
+ 10
+-26.1684092280314
+ 20
+-25.103700049859
+ 10
+-27.9004597908789
+ 20
+-24.1037003313756
+ 10
+-29.6325114266103
+ 20
+-25.103700049859
+ 10
+-29.6325114266103
+ 20
+-27.1036994868259
+ 10
+-27.9004597908789
+ 20
+-28.1036992053093
+ 10
+-27.0003294943505
+ 20
+-27.5840093744416
+  0
+LWPOLYLINE
+  5
+1C4
+330
+17
+100
+AcDbEntity
+  8
+Polyline_432_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-30.6325117254427
+ 20
+-27.1036995166282
+ 10
+-30.6325117254427
+ 20
+-25.1037000796613
+ 10
+-32.3645633611742
+ 20
+-24.1037003611779
+ 10
+-34.0966139240217
+ 20
+-25.1037000796613
+ 10
+-34.0966139240217
+ 20
+-27.1036995166282
+ 10
+-32.3645633611742
+ 20
+-28.1036992351116
+  0
+LWPOLYLINE
+  5
+1C5
+330
+17
+100
+AcDbEntity
+  8
+Polyline_434_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-35.0966132095747
+ 20
+-27.1036995166282
+ 10
+-35.0966132095747
+ 20
+-25.1037000796613
+ 10
+-36.8286648453062
+ 20
+-24.1037003611779
+ 10
+-38.5607164810377
+ 20
+-25.1037000796613
+ 10
+-38.5607164810377
+ 20
+-27.1036995166282
+ 10
+-36.8286648453062
+ 20
+-28.1036992351116
+  0
+LWPOLYLINE
+  5
+1C6
+330
+17
+100
+AcDbEntity
+  8
+Polyline_436_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-39.5607166010561
+ 20
+-27.1036995166282
+ 10
+-39.5607166010561
+ 20
+-25.1037000796613
+ 10
+-41.2927682367876
+ 20
+-24.1037003611779
+ 10
+-43.024819872519
+ 20
+-25.1037000796613
+ 10
+-43.024819872519
+ 20
+-27.1036995166282
+ 10
+-41.2927682367876
+ 20
+-28.1036992351116
+  0
+LWPOLYLINE
+  5
+1C7
+330
+17
+100
+AcDbEntity
+  8
+Polyline_438_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-44.0248190388628
+ 20
+-27.1036995166282
+ 10
+-44.0248190388628
+ 20
+-25.1037000796613
+ 10
+-45.7568696017102
+ 20
+-24.1037003611779
+ 10
+-47.4889212374417
+ 20
+-25.1037000796613
+ 10
+-47.4889212374417
+ 20
+-27.1036995166282
+ 10
+-45.7568696017102
+ 20
+-28.1036992351116
+  0
+LWPOLYLINE
+  5
+1C8
+330
+17
+100
+AcDbEntity
+  8
+Polyline_440_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-48.4889214766694
+ 20
+-27.1036995166282
+ 10
+-48.4889214766694
+ 20
+-25.1037000796613
+ 10
+-50.2209720395169
+ 20
+-24.1037003611779
+ 10
+-51.9530236752484
+ 20
+-25.1037000796613
+ 10
+-51.9530236752484
+ 20
+-27.1036995166282
+ 10
+-50.2209720395169
+ 20
+-28.1036992351116
+  0
+LWPOLYLINE
+  5
+1C9
+330
+17
+100
+AcDbEntity
+  8
+Polyline_442_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-52.9530239144761
+ 20
+-27.1036995166282
+ 10
+-52.9530239144761
+ 20
+-25.1037000796613
+ 10
+-54.6850755502076
+ 20
+-24.1037003611779
+ 10
+-56.4171261130551
+ 20
+-25.1037000796613
+ 10
+-56.4171261130551
+ 20
+-27.1036995166282
+ 10
+-54.6850755502076
+ 20
+-28.1036992351116
+  0
+LWPOLYLINE
+  5
+1CA
+330
+17
+100
+AcDbEntity
+  8
+Polyline_444_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-57.4171253986081
+ 20
+-27.1036995166282
+ 10
+-57.4171253986081
+ 20
+-25.1037000796613
+ 10
+-59.1491770343396
+ 20
+-24.1037003611779
+ 10
+-60.8812286700711
+ 20
+-25.1037000796613
+ 10
+-60.8812286700711
+ 20
+-27.1036995166282
+ 10
+-59.1491770343396
+ 20
+-28.1036992351116
+  0
+LWPOLYLINE
+  5
+1CB
+330
+17
+100
+AcDbEntity
+  8
+Polyline_446_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+7
+ 70
+1
+ 10
+-61.8812287900895
+ 20
+-27.1036995166282
+ 10
+-61.8812287900895
+ 20
+-25.1037000796613
+ 10
+-63.1369312589174
+ 20
+-24.378720287074
+ 10
+-64.286871684984
+ 20
+-27.5525293987819
+ 10
+-64.325911698224
+ 20
+-27.6922623610345
+ 10
+-63.6132804556233
+ 20
+-28.1036992500128
+ 10
+-61.8812288198918
+ 20
+-27.1036995315293
+  0
+LWPOLYLINE
+  5
+1CC
+330
+17
+100
+AcDbEntity
+  8
+Polyline_448_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-28.4004543374565
+ 20
+-30.9697243678616
+ 10
+-28.4004543374565
+ 20
+-28.9697239772207
+ 10
+-30.1325049003039
+ 20
+-27.9697242587372
+ 10
+-31.8645565360354
+ 20
+-28.9697239772207
+ 10
+-31.8645565360354
+ 20
+-30.9697243678616
+ 10
+-30.1325049003039
+ 20
+-31.969724086345
+  0
+LWPOLYLINE
+  5
+1CD
+330
+17
+100
+AcDbEntity
+  8
+Polyline_450_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-32.8645567752631
+ 20
+-30.9697243678616
+ 10
+-32.8645567752631
+ 20
+-28.9697239772207
+ 10
+-34.5966073381106
+ 20
+-27.9697242587372
+ 10
+-36.3286589738421
+ 20
+-28.9697239772207
+ 10
+-36.3286589738421
+ 20
+-30.9697243678616
+ 10
+-34.5966073381106
+ 20
+-31.969724086345
+  0
+LWPOLYLINE
+  5
+1CE
+330
+17
+100
+AcDbEntity
+  8
+Polyline_452_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-37.3286582593952
+ 20
+-30.9697243678616
+ 10
+-37.3286582593952
+ 20
+-28.9697239772207
+ 10
+-39.0607098951266
+ 20
+-27.9697242587372
+ 10
+-40.7927615308581
+ 20
+-28.9697239772207
+ 10
+-40.7927615308581
+ 20
+-30.9697243678616
+ 10
+-39.0607098951266
+ 20
+-31.969724086345
+  0
+LWPOLYLINE
+  5
+1CF
+330
+17
+100
+AcDbEntity
+  8
+Polyline_454_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-41.7927616508765
+ 20
+-30.9697243678616
+ 10
+-41.7927616508765
+ 20
+-28.9697239772207
+ 10
+-43.524813286608
+ 20
+-27.9697242587372
+ 10
+-45.2568628957808
+ 20
+-28.9697239772207
+ 10
+-45.2568628957808
+ 20
+-30.9697243678616
+ 10
+-43.524813286608
+ 20
+-31.969724086345
+  0
+LWPOLYLINE
+  5
+1D0
+330
+17
+100
+AcDbEntity
+  8
+Polyline_456_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-46.2568631350085
+ 20
+-30.9697243678616
+ 10
+-46.2568631350085
+ 20
+-28.9697239772207
+ 10
+-47.98891477074
+ 20
+-27.9697242587372
+ 10
+-49.7209664064715
+ 20
+-28.9697239772207
+ 10
+-49.7209664064715
+ 20
+-30.9697243678616
+ 10
+-47.98891477074
+ 20
+-31.969724086345
+  0
+LWPOLYLINE
+  5
+1D1
+330
+17
+100
+AcDbEntity
+  8
+Polyline_458_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-50.7209665264899
+ 20
+-30.9697243678616
+ 10
+-50.7209665264899
+ 20
+-28.9697239772207
+ 10
+-52.4530170893373
+ 20
+-27.9697242587372
+ 10
+-54.1850687250688
+ 20
+-28.9697239772207
+ 10
+-54.1850687250688
+ 20
+-30.9697243678616
+ 10
+-52.4530170893373
+ 20
+-31.969724086345
+  0
+LWPOLYLINE
+  5
+1D2
+330
+17
+100
+AcDbEntity
+  8
+Polyline_460_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-55.1850689642965
+ 20
+-30.9697243678616
+ 10
+-55.1850689642965
+ 20
+-28.9697239772207
+ 10
+-56.917119527144
+ 20
+-27.9697242587372
+ 10
+-58.6491711628755
+ 20
+-28.9697239772207
+ 10
+-58.6491711628755
+ 20
+-30.9697243678616
+ 10
+-56.917119527144
+ 20
+-31.969724086345
+  0
+LWPOLYLINE
+  5
+1D3
+330
+17
+100
+AcDbEntity
+  8
+Polyline_462_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-59.6491704484286
+ 20
+-30.9697243678616
+ 10
+-59.6491704484286
+ 20
+-28.9697239772207
+ 10
+-61.38122208416
+ 20
+-27.9697242587372
+ 10
+-63.1132737198915
+ 20
+-28.9697239772207
+ 10
+-63.1132737198915
+ 20
+-30.5929954623814
+ 10
+-62.8785906287705
+ 20
+-30.7619664169151
+ 10
+-60.292618584843
+ 20
+-31.3412192717482
+ 10
+-59.6491703590216
+ 20
+-30.9697243678616
+  0
+LWPOLYLINE
+  5
+1D4
+330
+17
+100
+AcDbEntity
+  8
+Polyline_464_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+5
+ 70
+1
+ 10
+-64.1132737505029
+ 20
+-28.9697239772207
+ 10
+-64.6037089305273
+ 20
+-28.6865710594392
+ 10
+-64.797537999999
+ 20
+-29.3803318552305
+ 10
+-64.1132737702708
+ 20
+-29.8730017028562
+ 10
+-64.1132737702708
+ 20
+-28.9697239639417
+  0
+LWPOLYLINE
+  5
+1D5
+330
+17
+100
+AcDbEntity
+  8
+Polyline_466_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+-27.8080391995169
+ 20
+-33.0399189698474
+ 10
+-27.7443771766976
+ 20
+-31.9258452917022
+ 10
+-27.900426230868
+ 20
+-31.8357503185865
+ 10
+-29.6324778665994
+ 20
+-32.83575003707
+ 10
+-29.6324778665994
+ 20
+-34.8357494740368
+ 10
+-29.0704606415883
+ 20
+-35.160230393127
+ 10
+-27.8187471554371
+ 20
+-35.2983073600001
+ 10
+-27.8080391520194
+ 20
+-33.0399189996497
+  0
+LWPOLYLINE
+  5
+1D6
+330
+17
+100
+AcDbEntity
+  8
+Polyline_468_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+7
+ 70
+1
+ 10
+-30.6324782594954
+ 20
+-34.8357494591357
+ 10
+-30.6324782594954
+ 20
+-32.8357500221688
+ 10
+-32.3645288223429
+ 20
+-31.8357503036854
+ 10
+-34.0965793851904
+ 20
+-32.8357500221688
+ 10
+-34.0965793851904
+ 20
+-34.6057964732578
+ 10
+-30.8537701192864
+ 20
+-34.9635123666745
+ 10
+-30.6324780359779
+ 20
+-34.835749399531
+  0
+LWPOLYLINE
+  5
+1D7
+330
+17
+100
+AcDbEntity
+  8
+Polyline_470_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-35.09657952011
+ 20
+-32.8357499625642
+ 10
+-36.8286311558414
+ 20
+-31.8357502440808
+ 10
+-38.5606827915729
+ 20
+-32.8357499625642
+ 10
+-38.5606827915729
+ 20
+-34.1133585935653
+ 10
+-35.09657952011
+ 20
+-34.4954854729707
+ 10
+-35.09657952011
+ 20
+-32.8357499029595
+  0
+LWPOLYLINE
+  5
+1D8
+330
+17
+100
+AcDbEntity
+  8
+Polyline_472_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-39.5606819579166
+ 20
+-32.8357499029595
+ 10
+-41.2927335936481
+ 20
+-31.8357501844761
+ 10
+-43.0247852293796
+ 20
+-32.8357499029595
+ 10
+-43.0247852293796
+ 20
+-33.6209216675468
+ 10
+-39.5606819579166
+ 20
+-34.0030485469522
+ 10
+-39.5606819579166
+ 20
+-32.8357498433549
+  0
+LWPOLYLINE
+  5
+1D9
+330
+17
+100
+AcDbEntity
+  8
+Polyline_474_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-44.024785349398
+ 20
+-32.8357498433549
+ 10
+-45.7568359122455
+ 20
+-31.8357501248715
+ 10
+-47.4888864750929
+ 20
+-32.8357498433549
+ 10
+-47.4888864750929
+ 20
+-33.128483758052
+ 10
+-44.024785349398
+ 20
+-33.5106106374574
+ 10
+-44.024785349398
+ 20
+-32.8357498135526
+  0
+LWPOLYLINE
+  5
+1DA
+330
+17
+100
+AcDbEntity
+  8
+Polyline_476_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+-48.48888683353
+ 20
+-32.8357498135526
+ 10
+-50.2209384692615
+ 20
+-31.8357500950692
+ 10
+-51.6348159863928
+ 20
+-32.6520518667429
+ 10
+-50.4378565386511
+ 20
+-32.8031818299146
+ 10
+-48.48888683353
+ 20
+-33.0181737710435
+ 10
+-48.48888683353
+ 20
+-32.8357498284538
+  0
+LWPOLYLINE
+  5
+1DB
+330
+17
+100
+AcDbEntity
+  8
+Polyline_478_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+-54.6850412646962
+ 20
+-31.8357501099703
+ 10
+-55.2978435130031
+ 20
+-32.189552005885
+ 10
+-53.7291869830263
+ 20
+-32.3876129544086
+ 10
+-54.6850413243008
+ 20
+-31.8357500950692
+  0
+LWPOLYLINE
+  5
+1DC
+330
+17
+100
+AcDbEntity
+  8
+Polyline_480_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+63.1133178545474
+ 20
+50.2167933340934
+ 10
+63.1133178545474
+ 20
+52.2167927710602
+ 10
+62.3160535888667
+ 20
+52.6770926399999
+ 10
+60.4420269762513
+ 20
+52.674522640712
+ 10
+59.6492157155731
+ 20
+52.2167927743198
+ 10
+59.6492157155731
+ 20
+50.216793337353
+ 10
+61.3812662784206
+ 20
+49.2167936188696
+ 10
+63.1133179141521
+ 20
+50.216793337353
+  0
+LWPOLYLINE
+  5
+1DD
+330
+17
+100
+AcDbEntity
+  8
+Polyline_482_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+58.6492164300201
+ 20
+50.216793337353
+ 10
+58.6492164300201
+ 20
+52.2167927743198
+ 10
+57.8625321713931
+ 20
+52.6709846590057
+ 10
+55.9672954767505
+ 20
+52.6683856597379
+ 10
+55.1851132181618
+ 20
+52.2167927752512
+ 10
+55.1851132181618
+ 20
+50.2167933382843
+ 10
+56.9171648538933
+ 20
+49.2167936198009
+ 10
+58.6492164896247
+ 20
+50.2167933382843
+  0
+LWPOLYLINE
+  5
+1DE
+330
+17
+100
+AcDbEntity
+  8
+Polyline_484_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+54.1851130981434
+ 20
+50.2167933382843
+ 10
+54.1851130981434
+ 20
+52.2167927752512
+ 10
+53.409007833291
+ 20
+52.6648766458809
+ 10
+51.4925632023891
+ 20
+52.6622486466332
+ 10
+50.7210108995644
+ 20
+52.2167927738542
+ 10
+50.7210108995644
+ 20
+50.2167933368873
+ 10
+52.4530614624119
+ 20
+49.2167936184039
+ 10
+54.1851130981434
+ 20
+50.2167933368873
+  0
+LWPOLYLINE
+  5
+1DF
+330
+17
+100
+AcDbEntity
+  8
+Polyline_486_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+49.7210106603367
+ 20
+50.2167933368873
+ 10
+49.7210106603367
+ 20
+52.2167927738542
+ 10
+48.9554854025381
+ 20
+52.65876866023
+ 10
+47.017830689609
+ 20
+52.6561116610026
+ 10
+46.2569084021531
+ 20
+52.2167927701289
+ 10
+46.2569084021531
+ 20
+50.216793333162
+ 10
+47.9889600378846
+ 20
+49.2167936146786
+ 10
+49.7210106007321
+ 20
+50.216793333162
+  0
+LWPOLYLINE
+  5
+1E0
+330
+17
+100
+AcDbEntity
+  8
+Polyline_488_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+45.2569091166
+ 20
+50.216793333162
+ 10
+45.2569091166
+ 20
+52.2167927701289
+ 10
+44.501962852576
+ 20
+52.6526606424486
+ 10
+42.5430991305036
+ 20
+52.6499746432413
+ 10
+41.7928058451371
+ 20
+52.2167927640753
+ 10
+41.7928058451371
+ 20
+50.2167933271084
+ 10
+43.5248574808686
+ 20
+49.216793608625
+ 10
+45.2569091166
+ 20
+50.2167933271084
+  0
+LWPOLYLINE
+  5
+1E1
+330
+17
+100
+AcDbEntity
+  8
+Polyline_490_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+40.7928057251187
+ 20
+50.2167933271084
+ 10
+40.7928057251187
+ 20
+52.2167927640753
+ 10
+40.0484394681484
+ 20
+52.6465526521411
+ 10
+38.0683657832582
+ 20
+52.6438366529467
+ 10
+37.3287025132604
+ 20
+52.2167927689647
+ 10
+37.3287025132604
+ 20
+50.2167933319979
+ 10
+39.0607541489919
+ 20
+49.2167936135145
+ 10
+40.7928057847234
+ 20
+50.2167933319979
+  0
+LWPOLYLINE
+  5
+1E2
+330
+17
+100
+AcDbEntity
+  8
+Polyline_492_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+9
+ 70
+1
+ 10
+36.3287033469167
+ 20
+50.2167933319979
+ 10
+36.3287033469167
+ 20
+52.2167927689647
+ 10
+35.5949160837209
+ 20
+52.6404446429744
+ 10
+33.5936343433621
+ 20
+52.6376996438001
+ 10
+32.9042361055528
+ 20
+52.2396757630736
+ 10
+32.8646010924583
+ 20
+52.1388337924083
+ 10
+32.8646010924583
+ 20
+50.2167932749544
+ 10
+34.5966527281898
+ 20
+49.216793556471
+ 10
+36.3287032910373
+ 20
+50.2167932749544
+  0
+LWPOLYLINE
+  5
+1E3
+330
+17
+100
+AcDbEntity
+  8
+Polyline_494_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+64.7632589999998
+ 20
+52.5920355548162
+ 10
+64.1133187531517
+ 20
+52.2167926523166
+ 10
+64.1133187531517
+ 20
+50.7746270875079
+ 10
+64.7632589999998
+ 20
+52.5920356144209
+  0
+LWPOLYLINE
+  5
+1E4
+330
+17
+100
+AcDbEntity
+  8
+Polyline_496_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+60.4486793971597
+ 20
+46.1010115170697
+ 10
+60.8812725402313
+ 20
+46.3507694519009
+ 10
+60.8812725402313
+ 20
+48.3507688888677
+ 10
+59.1492219773838
+ 20
+49.3507686073511
+ 10
+57.4171714145363
+ 20
+48.3507688888677
+ 10
+57.4171714145363
+ 20
+46.3507694519009
+ 10
+57.9003055892029
+ 20
+46.0718315349927
+ 10
+60.4486794865667
+ 20
+46.1010115263829
+  0
+LWPOLYLINE
+  5
+1E5
+330
+17
+100
+AcDbEntity
+  8
+Polyline_498_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+55.8942507071797
+ 20
+46.0488615411772
+ 10
+56.4171709070876
+ 20
+46.3507694425876
+ 10
+56.4171709070876
+ 20
+48.3507688795545
+ 10
+54.6851192713562
+ 20
+49.3507685980379
+ 10
+52.9530676356247
+ 20
+48.3507688795545
+ 10
+52.9530676356247
+ 20
+46.3507694425876
+ 10
+53.5230158575124
+ 20
+46.0217095469632
+ 10
+55.894250647575
+ 20
+46.0488615393146
+  0
+LWPOLYLINE
+  5
+1E6
+330
+17
+100
+AcDbEntity
+  8
+Polyline_500_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+9
+ 70
+1
+ 10
+51.0450009769907
+ 20
+45.9933355554298
+ 10
+51.3398200800479
+ 20
+45.9967115545746
+ 10
+51.9530672771876
+ 20
+46.3507694523665
+ 10
+51.9530672771876
+ 20
+48.3507688893334
+ 10
+50.2210156414561
+ 20
+49.3507686078168
+ 10
+48.4889660322833
+ 20
+48.3507688893334
+ 10
+48.4889660322833
+ 20
+46.3507694523665
+ 10
+49.6736074605112
+ 20
+45.6668166577166
+ 10
+51.0450009173861
+ 20
+45.9933355782472
+  0
+LWPOLYLINE
+  5
+1E7
+330
+17
+100
+AcDbEntity
+  8
+Polyline_502_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+47.4889655546369
+ 20
+46.3507694821689
+ 10
+47.4889655546369
+ 20
+48.3507689191357
+ 10
+45.7569139189054
+ 20
+49.3507686376191
+ 10
+44.024862283174
+ 20
+48.3507689191357
+ 10
+44.024862283174
+ 20
+46.3507694821689
+ 10
+45.7569139189054
+ 20
+45.3507697636854
+  0
+LWPOLYLINE
+  5
+1E8
+330
+17
+100
+AcDbEntity
+  8
+Polyline_504_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+43.0248631168302
+ 20
+46.3507694821689
+ 10
+43.0248631168302
+ 20
+48.3507689191357
+ 10
+41.2928114810988
+ 20
+49.3507686376191
+ 10
+39.5607598453673
+ 20
+48.3507689191357
+ 10
+39.5607598453673
+ 20
+46.3507694821689
+ 10
+41.2928114810988
+ 20
+45.3507697636854
+  0
+LWPOLYLINE
+  5
+1E9
+330
+17
+100
+AcDbEntity
+  8
+Polyline_506_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+38.5607597253489
+ 20
+46.3507694821689
+ 10
+38.5607597253489
+ 20
+48.3507689191357
+ 10
+36.8287080896174
+ 20
+49.3507686376191
+ 10
+35.0966584804446
+ 20
+48.3507689191357
+ 10
+35.0966584804446
+ 20
+46.3507694821689
+ 10
+36.8287080896174
+ 20
+45.3507697636854
+  0
+LWPOLYLINE
+  5
+1EA
+330
+17
+100
+AcDbEntity
+  8
+Polyline_508_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+34.0966582412169
+ 20
+46.3507694821689
+ 10
+34.0966582412169
+ 20
+48.3507689191357
+ 10
+32.3646066054854
+ 20
+49.3507686376191
+ 10
+31.593893357546
+ 20
+48.9057977676981
+ 10
+30.6325550293586
+ 20
+46.4598815651662
+ 10
+30.6325550293586
+ 20
+46.3507695939275
+ 10
+32.3646066650901
+ 20
+45.3507698754441
+ 10
+34.0966583008215
+ 20
+46.3507695939275
+  0
+LWPOLYLINE
+  5
+1EB
+330
+17
+100
+AcDbEntity
+  8
+Polyline_510_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+62.4501402197379
+ 20
+46.1239296534618
+ 10
+63.6017256153807
+ 20
+49.3440706346033
+ 10
+61.8812740013547
+ 20
+48.3507689265863
+ 10
+61.8812740013547
+ 20
+46.3507694896194
+ 10
+62.2775951420795
+ 20
+46.1219535514276
+ 10
+62.4501402048367
+ 20
+46.1239295507835
+  0
+LWPOLYLINE
+  5
+1EC
+330
+17
+100
+AcDbEntity
+  8
+Polyline_512_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+47.3840566185609
+ 20
+45.12168989038
+ 10
+48.2575879155916
+ 20
+45.3296718355185
+ 10
+47.9889938225544
+ 20
+45.4847447938436
+ 10
+46.2569421868229
+ 20
+44.4847450753602
+ 10
+46.2569421868229
+ 20
+44.483986075557
+ 10
+47.3840566483632
+ 20
+45.1216899108109
+  0
+LWPOLYLINE
+  5
+1ED
+330
+17
+100
+AcDbEntity
+  8
+Polyline_514_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+8
+ 70
+1
+ 10
+44.0717445270415
+ 20
+43.2476344567527
+ 10
+45.2569419475952
+ 20
+43.9182012440474
+ 10
+45.2569419475952
+ 20
+44.4847450808899
+ 10
+43.5248903118637
+ 20
+45.4847447993734
+ 10
+41.7928386761322
+ 20
+44.4847450808899
+ 10
+41.7928386761322
+ 20
+42.4847456439231
+ 10
+42.6929619989146
+ 20
+41.9650587932868
+ 10
+44.0717445270415
+ 20
+43.2476343971481
+  0
+LWPOLYLINE
+  5
+1EE
+330
+17
+100
+AcDbEntity
+  8
+Polyline_516_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+40.7928393905792
+ 20
+42.4847455843185
+ 10
+40.7928393905792
+ 20
+44.4847450212853
+ 10
+39.0607877548477
+ 20
+45.4847447397687
+ 10
+37.3287361191162
+ 20
+44.4847450212853
+ 10
+37.3287361191162
+ 20
+42.4847455843185
+ 10
+39.0607877548477
+ 20
+41.484744912161
+  0
+LWPOLYLINE
+  5
+1EF
+330
+17
+100
+AcDbEntity
+  8
+Polyline_518_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+6
+ 70
+1
+ 10
+36.3287359990978
+ 20
+42.4847455843185
+ 10
+36.3287359990978
+ 20
+44.4847450212853
+ 10
+34.5966854362503
+ 20
+45.4847447397687
+ 10
+32.8646348734028
+ 20
+44.4847450212853
+ 10
+32.8646348734028
+ 20
+42.4847455843185
+ 10
+34.5966854362503
+ 20
+41.484744912161
+  0
+LWPOLYLINE
+  5
+1F0
+330
+17
+100
+AcDbEntity
+  8
+Polyline_520_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+7
+ 70
+1
+ 10
+31.8646345149658
+ 20
+42.4847455843185
+ 10
+31.8646345149658
+ 20
+44.4847450212853
+ 10
+30.227704893043
+ 20
+45.429825750789
+ 10
+29.6219776590022
+ 20
+43.8886862243565
+ 10
+28.7877153465364
+ 20
+42.2612046259019
+ 10
+30.1325828196297
+ 20
+41.4847448525564
+ 10
+31.8646344553611
+ 20
+42.4847455247138
+  0
+LWPOLYLINE
+  5
+1F1
+330
+17
+100
+AcDbEntity
+  8
+Polyline_522_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+41.5388923403918
+ 20
+41.4766648491853
+ 10
+41.2928452471421
+ 20
+41.6187198140296
+ 10
+41.0040421324455
+ 20
+41.4519798607217
+ 10
+41.5388923254907
+ 20
+41.4766648529106
+  0
+LWPOLYLINE
+  5
+1F2
+330
+17
+100
+AcDbEntity
+  8
+Polyline_524_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+37.4052348189023
+ 20
+41.2858819125872
+ 10
+36.8287426007191
+ 20
+41.6187198177549
+ 10
+36.1520723433173
+ 20
+41.228043935963
+ 10
+37.4052348189023
+ 20
+41.2858819200378
+  0
+LWPOLYLINE
+  5
+1F3
+330
+17
+100
+AcDbEntity
+  8
+Polyline_526_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+33.271577312314
+ 20
+41.0950989797145
+ 10
+32.3646399840984
+ 20
+41.6187198550077
+ 10
+31.3001016005144
+ 20
+41.004108044732
+ 10
+33.271577312314
+ 20
+41.0950990169674
+  0
+LWPOLYLINE
+  5
+1F4
+330
+17
+100
+AcDbEntity
+  8
+Polyline_528_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+4
+ 70
+1
+ 10
+28.0668215710049
+ 20
+40.8548810859689
+ 10
+29.1379209978189
+ 20
+40.9043160729188
+ 10
+28.3309797357763
+ 20
+41.3702039353377
+ 10
+28.0668186503762
+ 20
+40.8548780573087
+  0
+LWPOLYLINE
+  5
+1F5
+330
+17
+100
+AcDbEntity
+  8
+Polyline_1248_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+10
+ 70
+1
+ 10
+29.6128199693861
+ 20
+43.8928262120882
+ 10
+33.0535349081132
+ 20
+52.6469803581163
+ 10
+64.80905
+ 20
+52.69053336
+ 10
+62.4571691410608
+ 20
+46.1140296508822
+ 10
+51.0461904835104
+ 20
+45.9833706377806
+ 10
+47.3877090149281
+ 20
+45.1123105107002
+ 10
+44.0776541371653
+ 20
+43.23953127324
+ 10
+42.2048600492194
+ 20
+41.4974110190792
+ 10
+28.0500201114182
+ 20
+40.8441159833735
+ 10
+29.6128167507352
+ 20
+43.8928265473643
+  0
+LWPOLYLINE
+  5
+1F6
+330
+17
+100
+AcDbEntity
+  8
+Polyline_3422_Red
+  6
+ByLayer
+100
+AcDbPolyline
+ 90
+38
+ 70
+1
+ 10
+-49.6720850266363
+ 20
+51.7751261741004
+ 10
+-45.6994423149133
+ 20
+49.6299178239878
+ 10
+-43.0774982539223
+ 20
+47.4847094738752
+ 10
+-40.8528184879453
+ 20
+43.7504576806991
+ 10
+-37.6740317873496
+ 20
+30.3616626464744
+ 10
+-41.068119076581
+ 20
+20.4976811986808
+ 10
+-46.90170702218
+ 20
+9.14879915381317
+ 10
+-53.2656209279075
+ 20
+-1.45763354619125
+ 10
+-58.674947723934
+ 20
+-11.8519367720361
+ 10
+-61.6447743404301
+ 20
+-20.2310176227556
+ 10
+-64.2964053331654
+ 20
+-27.5494558710463
+ 10
+-64.8090539242089
+ 20
+-29.3843493819207
+ 10
+-62.882778653109
+ 20
+-30.7712557063003
+ 10
+-58.0670903561501
+ 20
+-31.8499606517532
+ 10
+-50.4390404447192
+ 20
+-32.8130899907016
+ 10
+-27.8088132066655
+ 20
+-35.3094443654269
+ 10
+-27.7980529649775
+ 20
+-33.0402059715178
+ 10
+-27.5874596835914
+ 20
+-29.3548552320554
+ 10
+-26.1659549969826
+ 20
+-25.1430260198855
+ 10
+-8.89961244457129
+ 20
+16.5565623032776
+ 10
+-16.9533969325895
+ 20
+19.1137200573604
+ 10
+-13.9097859549301
+ 20
+28.1881120652166
+ 10
+-5.17349481484937
+ 20
+25.5390661732509
+ 10
+-0.725672129260817
+ 20
+34.305256563762
+ 10
+2.06661034664544
+ 20
+38.693091517717
+ 10
+5.45723913550835
+ 20
+41.1529380679521
+ 10
+8.91435095399694
+ 20
+41.8177615259559
+ 10
+12.5044283548997
+ 20
+41.884243868776
+ 10
+21.4292877621946
+ 20
+41.9594101059449
+ 10
+25.1578154028037
+ 20
+52.660768658862
+ 10
+-3.59020307363947
+ 20
+52.6580556345731
+ 10
+-8.41523165809572
+ 20
+40.0191514617374
+ 10
+-32.0044128811261
+ 20
+40.045112455129
+ 10
+-33.9064135613659
+ 20
+41.0357292354903
+ 10
+-34.8177889071823
+ 20
+42.9773382465919
+ 10
+-31.1595738514949
+ 20
+52.5696475976091
+ 10
+-53.2474674145051
+ 20
+52.6490997623117
+ 10
+-49.6720892362149
+ 20
+51.7751259282314
+  0
+VIEWPORT
+  5
+1FB
+330
+1F7
+100
+AcDbEntity
+ 67
+1
+  8
+0
+  6
+ByLayer
+100
+AcDbViewport
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+ 40
+297.0
+ 41
+210.0
+ 68
+1
+ 69
+1
+ 12
+50.0
+ 22
+100.0
+ 13
+0.0
+ 23
+0.0
+ 14
+10.0
+ 24
+10.0
+ 15
+10.0
+ 25
+10.0
+ 16
+0.0
+ 26
+0.0
+ 36
+1.0
+ 17
+0.0
+ 27
+0.0
+ 37
+0.0
+ 42
+50.0
+ 43
+0.0
+ 44
+0.0
+ 45
+250.0
+ 50
+0.0
+ 51
+0.0
+ 72
+1000
+ 90
+819232
+  1
+
+281
+0
+ 71
+0
+ 74
+0
+110
+0.0
+120
+0.0
+130
+0.0
+111
+1.0
+121
+0.0
+131
+0.0
+112
+0.0
+122
+1.0
+132
+0.0
+ 79
+0
+146
+0.0
+  0
+ENDSEC
+  0
+SECTION
+  2
+OBJECTS
+  0
+DICTIONARY
+  5
+1FE
+330
+0
+100
+AcDbDictionary
+281
+1
+  3
+ACAD_GROUP
+350
+1FF
+  3
+ACAD_LAYOUT
+350
+200
+  3
+ACAD_MLINESTYLE
+350
+201
+  3
+ACAD_COLOR
+350
+203
+  3
+ACAD_MATERIAL
+350
+204
+  3
+ACAD_MLEADERSTYLE
+350
+205
+  3
+ACAD_PLOTSETTINGS
+350
+206
+  3
+ACAD_PLOTSTYLENAME
+350
+207
+  3
+ACAD_SCALELIST
+350
+209
+  3
+ACAD_TABLESTYLE
+350
+20A
+  3
+ACAD_VISUALSTYLE
+350
+20B
+  3
+EZDXF_META
+350
+213
+  0
+DICTIONARY
+  5
+1FF
+330
+1FE
+100
+AcDbDictionary
+281
+1
+  0
+DICTIONARY
+  5
+200
+330
+1FE
+100
+AcDbDictionary
+281
+1
+  3
+Model
+350
+1B
+  3
+Layout1
+350
+1FC
+  0
+DICTIONARY
+  5
+201
+330
+1FE
+100
+AcDbDictionary
+281
+1
+  3
+Standard
+350
+16
+  0
+LAYOUT
+  5
+1B
+330
+200
+100
+AcDbPlotSettings
+  1
+
+  2
+none_device
+  4
+ISO_A4_(210.00_x_297.00_MM)
+  6
+
+ 40
+7.5
+ 41
+20.0
+ 42
+7.5
+ 43
+20.0
+ 44
+210.0
+ 45
+297.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+11952
+ 72
+1
+ 73
+1
+ 74
+5
+  7
+
+ 75
+16
+ 76
+0
+ 77
+2
+ 78
+300
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Model
+ 70
+1
+ 71
+0
+ 10
+-20.0
+ 20
+-7.5
+ 11
+277.0
+ 21
+202.5
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+25.7
+ 24
+19.5
+ 34
+0.0
+ 15
+231.3
+ 25
+175.5
+ 35
+0.0
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+1.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+1.0
+ 37
+0.0
+ 76
+0
+330
+17
+  0
+LAYOUT
+  5
+1FC
+330
+200
+100
+AcDbPlotSettings
+  1
+
+  2
+none_device
+  4
+ISO_A4_(210.00_x_297.00_MM)
+  6
+
+ 40
+7.5
+ 41
+20.0
+ 42
+7.5
+ 43
+20.0
+ 44
+210.0
+ 45
+297.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+688
+ 72
+1
+ 73
+1
+ 74
+5
+  7
+
+ 75
+16
+ 76
+0
+ 77
+2
+ 78
+300
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Layout1
+ 70
+1
+ 71
+1
+ 10
+-20.0
+ 20
+-7.5
+ 11
+277.0
+ 21
+202.5
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+25.7
+ 24
+19.5
+ 34
+0.0
+ 15
+231.3
+ 25
+175.5
+ 35
+0.0
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+1.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+1.0
+ 37
+0.0
+ 76
+0
+330
+1F7
+  0
+MLINESTYLE
+  5
+16
+330
+201
+100
+AcDbMlineStyle
+  2
+Standard
+ 70
+0
+  3
+
+ 62
+256
+ 51
+90.0
+ 52
+90.0
+ 71
+2
+ 49
+0.5
+ 62
+256
+  6
+ByLayer
+ 49
+-0.5
+ 62
+256
+  6
+ByLayer
+  0
+DICTIONARY
+  5
+203
+330
+1FE
+100
+AcDbDictionary
+281
+1
+  0
+DICTIONARY
+  5
+204
+330
+1FE
+100
+AcDbDictionary
+281
+1
+  3
+ByBlock
+350
+20C
+  3
+ByLayer
+350
+20D
+  3
+Global
+350
+20E
+  0
+DICTIONARY
+  5
+205
+330
+1FE
+100
+AcDbDictionary
+281
+1
+  3
+Standard
+350
+210
+  0
+DICTIONARY
+  5
+206
+330
+1FE
+100
+AcDbDictionary
+281
+1
+  0
+ACDBDICTIONARYWDFLT
+  5
+207
+330
+1FE
+100
+AcDbDictionary
+281
+1
+  3
+Normal
+350
+208
+100
+AcDbDictionaryWithDefault
+340
+208
+  0
+ACDBPLACEHOLDER
+  5
+208
+330
+207
+  0
+DICTIONARY
+  5
+209
+330
+1FE
+100
+AcDbDictionary
+281
+1
+  0
+DICTIONARY
+  5
+20A
+330
+1FE
+100
+AcDbDictionary
+281
+1
+  0
+DICTIONARY
+  5
+20B
+330
+1FE
+100
+AcDbDictionary
+281
+1
+  0
+MATERIAL
+  5
+20C
+102
+{ACAD_REACTORS
+330
+204
+102
+}
+330
+204
+100
+AcDbMaterial
+  1
+ByBlock
+  2
+
+ 70
+0
+ 40
+1.0
+ 71
+1
+ 41
+1.0
+ 91
+-1023410177
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 44
+0.5
+ 73
+0
+ 45
+1.0
+ 46
+1.0
+ 77
+1
+  4
+
+ 78
+1
+ 79
+1
+170
+1
+ 48
+1.0
+171
+1
+  6
+
+172
+1
+173
+1
+174
+1
+140
+1.0
+141
+1.0
+175
+1
+  7
+
+176
+1
+177
+1
+178
+1
+143
+1.0
+179
+1
+  8
+
+270
+1
+271
+1
+272
+1
+145
+1.0
+146
+1.0
+273
+1
+  9
+
+274
+1
+275
+1
+276
+1
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 94
+63
+  0
+MATERIAL
+  5
+20D
+102
+{ACAD_REACTORS
+330
+204
+102
+}
+330
+204
+100
+AcDbMaterial
+  1
+ByLayer
+  2
+
+ 70
+0
+ 40
+1.0
+ 71
+1
+ 41
+1.0
+ 91
+-1023410177
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 44
+0.5
+ 73
+0
+ 45
+1.0
+ 46
+1.0
+ 77
+1
+  4
+
+ 78
+1
+ 79
+1
+170
+1
+ 48
+1.0
+171
+1
+  6
+
+172
+1
+173
+1
+174
+1
+140
+1.0
+141
+1.0
+175
+1
+  7
+
+176
+1
+177
+1
+178
+1
+143
+1.0
+179
+1
+  8
+
+270
+1
+271
+1
+272
+1
+145
+1.0
+146
+1.0
+273
+1
+  9
+
+274
+1
+275
+1
+276
+1
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 94
+63
+  0
+MATERIAL
+  5
+20E
+102
+{ACAD_REACTORS
+330
+204
+102
+}
+330
+204
+100
+AcDbMaterial
+  1
+Global
+  2
+
+ 70
+0
+ 40
+1.0
+ 71
+1
+ 41
+1.0
+ 91
+-1023410177
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 44
+0.5
+ 73
+0
+ 45
+1.0
+ 46
+1.0
+ 77
+1
+  4
+
+ 78
+1
+ 79
+1
+170
+1
+ 48
+1.0
+171
+1
+  6
+
+172
+1
+173
+1
+174
+1
+140
+1.0
+141
+1.0
+175
+1
+  7
+
+176
+1
+177
+1
+178
+1
+143
+1.0
+179
+1
+  8
+
+270
+1
+271
+1
+272
+1
+145
+1.0
+146
+1.0
+273
+1
+  9
+
+274
+1
+275
+1
+276
+1
+ 42
+1.0
+ 72
+1
+  3
+
+ 73
+1
+ 74
+1
+ 75
+1
+ 94
+63
+  0
+MLEADERSTYLE
+  5
+210
+102
+{ACAD_REACTORS
+330
+205
+102
+}
+330
+205
+100
+AcDbMLeaderStyle
+179
+2
+170
+2
+171
+1
+172
+0
+ 90
+2
+ 40
+0.0
+ 41
+0.0
+173
+1
+ 91
+-1056964608
+ 92
+-2
+290
+1
+ 42
+2.0
+291
+1
+ 43
+8.0
+  3
+Standard
+ 44
+4.0
+300
+
+342
+13
+174
+1
+175
+1
+176
+0
+178
+1
+ 93
+-1056964608
+ 45
+4.0
+292
+0
+297
+0
+ 46
+4.0
+ 94
+-1056964608
+ 47
+1.0
+ 49
+1.0
+140
+1.0
+294
+1
+141
+0.0
+177
+0
+142
+1.0
+295
+0
+296
+0
+143
+3.75
+271
+0
+272
+9
+273
+9
+  0
+DICTIONARY
+  5
+213
+330
+1FE
+100
+AcDbDictionary
+280
+1
+281
+1
+  3
+WRITTEN_BY_EZDXF
+350
+214
+  0
+DICTIONARYVAR
+  5
+214
+330
+213
+100
+DictionaryVariables
+280
+0
+  1
+1.4.3 @ 2026-07-28T02:48:19.937490+00:00
+  0
+ENDSEC
+  0
+EOF
